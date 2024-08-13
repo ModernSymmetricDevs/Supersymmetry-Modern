@@ -25,7 +25,6 @@ Juke.setup({ file: import.meta.url }).then((code) => {
 const includeList = [
   "config",
   "defaultconfigs",
-  "config-overrides",
   "kubejs",
   "mods"
 ]
