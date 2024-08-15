@@ -91,10 +91,7 @@ async function packMod(group) {
         `dist/${group}.zip`,  // file out
         'overrides',
         'manifest.json',
-        'modlist.html',
-        'LICENSE.md',
-        'pack-mode-switcher.bat',
-        'pack-mode-switcher.sh'
+        'LICENSE.md'
       ])
       return;
     }
