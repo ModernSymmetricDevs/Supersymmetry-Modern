@@ -1,3 +1,4 @@
+// priority: 2147483647
 const lubricants = [
     {
       name: 'lubricating_oil',
