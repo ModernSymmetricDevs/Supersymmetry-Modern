@@ -1,33 +1,15 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
-  event.remove({ type: 'gtceu:forge_hammer', input: 'gregtech:ore_sulfur_0'})
-  event.remove({ type: 'gtceu:macerator', input: 'gregtech:ore_sulfur_0'})
+  event.remove({ type: 'gtceu:forge_hammer', input: safeItemId('gtceu:ore_sulfur_0')})
+  event.remove({ type: 'gtceu:macerator', input: safeItemId('gtceu:ore_sulfur_0')})
 
-  event.recipes.susy.mods.gregtech.assembler('tnvvbfsox74npr') // remapped from original line 15
+  event.recipes.susy.mods.gregtech.assembler('jdtxlalktexk6w') // remapped from original line 15
     .itemInputs('4x #forge:plates/wrought_iron')
     .circuit(2)
-    .itemOutputs(safeItemId('3x susy:susy_multiblock_casing', ')) * 6)
+    .itemOutputs(safeItemId('6x susy:susy_multiblock_casing'))
     .duration(240)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('jpldhbwj7haecp') // remapped from original line 23
+  event.recipes.susy.mods.gregtech.assembler('ieb8ehvm5f1zxw') // remapped from original line 23
     .itemInputs('2x #forge:plates/steel')
     .itemInputs('2x #forge:pipes/tiny_fluid_copper')
     .circuit(2)
@@ -35,9 +17,9 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('6b1ilrv0xtbfse') // remapped from original line 32
+  event.recipes.susy.mods.gregtech.assembler('xbarsg4rqm0ndm') // remapped from original line 32
     .circuit(10)
-    .itemInputs(metaitem('electric.motor.hv') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.hv'))
     .itemInputs('4x #forge:gears/stainless_steel')
     .itemInputs('16x #forge:rotors/stainless_steel')
     .itemInputs('16x #forge:plates/stainless_steel')
@@ -45,44 +27,44 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('2trxkthr2r9jzx') // remapped from original line 43
+  event.recipes.susy.mods.gregtech.assembler('pibwgtfvkh0qxl') // remapped from original line 43
     .circuit(9)
     .itemInputs('9x #forge:plates/stainless_steel')
-    .itemOutputs(safeItemId('2x susy:susy_multiblock_casing', ')))
+    .itemOutputs(safeItemId('1x susy:susy_multiblock_casing'))
     .duration(240)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.mods.gregtech.assembler('s0vwgqsujjai8o') // remapped from original line 51
+  event.recipes.susy.mods.gregtech.assembler('hzk3qqo6qeap3w') // remapped from original line 51
     .circuit(11)
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:frames/gt_stainless_steel')
-    .itemOutputs(safeItemId('1x susy:susy_multiblock_casing', ')))
+    .itemOutputs(safeItemId('1x susy:susy_multiblock_casing'))
     .duration(240)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.mods.gregtech.assembler('xwiptl9enjzewh') // remapped from original line 72
+  event.recipes.susy.mods.gregtech.assembler('j7iblevsix3zwi') // remapped from original line 72
     .itemInputs('2x #forge:plates/wrought_iron')
     .itemInputs('2x #forge:rods/wrought_iron')
     .itemInputs('2x #forge:screws/wrought_iron')
     .circuit(13)
-    .itemOutputs(safeItemId('4x susy:meta_item', ')))
+    .itemOutputs(safeItemId('1x susy:meta_item'))
     .duration(200)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('c17f2xyrtozc7t') // remapped from original line 82
+  event.recipes.susy.mods.gregtech.assembler('5igz82d6oewl8u') // remapped from original line 82
     .itemInputs('2x #forge:plates/iron')
     .itemInputs('2x #forge:rods/iron')
     .itemInputs('2x #forge:screws/iron')
     .circuit(13)
-    .itemOutputs(safeItemId('4x susy:meta_item', ')))
+    .itemOutputs(safeItemId('1x susy:meta_item'))
     .duration(200)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('jrhctb34frwxrm') // remapped from original line 92
+  event.recipes.susy.mods.gregtech.assembler('g3vzzucaxrxnpw') // remapped from original line 92
     .circuit(11)
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:frames/gt_stainless_steel')
-    .itemOutputs(safeItemId('1x susy:susy_multiblock_casing', ')))
+    .itemOutputs(safeItemId('1x susy:susy_multiblock_casing'))
     .duration(240)
     .EUt(voltAmps[3])
 

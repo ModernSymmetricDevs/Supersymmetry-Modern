@@ -1,310 +1,292 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.assembler('asw2ackf1ket72') // remapped from original line 367
-    .itemInputs(metaitem('hull.lv'))
-    .itemInputs(metaitem('electric.motor.lv'))
+  event.recipes.susy.mods.gregtech.assembler('tnjkgry2a1w9rm') // remapped from original line 367
+    .itemInputs(safeItemId('1x susy:hull.lv'))
+    .itemInputs(safeItemId('1x susy:electric.motor.lv'))
     .itemInputs('1x #forge:circuits/lv')
     .itemInputs('1x #forge:wires/fine_red_alloy')
     .itemInputs('4x #forge:plates/steel')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('3x techguns:basicmachine', ')))
+    .itemOutputs(safeItemId('1x techguns:basicmachine'))
     .duration(100)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('weapons_factory')('m8oil4vplupuia') // remapped from original line 814
+  event.recipes.susy.weapons_factory('v0qzfyq9wcjoqi') // remapped from original line 814
     .itemInputs([ore('plateCupronickel'),
-    .itemOutputs(safeItemId('3x techguns:itemshared', '))*8)
+    .itemOutputs(safeItemId('8x techguns:itemshared'))
     .duration(10)
     .EUt(16)
 
-  event.recipes.susy.recipemap('weapons_factory')('vnxjzxogvo6c90') // remapped from original line 824
+  event.recipes.susy.weapons_factory('kdqzpvqpl1qg9h') // remapped from original line 824
     .itemInputs([ore('plateAluminium'),
-    .itemOutputs(safeItemId('4x techguns:itemshared', '))*8)
+    .itemOutputs(safeItemId('8x techguns:itemshared'))
     .duration(10)
     .EUt(16)
 
-  event.recipes.susy.recipemap('weapons_factory')('gbioadopcomgza') // remapped from original line 834
+  event.recipes.susy.weapons_factory('p9o7m5zkg8xnxw') // remapped from original line 834
     .itemInputs([
     .circuit(1)
-    .itemOutputs(safeItemId('5x techguns:itemshared', '))*4)
+    .itemOutputs(safeItemId('4x techguns:itemshared'))
     .duration(80)
     .EUt(30)
 
-  event.recipes.susy.recipemap('weapons_factory')('xzex5q5mvgdlye') // remapped from original line 847
+  event.recipes.susy.weapons_factory('qw4oabptvb1kyp') // remapped from original line 847
     .itemInputs([
     .circuit(2)
     .itemOutputs(safeItemId('4x techguns:fraggrenade'))
     .duration(80)
     .EUt(30)
 
-  event.recipes.susy.recipemap('weapons_factory')('9scws0vtqywpep') // remapped from original line 861
+  event.recipes.susy.weapons_factory('ktfgoqnxoysgvl') // remapped from original line 861
     .itemInputs('4x #forge:plates/plastic')
     .circuit(1)
-    .itemOutputs(safeItemId('43x techguns:itemshared', 4')3))
+    .itemOutputs(safeItemId('1x techguns:itemshared'))
     .duration(200)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('weapons_factory')('bt9no2axvz6ymh') // remapped from original line 869
+  event.recipes.susy.weapons_factory('rmn0jvf6omajfo') // remapped from original line 869
     .circuit(1)
     .itemInputs([ore('plateBrass'),
-    .itemOutputs(safeItemId('1x techguns:itemshared', '))*12)
+    .itemOutputs(safeItemId('12x techguns:itemshared'))
     .duration(10)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('weapons_factory')('rys29vde5j93n6') // remapped from original line 880
+  event.recipes.susy.weapons_factory('8qzfat3pabltly') // remapped from original line 880
     .circuit(2)
     .itemInputs([ore('plateBrass') * 2,
-    .itemOutputs(safeItemId('2x techguns:itemshared', ')) * 5)
+    .itemOutputs(safeItemId('5x techguns:itemshared'))
     .duration(10)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('assembler')('z01rreuuddhnlf') // remapped from original line 891
+  event.recipes.gtceu.assembler('kju6clgkl1iwsi') // remapped from original line 891
     .itemInputs('4x #forge:plates/plastic')
     .itemInputs('2x #forge:rings/tin')
-    .itemOutputs(safeItemId('28x techguns:itemshared', 2')8))
+    .itemOutputs(safeItemId('1x techguns:itemshared'))
     .duration(200)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('assembler')('i7ttrn3bzhbxpi') // remapped from original line 899
-    .itemInputs(metaitem('electric.pump.mv'))
+  event.recipes.gtceu.assembler('o3yxt4uvls5sma') // remapped from original line 899
+    .itemInputs(safeItemId('1x susy:electric.pump.mv'))
     .itemInputs('2x #forge:rings/steel')
     .itemInputs('4x #forge:plates/plastic')
-    .itemOutputs(safeItemId('72x techguns:itemshared', 7')2))
+    .itemOutputs(safeItemId('1x techguns:itemshared'))
     .duration(200)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.forming_press('ykbzxlfsj0zwvz') // remapped from original line 908
+  event.recipes.susy.mods.gregtech.forming_press('yzzyvb9brp7tmd') // remapped from original line 908
     .itemInputs('1x #forge:plates/bronze')
     .itemInputs('1x #forge:plates/steel')
     .itemInputs('1x #forge:plates/brass')
     .itemInputs('1x #forge:bolts/bronze')
     .itemInputs('1x #forge:bolts/steel')
     .itemInputs('1x #forge:bolts/brass')
-    .itemOutputs(safeItemId('45x techguns:itemshared', 4')5))
+    .itemOutputs(safeItemId('1x techguns:itemshared'))
     .duration(60)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.lathe('pspao67snzybzq') // remapped from original line 920
+  event.recipes.susy.mods.gregtech.lathe('964jgsk1jy5qda') // remapped from original line 920
     .itemInputs('1x #forge:rods/iron')
-    .itemOutputs(safeItemId('38x techguns:itemshared', 3')8))
+    .itemOutputs(safeItemId('1x techguns:itemshared'))
     .duration(80)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.lathe('f2ouysxgt2hqnt') // remapped from original line 927
+  event.recipes.susy.mods.gregtech.lathe('cc1g7epa4wo3t5') // remapped from original line 927
     .itemInputs('1x #forge:rods/steel')
-    .itemOutputs(metaitem('gun.barrel.steel'))
+    .itemOutputs(safeItemId('1x susy:gun.barrel.steel'))
     .duration(80)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.recipemap('chemical_bath')('gdnbkabhf5k4jt') // remapped from original line 934
-    .itemInputs(safeItemId('4x techguns:itemshared', ')) * 4)
+  event.recipes.gtceu.chemical_bath('yvrvi2o4hfl1tc') // remapped from original line 934
+    .itemInputs(safeItemId('4x techguns:itemshared'))
     .inputFluids(safeFluidOf('gtceu:glyceryl_trinitrate', 250))
-    .itemOutputs(safeItemId('144x techguns:itemshared', 14')) * 4)
+    .itemOutputs(safeItemId('4x techguns:itemshared'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('canner')('1nmm6q4aadptiq') // remapped from original line 942
-    .itemInputs(safeItemId('2x techguns:itemshared', ')) * 4)
+  event.recipes.gtceu.canner('ox0cb1iaafdoym') // remapped from original line 942
+    .itemInputs(safeItemId('4x techguns:itemshared'))
     .itemInputs('1x #forge:dusts/phosphorus')
-    .itemOutputs(safeItemId('106x techguns:itemshared', 10')) * 4)
+    .itemOutputs(safeItemId('4x techguns:itemshared'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('canner')('3yzawa3crqidnb') // remapped from original line 950
-    .itemInputs(safeItemId('4x techguns:itemshared', ')) * 4)
+  event.recipes.gtceu.canner('qkfsfmqd4ribqc') // remapped from original line 950
+    .itemInputs(safeItemId('4x techguns:itemshared'))
     .itemInputs('1x #forge:dusts/phosphorus')
-    .itemOutputs(safeItemId('108x techguns:itemshared', 10')) * 4)
+    .itemOutputs(safeItemId('4x techguns:itemshared'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('canner')('nehbtcpuifdqhr') // remapped from original line 958
-    .itemInputs(safeItemId('1x techguns:itemshared', ')) * 6)
+  event.recipes.gtceu.canner('07mlgd2woz8dxs') // remapped from original line 958
+    .itemInputs(safeItemId('6x techguns:itemshared'))
     .itemInputs('1x #forge:dusts/phosphorus')
-    .itemOutputs(safeItemId('109x techguns:itemshared', 10')) * 6)
+    .itemOutputs(safeItemId('6x techguns:itemshared'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('canner')('x2fld7x44ixjyy') // remapped from original line 966
-    .itemInputs(safeItemId('3x techguns:itemshared', ')) * 4)
+  event.recipes.gtceu.canner('w5unbp0tfro5ch') // remapped from original line 966
+    .itemInputs(safeItemId('4x techguns:itemshared'))
     .itemInputs('1x #forge:dusts/phosphorus')
-    .itemOutputs(safeItemId('110x techguns:itemshared', 11')) * 4)
+    .itemOutputs(safeItemId('4x techguns:itemshared'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('forming_press')('ffbzuc8nuanhiy') // remapped from original line 1071
+  event.recipes.gtceu.forming_press('ifa5jj5er5ubci') // remapped from original line 1071
     .itemInputs([metaitem('platePolycaprolactam') * 2,
-    .itemOutputs(safeItemId('60x techguns:itemshared:60')') * 2)
+    .itemOutputs(safeItemId('2x techguns:itemshared:60'))
     .duration(40)
     .EUt(16)
 
-  event.recipes.susy.recipemap('forming_press')('eyxqpad2ukfvhg') // remapped from original line 1080
+  event.recipes.gtceu.forming_press('iujyb6irqodfoa') // remapped from original line 1080
     .itemInputs([metaitem('foilSteel'), item('techguns:itemshared:38')])
-    .itemOutputs(safeItemId('39x techguns:itemshared:39')9'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:39'))
     .duration(30)
     .EUt(30)
 
-  event.recipes.susy.recipemap('roaster')('ld2dqcpcuzoc0j') // remapped from original line 1087
+  event.recipes.susy.roaster('9xglxtlxszgfij') // remapped from original line 1087
     .itemInputs(safeItemId('1x minecraft:leather'))
     .inputFluids(safeFluidOf('minecraft:water', 1000))
-    .itemOutputs(safeItemId('77x techguns:itemshared:77')7'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:77'))
     .duration(85)
     .EUt(7)
 
-  event.recipes.susy.recipemap('weapons_factory')('mxwgkumcat91ke') // remapped from original line 1101
+  event.recipes.susy.weapons_factory('ltiq4aj9vdammk') // remapped from original line 1101
     .circuit(1)
     .itemInputs('5x #forge:plates/ultra_high_molecular_weight_polyethylene')
     .itemInputs('2x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_commando_helmet')_commando_helmet'))
+    .itemOutputs(safeItemId('1x techguns:t2_commando_helmet'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('xcr73g2j7wo9fw') // remapped from original line 1110
+  event.recipes.susy.weapons_factory('8vfi0cpnqrfp6q') // remapped from original line 1110
     .circuit(2)
     .itemInputs('8x #forge:plates/ultra_high_molecular_weight_polyethylene')
     .itemInputs('4x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_commando_chestplate')_commando_chestplate'))
+    .itemOutputs(safeItemId('1x techguns:t2_commando_chestplate'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('imfbfumaifg6nb') // remapped from original line 1119
+  event.recipes.susy.weapons_factory('fk7kinxgvlpmsr') // remapped from original line 1119
     .circuit(3)
     .itemInputs('7x #forge:plates/ultra_high_molecular_weight_polyethylene')
     .itemInputs('3x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_commando_leggings')_commando_leggings'))
+    .itemOutputs(safeItemId('1x techguns:t2_commando_leggings'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('le1pmt2ihnc9rt') // remapped from original line 1128
+  event.recipes.susy.weapons_factory('tprb4urazrg2vg') // remapped from original line 1128
     .circuit(4)
     .itemInputs('4x #forge:plates/ultra_high_molecular_weight_polyethylene')
     .itemInputs('2x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_commando_boots')_commando_boots'))
+    .itemOutputs(safeItemId('1x techguns:t2_commando_boots'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('gpqetmz0rrom3j') // remapped from original line 1137
+  event.recipes.susy.weapons_factory('ypzksrh1wfls9m') // remapped from original line 1137
     .circuit(1)
     .itemInputs('5x #forge:plates/kevlar')
     .itemInputs('2x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_combat_helmet')_combat_helmet'))
+    .itemOutputs(safeItemId('1x techguns:t2_combat_helmet'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('m5lyqh0fkcrofm') // remapped from original line 1146
+  event.recipes.susy.weapons_factory('9hec6xlxuiig2o') // remapped from original line 1146
     .circuit(2)
     .itemInputs('8x #forge:plates/kevlar')
     .itemInputs('4x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_combat_chestplate')_combat_chestplate'))
+    .itemOutputs(safeItemId('1x techguns:t2_combat_chestplate'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('ezsyoqs9o4xwlz') // remapped from original line 1155
+  event.recipes.susy.weapons_factory('2d5gn9ijflcapv') // remapped from original line 1155
     .circuit(3)
     .itemInputs('7x #forge:plates/kevlar')
     .itemInputs('3x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_combat_leggings')_combat_leggings'))
+    .itemOutputs(safeItemId('1x techguns:t2_combat_leggings'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('xii2mggfz1xi3c') // remapped from original line 1164
+  event.recipes.susy.weapons_factory('nj16ac6iadxdnp') // remapped from original line 1164
     .circuit(4)
     .itemInputs('4x #forge:plates/kevlar')
     .itemInputs('2x #forge:plates/boron_nitride')
-    .itemOutputs(safeItemId('2x techguns:t2_combat_boots')_combat_boots'))
+    .itemOutputs(safeItemId('1x techguns:t2_combat_boots'))
     .duration(100)
     .EUt(960)
 
-  event.recipes.susy.recipemap('weapons_factory')('3wzielm2lxqydp') // remapped from original line 1175
+  event.recipes.susy.weapons_factory('3r2btlqulmdqcm') // remapped from original line 1175
     .circuit(10)
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('147x techguns:itemshared:147')47'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:147'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('weapons_factory')('leeydab6wujotr') // remapped from original line 1183
+  event.recipes.susy.weapons_factory('jijuzimm618bt8') // remapped from original line 1183
     .circuit(11)
     .itemInputs('2x #forge:plates/steel')
     .itemInputs('2x #forge:plates/polycaprolactam')
-    .itemOutputs(safeItemId('150x techguns:itemshared:150')50'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:150'))
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.recipemap('weapons_factory')('xgp4ma2bmb5y4d') // remapped from original line 1192
+  event.recipes.susy.weapons_factory('lkxd5qhmskoy6e') // remapped from original line 1192
     .circuit(12)
     .itemInputs('2x #forge:plates/boron_nitride')
     .itemInputs('2x #forge:plates/kevlar')
-    .itemOutputs(safeItemId('153x techguns:itemshared:153')53'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:153'))
     .duration(100)
     .EUt(480)
 
-  event.recipes.susy.recipemap('weapons_factory')('zgjagmuxyasqoe') // remapped from original line 1201
+  event.recipes.susy.weapons_factory('py9n2x6pkgqsgq') // remapped from original line 1201
     .circuit(13)
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('148x techguns:itemshared:148')48'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:148'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('weapons_factory')('sd9gdljssui7ov') // remapped from original line 1209
+  event.recipes.susy.weapons_factory('erd8lgevzu0mlc') // remapped from original line 1209
     .circuit(14)
     .itemInputs('2x #forge:plates/steel')
     .itemInputs('2x #forge:plates/polycaprolactam')
-    .itemOutputs(safeItemId('151x techguns:itemshared:151')51'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:151'))
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.recipemap('weapons_factory')('tanocuq7yd6mud') // remapped from original line 1218
+  event.recipes.susy.weapons_factory('kctrqbx6kwiabl') // remapped from original line 1218
     .circuit(15)
     .itemInputs('2x #forge:plates/boron_nitride')
     .itemInputs('2x #forge:plates/kevlar')
-    .itemOutputs(safeItemId('154x techguns:itemshared:154')54'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:154'))
     .duration(100)
     .EUt(480)
 
-  event.recipes.susy.recipemap('weapons_factory')('umdpcam1vvp5mj') // remapped from original line 1227
+  event.recipes.susy.weapons_factory('wjqzga5vg3hedm') // remapped from original line 1227
     .circuit(16)
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('149x techguns:itemshared:149')49'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:149'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.recipemap('weapons_factory')('s5mauo2ad92bwt') // remapped from original line 1235
+  event.recipes.susy.weapons_factory('thcf6nps76qxes') // remapped from original line 1235
     .circuit(17)
     .itemInputs('2x #forge:plates/steel')
     .itemInputs('2x #forge:plates/polycaprolactam')
-    .itemOutputs(safeItemId('152x techguns:itemshared:152')52'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:152'))
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.recipemap('weapons_factory')('7heuifsawizsdm') // remapped from original line 1244
+  event.recipes.susy.weapons_factory('rbmdncxsgaazwt') // remapped from original line 1244
     .circuit(18)
     .itemInputs('2x #forge:plates/boron_nitride')
     .itemInputs('2x #forge:plates/kevlar')
-    .itemOutputs(safeItemId('155x techguns:itemshared:155')55'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:155'))
     .duration(100)
     .EUt(480)
 
-  event.recipes.susy.recipemap('canner')('fkyqmlhyi3unbb') // remapped from original line 1255
-    .itemInputs(safeItemId('24x techguns:itemshared:24')4'))
+  event.recipes.gtceu.canner('lmlrjpauv1yahz') // remapped from original line 1255
+    .itemInputs(safeItemId('1x techguns:itemshared:24'))
     .inputFluids(safeFluidOf('susy:hp_air', 1000))
-    .itemOutputs(safeItemId('23x techguns:itemshared:23')3'))
+    .itemOutputs(safeItemId('1x techguns:itemshared:23'))
     .duration(100)
     .EUt(7)
 

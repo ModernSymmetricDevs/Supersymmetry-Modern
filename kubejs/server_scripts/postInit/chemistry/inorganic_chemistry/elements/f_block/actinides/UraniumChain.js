@@ -1,24 +1,6 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.mixer('zu9ynft4chrfum') // remapped from original line 32
+  event.recipes.gtceu.mixer('9ricimieuzbodu') // remapped from original line 32
     .inputFluids(safeFluidOf('susy:hot_sulfuric_acid', 2000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 4000))
     .itemInputs('1x #forge:dusts/carnotite')
@@ -26,7 +8,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(300)
 
-  event.recipes.gtceu.mixer('vpaaxy5luyzpbi') // remapped from original line 41
+  event.recipes.gtceu.mixer('dpzpvlazvuch8t') // remapped from original line 41
     .inputFluids(safeFluidOf('susy:carnotite_leach', 6000))
     .itemInputs('1x #forge:dusts/any_purity_iron')
     .itemInputs('3x #forge:dusts/calcite')
@@ -34,7 +16,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(300)
 
-  event.recipes.gtceu.mixer('yg0hemdurksedv') // remapped from original line 50
+  event.recipes.gtceu.mixer('mgjmljv9ndvbfo') // remapped from original line 50
     .inputFluids(safeFluidOf('susy:kerosene', 900))
     .inputFluids(safeFluidOf('susy:tributyl_phosphate', 40))
     .inputFluids(safeFluidOf('susy:di_two_ethylhexyl_phosphoric_acid', 60))
@@ -42,7 +24,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('o9uk6l6pfzw88j') // remapped from original line 59
+  event.recipes.gtceu.centrifuge('qkqls5qfyokwwq') // remapped from original line 59
     .inputFluids(safeFluidOf('susy:uranium_vanadium_extraction_mixture', 1000))
     .inputFluids(safeFluidOf('susy:reduced_carnotite_leach', 1000))
     .outputFluids(safeFluidOf('susy:uranium_vanadium_extract', 1000))
@@ -50,7 +32,7 @@ ServerEvents.recipes(event => {
     .EUt(240)
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('rfqmqlve795iwx') // remapped from original line 68
+  event.recipes.gtceu.centrifuge('paieifd3twhvdf') // remapped from original line 68
     .inputFluids(safeFluidOf('susy:uranium_vanadium_extract', 3000))
     .inputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 2000))
     .outputFluids(safeFluidOf('susy:uranium_extract', 3000))
@@ -58,16 +40,17 @@ ServerEvents.recipes(event => {
     .EUt(240)
     .duration(200)
 
-  event.recipes.gtceu.large_chemical_reactor('xayuezvhhyla77') // remapped from original line 77
-    .inputFluids(safeFluidOf('susy:acidic_vanadyl_solution', 6000))
-    .inputFluids(safeFluidOf('gtceu:ammonia', 1000))
-    .itemInputs(safeItemId('5x gregtechfoodoption:sodium_chlorate_dust'))
-    .outputFluids(safeFluidOf('susy:wastewater', 6000))
-    .itemOutputs('7x #forge:dusts/vanadium_pentoxide')
-    .EUt(240)
-    .duration(200)
+  // Contains GTFO resources
+  //event.recipes.gtceu.large_chemical_reactor('qdkqjvwscd1tqz') // remapped from original line 77
+    //.inputFluids(safeFluidOf('susy:acidic_vanadyl_solution', 6000))
+    //.inputFluids(safeFluidOf('gtceu:ammonia', 1000))
+    //.itemInputs(safeItemId('5x gregtechfoodoption:sodium_chlorate_dust'))
+    //.outputFluids(safeFluidOf('susy:wastewater', 6000))
+    //.itemOutputs('7x #forge:dusts/vanadium_pentoxide')
+    //.EUt(240)
+    //.duration(200)
 
-  event.recipes.gtceu.centrifuge('wsclovxxetjukn') // remapped from original line 87
+  event.recipes.gtceu.centrifuge('jbizphoujfe8z2') // remapped from original line 87
     .inputFluids(safeFluidOf('susy:uranium_extract', 3000))
     .inputFluids(safeFluidOf('susy:soda_ash_solution', 1000))
     .outputFluids(safeFluidOf('susy:uranium_vanadium_extraction_mixture', 3000))
@@ -75,7 +58,7 @@ ServerEvents.recipes(event => {
     .EUt(720)
     .duration(160)
 
-  event.recipes.gtceu.sifter('mbebqjd0kfh732') // remapped from original line 96
+  event.recipes.gtceu.sifter('8qoyzirugnuhc7') // remapped from original line 96
     .inputFluids(safeFluidOf('susy:impure_uranyl_carbonate_solution', 6000))
     .chancedOutput('7x #forge:dusts/aluminium_hydroxide', 1000, 1000)
     .chancedOutput('5x #forge:dusts/iron_carbonate', 4000, 1000)
@@ -83,14 +66,14 @@ ServerEvents.recipes(event => {
     .EUt(240)
     .duration(200)
 
-  event.recipes.susy.roaster('x8xavce8woxs8n') // remapped from original line 105
+  event.recipes.susy.roaster('f6wiu4xlilmygj') // remapped from original line 105
     .itemInputs('5x #forge:dusts/iron_carbonate')
     .itemOutputs('2x #forge:dusts/iron_ii_oxide')
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 1000))
     .EUt(120)
     .duration(200)
 
-  event.recipes.susy.continuous_stirred_tank_reactor('khmkwrrksrlfpg') // remapped from original line 113
+  event.recipes.susy.continuous_stirred_tank_reactor('qpki0jfrdtamfg') // remapped from original line 113
     .inputFluids(safeFluidOf('susy:uranyl_carbonate_solution', 50))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 50))
     .outputFluids(safeFluidOf('susy:uranyl_sulfate_solution', 100))
@@ -98,7 +81,7 @@ ServerEvents.recipes(event => {
     .EUt(240)
     .duration(5)
 
-  event.recipes.gtceu.large_chemical_reactor('clpgmxjxqxoyj6') // remapped from original line 122
+  event.recipes.gtceu.large_chemical_reactor('bu9om5dfk4hkdc') // remapped from original line 122
     .inputFluids(safeFluidOf('susy:uranyl_sulfate_solution', 2000))
     .inputFluids(safeFluidOf('gtceu:ammonia', 6000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
@@ -107,7 +90,7 @@ ServerEvents.recipes(event => {
     .EUt(720)
     .duration(200)
 
-  event.recipes.susy.reaction_furnace('dteceytba6zryn') // remapped from original line 132
+  event.recipes.susy.reaction_furnace('ka1ssvb6o5s2sg') // remapped from original line 132
     .itemInputs('19x #forge:dusts/ammonium_diuranate')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('6x #forge:dusts/uranium_dioxide')
@@ -116,7 +99,7 @@ ServerEvents.recipes(event => {
     .EUt(3840)
     .duration(600)
 
-  event.recipes.susy.reaction_furnace('bj2sbjrcfdumru') // remapped from original line 142
+  event.recipes.susy.reaction_furnace('fpnpq0tcgm5qgg') // remapped from original line 142
     .itemInputs('3x #forge:dusts/uranium_dioxide')
     .itemInputs('2x #forge:dusts/any_purity_magnesium')
     .itemOutputs('1x #forge:dusts/uranium')
@@ -124,7 +107,7 @@ ServerEvents.recipes(event => {
     .EUt(3840)
     .duration(300)
 
-  event.recipes.susy.rotary_kiln('packnqlun3fnss') // remapped from original line 151
+  event.recipes.susy.rotary_kiln('erbjohmeqez20n') // remapped from original line 151
     .itemInputs('3x #forge:dusts/uranium_dioxide')
     .inputFluids(safeFluidOf('susy:hydrogen_fluoride', 4000))
     .itemOutputs('5x #forge:dusts/uranium_tetrafluoride')
@@ -132,14 +115,14 @@ ServerEvents.recipes(event => {
     .EUt(1920)
     .duration(80)
 
-  event.recipes.susy.fluidized_bed_reactor('xaxi34c4veoxyv') // remapped from original line 160
+  event.recipes.susy.fluidized_bed_reactor('bc44anzn39bytz') // remapped from original line 160
     .itemInputs('5x #forge:dusts/uranium_tetrafluoride')
     .inputFluids(safeFluidOf('gtceu:fluorine', 2000))
     .outputFluids(safeFluidOf('gtceu:uranium_hexafluoride', 1000))
     .EUt(240)
     .duration(80)
 
-  event.recipes.susy.fluidized_bed_reactor('r0te62kopnszfx') // remapped from original line 168
+  event.recipes.susy.fluidized_bed_reactor('l6kpcjnr5oryva') // remapped from original line 168
     .inputFluids(safeFluidOf('gtceu:uranium_hexafluoride', 1000))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('5x #forge:dusts/uranium_tetrafluoride')
@@ -147,10 +130,10 @@ ServerEvents.recipes(event => {
     .EUt(240)
     .duration(80)
 
-  event.recipes.susy.reaction_furnace('vovla8jxizn4wr') // remapped from original line 177
+  event.recipes.susy.reaction_furnace('xkdnrfsnpcqdmb') // remapped from original line 177
     .itemInputs('5x #forge:dusts/uranium_tetrafluoride')
     .itemInputs('2x #forge:dusts/magnesium')
-    .itemOutputs('238x #forge:dusts/uranium238'38').first())
+    .itemOutputs('1x #forge:dusts/uranium238'.first())
     .itemOutputs('6x #forge:dusts/magnesium_fluoride')
     .EUt(3840)
     .duration(80)

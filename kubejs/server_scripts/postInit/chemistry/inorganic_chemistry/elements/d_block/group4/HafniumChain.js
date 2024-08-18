@@ -1,24 +1,6 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.centrifuge('rbgfcuz6ujhysk') // remapped from original line 24
+  event.recipes.gtceu.centrifuge('31venhfpn2nyfc') // remapped from original line 24
     .inputFluids(safeFluidOf('susy:hafnium_extract', 1000))
     .inputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 80))
     .outputFluids(safeFluidOf('susy:hafnium_extraction_mixture', 1000))
@@ -26,7 +8,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.susy.roaster('qebm8ahzlw6wmx') // remapped from original line 33
+  event.recipes.susy.roaster('ldpzvbjnjcqxmd') // remapped from original line 33
     .inputFluids(safeFluidOf('susy:hafnium_sulfate_solution', 2000))
     .itemOutputs('3x #forge:dusts/hafnium_dioxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 2000))
@@ -34,7 +16,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.susy.REACTION_FURNACE('hf2tpauvlda1yk') // remapped from original line 54
+  event.recipes.susy.REACTION_FURNACE('s89ezlw5btzaoz') // remapped from original line 54
     .itemInputs('5x #forge:dusts/impure_hafnium_tetrachloride')
     .notConsumable(safeFluidOf('gtceu:nitrogen', 1000))
     .notConsumable(safeFluidOf('gtceu:hydrogen', 1000))
@@ -42,26 +24,26 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.vacuum_chamber('ow5eiqpgpp0tgt') // remapped from original line 77
-    .itemInputs(metaitem('sponge.hafnium.crude'))
-    .itemOutputs(metaitem('sponge.hafnium'))
+  event.recipes.susy.vacuum_chamber('zzfwx4lcx3vkyo') // remapped from original line 77
+    .itemInputs(safeItemId('1x susy:sponge.hafnium.crude'))
+    .itemOutputs(safeItemId('1x susy:sponge.hafnium'))
     .duration(100)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.macerator('nazjwizguju7yy') // remapped from original line 84
-    .itemInputs(metaitem('sponge.hafnium'))
+  event.recipes.gtceu.macerator('e3kptpw0i83xbc') // remapped from original line 84
+    .itemInputs(safeItemId('1x susy:sponge.hafnium'))
     .itemOutputs('1x #forge:dusts/hafnium')
     .duration(100)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('4lafkfsfktwgbp') // remapped from original line 93
+  event.recipes.susy.batch_reactor('h03nqjd8vwjlnu') // remapped from original line 93
     .itemInputs('1x #forge:dusts/hafnium')
     .itemInputs('4x #forge:dusts/any_purity_iodine')
     .itemOutputs('5x #forge:dusts/hafnium_iodide')
     .duration(360)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.CVD('1yd2jdghrkmepb') // remapped from original line 101
+  event.recipes.susy.CVD('jpfn0crlkm5j5k') // remapped from original line 101
     .itemInputs('5x #forge:dusts/hafnium_iodide')
     .notConsumable('1x #forge:rods/tungsten')
     .itemOutputs('1x #forge:dusts/high_purity_hafnium')

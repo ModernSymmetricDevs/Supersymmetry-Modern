@@ -1,24 +1,6 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.advanced_arc_furnace('xgivrnkdi9rzoh') // remapped from original line 19
+  event.recipes.susy.advanced_arc_furnace('oicvrrh8tbo6pd') // remapped from original line 19
     .itemInputs('1x #forge:dusts/chromite')
     .itemInputs('4x #forge:dusts/any_purity_carbon')
     .itemInputs('1x #forge:dusts/tiny_quicklime')
@@ -27,7 +9,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('2kcima8gmzh7fo') // remapped from original line 44
+  event.recipes.susy.batch_reactor('erie54l5qomcus') // remapped from original line 44
     .itemInputs('10x #forge:dusts/sodium_chromate_mixture')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 8000))
     .itemOutputs('10x #forge:dusts/iron_iii_oxide')
@@ -35,14 +17,14 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.continuous_stirred_tank_reactor('e0qhmlina6ovnn') // remapped from original line 53
+  event.recipes.susy.continuous_stirred_tank_reactor('26yrr8e9eg2qzs') // remapped from original line 53
     .inputFluids(safeFluidOf('susy:sodium_chromate_solution', 50))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 50))
     .outputFluids(safeFluidOf('susy:sodium_dichromate_solution', 50))
     .duration(5)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.DISTILLATION_TOWER('dmyv4cju1co9h3') // remapped from original line 61
+  event.recipes.gtceu.DISTILLATION_TOWER('rvbddf4arwukik') // remapped from original line 61
     .inputFluids(safeFluidOf('susy:sodium_dichromate_solution', 1000))
     .itemOutputs('11x #forge:dusts/sodium_dichromate')
     .outputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
@@ -50,7 +32,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('nze7cgnatlocqx') // remapped from original line 70
+  event.recipes.susy.roaster('hkhckik7cofdkg') // remapped from original line 70
     .itemInputs('2x #forge:dusts/any_purity_carbon')
     .itemInputs('11x #forge:dusts/sodium_dichromate')
     .itemOutputs('2x #forge:dusts/chromium_soda_mixture')
@@ -58,7 +40,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('rohyimapoda7gw') // remapped from original line 79
+  event.recipes.susy.batch_reactor('yoahx1jgggue8w') // remapped from original line 79
     .itemInputs('2x #forge:dusts/chromium_soda_mixture')
     .inputFluids(safeFluidOf('minecraft:water', 1000))
     .itemOutputs('5x #forge:dusts/chromium_iii_oxide')
@@ -66,14 +48,14 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('75qsv16esqjhu5') // remapped from original line 88
+  event.recipes.susy.roaster('t6e5womhkzlcme') // remapped from original line 88
     .itemInputs('14x #forge:dusts/chromium_iii_hydroxide')
     .itemOutputs('5x #forge:dusts/chromium_iii_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 3000))
     .EUt(voltAmps[2])
     .duration(100)
 
-  event.recipes.susy.reaction_furnace('ldfamikz95skga') // remapped from original line 96
+  event.recipes.susy.reaction_furnace('giev0s7ogzoiar') // remapped from original line 96
     .itemInputs('2x #forge:dusts/any_purity_aluminium')
     .itemInputs('5x #forge:dusts/chromium_iii_oxide')
     .itemOutputs('5x #forge:dusts/alumina')
@@ -81,21 +63,21 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(100)
 
-  event.recipes.susy.bubble_column_reactor('xjf3hkv1a7rvpi') // remapped from original line 105
+  event.recipes.susy.bubble_column_reactor('ljfcjjvqpsyns1') // remapped from original line 105
     .inputFluids(safeFluidOf('gtceu:ammonia', 100))
     .inputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 100))
     .outputFluids(safeFluidOf('susy:ammonium_sulfate_solution', 50))
     .EUt(voltAmps[2])
     .duration(5)
 
-  event.recipes.gtceu.DISTILLERY('c5x2xxfdkcuaqh') // remapped from original line 113
+  event.recipes.gtceu.DISTILLERY('3e6a05ifbbdv20') // remapped from original line 113
     .inputFluids(safeFluidOf('susy:ammonium_sulfate_solution', 1000))
     .itemOutputs('15x #forge:dusts/ammonium_sulfate')
     .outputFluids(safeFluidOf('minecraft:water', 1000))
     .EUt(voltAmps[2])
     .duration(5)
 
-  event.recipes.susy.batch_reactor('ol6tqftmen6gqs') // remapped from original line 121
+  event.recipes.susy.batch_reactor('wjn6ghkteftwi3') // remapped from original line 121
     .circuit(1)
     .itemInputs('3x #forge:dusts/ferrochromium')
     .itemInputs('15x #forge:dusts/ammonium_sulfate')
@@ -106,7 +88,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('5k27drnjov9lsh') // remapped from original line 133
+  event.recipes.susy.batch_reactor('ecql5ki1iurz03') // remapped from original line 133
     .inputFluids(safeFluidOf('susy:dissolved_ferrochromium', 1000))
     .inputFluids(safeFluidOf('gtceu:ammonia', 4000))
     .itemOutputs('21x #forge:dusts/crude_ammonium_iron_ii_sulfate')
@@ -114,7 +96,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('5q94osr0f84axv') // remapped from original line 142
+  event.recipes.susy.batch_reactor('xfaetvvedpb5zf') // remapped from original line 142
     .inputFluids(safeFluidOf('susy:dissolved_ferrochromium', 1000))
     .inputFluids(safeFluidOf('gtceu:ammonia', 4000))
     .inputFluids(safeFluidOf('susy:mohr_mother_liquor', 250))
@@ -123,28 +105,30 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('vdhxm5ugiddtpi') // remapped from original line 152
-    .itemInputs('21x #forge:dusts/crude_ammonium_iron_ii_sulfate')
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 250))
-    .outputFluids(safeFluidOf('susy:crude_ammonium_iron_ii_sulfate_solution', 250))
-    .EUt(voltAmps[3])
-    .duration(200)
+  // Contains GTFO resources
+  //event.recipes.susy.batch_reactor('v5ijpzqufw1top') // remapped from original line 152
+    //.itemInputs('21x #forge:dusts/crude_ammonium_iron_ii_sulfate')
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 250))
+    //.outputFluids(safeFluidOf('susy:crude_ammonium_iron_ii_sulfate_solution', 250))
+    //.EUt(voltAmps[3])
+    //.duration(200)
 
-  event.recipes.susy.crystallizer('6ykrswzz5utxkw') // remapped from original line 160
+  event.recipes.susy.crystallizer('lqduryotcgpwy1') // remapped from original line 160
     .inputFluids(safeFluidOf('susy:crude_ammonium_iron_ii_sulfate_solution', 250))
     .itemOutputs('21x #forge:dusts/ammonium_iron_ii_sulfate')
     .outputFluids(safeFluidOf('susy:mohr_mother_liquor', 250))
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('dfzkdmr1dj6art') // remapped from original line 168
-    .itemInputs('21x #forge:dusts/ammonium_iron_ii_sulfate')
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
-    .outputFluids(safeFluidOf('susy:ammonium_iron_ii_sulfate_solution', 1000))
-    .EUt(voltAmps[3])
-    .duration(200)
+  // Contains GTFO resources
+  //event.recipes.susy.batch_reactor('s9s6nvoeyyfyhr') // remapped from original line 168
+    //.itemInputs('21x #forge:dusts/ammonium_iron_ii_sulfate')
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
+    //.outputFluids(safeFluidOf('susy:ammonium_iron_ii_sulfate_solution', 1000))
+    //.EUt(voltAmps[3])
+    //.duration(200)
 
-  event.recipes.susy.batch_reactor('m2ivw77fvitted') // remapped from original line 176
+  event.recipes.susy.batch_reactor('ix1t3k1lu5a3ir') // remapped from original line 176
     .inputFluids(safeFluidOf('susy:ammonia_solution', 2000))
     .inputFluids(safeFluidOf('susy:crude_ammonium_iron_ii_sulfate_solution', 1000))
     .itemOutputs('5x #forge:dusts/iron_ii_hydroxide')
@@ -152,55 +136,56 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('of8vpwivteuyxc') // remapped from original line 185
+  event.recipes.susy.batch_reactor('zxfsbsui1k2rwj') // remapped from original line 185
     .inputFluids(safeFluidOf('susy:warm_water', 1000))
     .inputFluids(safeFluidOf('susy:ammonium_chrome_alum_solution', 1000))
     .outputFluids(safeFluidOf('susy:aged_ammonium_chrome_alum_solution', 2000))
     .EUt(voltAmps[1])
     .duration(800)
 
-  event.recipes.susy.crystallizer('dl6fln7li3cdhz') // remapped from original line 193
+  event.recipes.susy.crystallizer('95v0jh68n2intm') // remapped from original line 193
     .inputFluids(safeFluidOf('susy:aged_ammonium_chrome_alum_solution', 2000))
     .itemOutputs('12x #forge:dusts/ammonium_chrome_alum')
     .outputFluids(safeFluidOf('susy:chromium_mother_liquor', 2000))
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('pgm4trufxml0t7') // remapped from original line 201
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
-    .itemInputs('16x #forge:dusts/ammonium_chrome_alum')
-    .outputFluids(safeFluidOf('susy:purified_ammonium_chrome_alum_solution', 1000))
-    .EUt(voltAmps[1])
-    .duration(800)
+  // Contains GTFO resources
+  //event.recipes.susy.batch_reactor('gojl97fpygcl6u') // remapped from original line 201
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
+    //.itemInputs('16x #forge:dusts/ammonium_chrome_alum')
+    //.outputFluids(safeFluidOf('susy:purified_ammonium_chrome_alum_solution', 1000))
+    //.EUt(voltAmps[1])
+    //.duration(800)
 
-  event.recipes.gtceu.electrolytic_cell('dhtqz8xgnbxkfb') // remapped from original line 209
+  event.recipes.gtceu.electrolytic_cell('hrtfhdypzhcbgx') // remapped from original line 209
     .inputFluids(safeFluidOf('susy:purified_ammonium_chrome_alum_solution', 1000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 400))
     .notConsumable('1x #forge:plates/stainless_steel')
     .notConsumable('1x #forge:plates/silver')
     .notConsumable('4x #forge:foils/asbestos')
-    .chancedOutput('8000x #forge:dusts/electrolytic_chromium', 8000, 0)
+    .chancedOutput('1x #forge:dusts/electrolytic_chromium', 8000, 0)
     .outputFluids(safeFluidOf('gtceu:oxygen', 1200))
     .outputFluids(safeFluidOf('susy:chromium_anolyte', 100))
     .outputFluids(safeFluidOf('susy:chromium_catholyte', 100))
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('ollsmxnpgey4sd') // remapped from original line 223
+  event.recipes.susy.batch_reactor('nrobxlfzkdikq1') // remapped from original line 223
     .inputFluids(safeFluidOf('susy:warm_water', 1000))
     .inputFluids(safeFluidOf('susy:chromium_catholyte', 1000))
     .outputFluids(safeFluidOf('susy:aged_ammonium_chrome_alum_solution', 2000))
     .EUt(voltAmps[1])
     .duration(800)
 
-  event.recipes.susy.bubble_column_reactor('9nfo8ogaksmyva') // remapped from original line 231
+  event.recipes.susy.bubble_column_reactor('doo4rrhorkweyj') // remapped from original line 231
     .inputFluids(safeFluidOf('susy:chromium_anolyte', 100))
     .inputFluids(safeFluidOf('gtceu:sulfur_dioxide', 150))
     .outputFluids(safeFluidOf('susy:reduced_chromium_anolyte', 100))
     .EUt(voltAmps[1])
     .duration(10)
 
-  event.recipes.susy.batch_reactor('vabfh98vgp5m07') // remapped from original line 239
+  event.recipes.susy.batch_reactor('9oa3fm2gsfrwho') // remapped from original line 239
     .itemInputs('3x #forge:dusts/ferrochromium')
     .itemInputs('15x #forge:dusts/ammonium_sulfate')
     .inputFluids(safeFluidOf('susy:reduced_chromium_anolyte', 3000))
@@ -211,7 +196,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('ikqukf5rb4ulsp') // remapped from original line 251
+  event.recipes.susy.batch_reactor('aqpltwlopkpcun') // remapped from original line 251
     .itemInputs('3x #forge:dusts/ferrochromium')
     .itemInputs('15x #forge:dusts/ammonium_sulfate')
     .inputFluids(safeFluidOf('susy:chromium_mother_liquor', 8000))
@@ -222,14 +207,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.vacuum_chamber('j6ust3dttanbzc') // remapped from original line 263
+  event.recipes.susy.vacuum_chamber('dr58g1huvaimon') // remapped from original line 263
     .inputFluids(safeFluidOf('susy:electrolytic_chromium', 1440))
     .outputFluids(safeFluidOf('susy:high_purity_chrome', 1440))
     .outputFluids(safeFluidOf('gtceu:oxygen', 144))
     .EUt(voltAmps[3])
     .duration(200)
 
-  event.recipes.susy.roaster('ug1jmr8w0h3cdh') // remapped from original line 271
+  event.recipes.susy.roaster('hmap4bgu2kdvae') // remapped from original line 271
     .itemInputs('8x #forge:dusts/chromium_trioxide')
     .itemOutputs('5x #forge:dusts/chromium_iii_oxide')
     .outputFluids(safeFluidOf('gtceu:oxygen', 3000))

@@ -1,32 +1,14 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/cobaltite' && safeFluidOf('gtceu:oxygen')})
 
-  event.recipes.gtceu.MIXER('g0drmcaauy7ht8') // remapped from original line 24
+  event.recipes.gtceu.MIXER('effhvkcbfzobqi') // remapped from original line 24
     .itemInputs('8x #forge:dusts/impure_arsenopyrite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_arsenopyrite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.FLOTATION('iwnncvoovhhviu') // remapped from original line 32
+  event.recipes.susy.FLOTATION('aqh2tgklfq2s1l') // remapped from original line 32
     .inputFluids(safeFluidOf('susy:impure_arsenopyrite_slurry', 2000))
     .notConsumable('1x #forge:dusts/sodium_ethyl_xanthate')
     .notConsumable('6x #forge:dusts/potassium_permanganate')
@@ -35,16 +17,16 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.CLARIFIER('dmtas7mjv3xqdr') // remapped from original line 42
+  event.recipes.susy.CLARIFIER('j2mhwgo8r6sgbx') // remapped from original line 42
     .inputFluids(safeFluidOf('susy:arsenopyrite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/arsenopyrite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.electric_blast_furnace('5uv5y07emp5thh') // remapped from original line 54
+  event.recipes.gtceu.electric_blast_furnace('my8rbqgxosxsc3') // remapped from original line 54
     .itemInputs('2x #forge:dusts/cobaltite')
-    .inputFluids(safeFluidOf('gtceu:oxygen', 9000)))
+    .inputFluids(safeFluidOf('gtceu:oxygen', 9000))
     .itemOutputs('4x #forge:dusts/cobalt_oxide')
     .chancedOutput('5x #forge:dusts/arsenic_trioxide', 7500, 0)
     .outputFluids(safeFluidOf('gtceu:sulfur_dioxide', 2000))
@@ -52,7 +34,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electric_blast_furnace('ekvtqminalyqcu') // remapped from original line 66
+  event.recipes.gtceu.electric_blast_furnace('grlpxyoqdbg8jn') // remapped from original line 66
     .itemInputs('1x #forge:dusts/sperrylite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 3000))
     .itemOutputs('1x #forge:dusts/roasted_sperrylite')
@@ -61,18 +43,18 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electric_blast_furnace('w7smjvnjfhphgw') // remapped from original line 77
+  event.recipes.gtceu.electric_blast_furnace('v8p8nfzgpjhhpg') // remapped from original line 77
     .itemInputs('1x #forge:dusts/realgar')
-    .inputFluids(safeFluidOf('gtceu:oxygen', 14000)))
+    .inputFluids(safeFluidOf('gtceu:oxygen', 14000))
     .chancedOutput('10x #forge:dusts/arsenic_trioxide', 7500, 0)
     .outputFluids(safeFluidOf('gtceu:sulfur_dioxide', 4000))
     .blastFurnaceTemp(1200)
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electric_blast_furnace('lvfk33r4aiukfn') // remapped from original line 88
+  event.recipes.gtceu.electric_blast_furnace('usmsyva2t3bixb') // remapped from original line 88
     .itemInputs('2x #forge:dusts/arsenopyrite')
-    .inputFluids(safeFluidOf('gtceu:oxygen', 10000)))
+    .inputFluids(safeFluidOf('gtceu:oxygen', 10000))
     .itemOutputs('5x #forge:dusts/iron_iii_oxide')
     .chancedOutput('5x #forge:dusts/arsenic_trioxide', 7500, 0)
     .outputFluids(safeFluidOf('gtceu:sulfur_dioxide', 2000))
@@ -80,7 +62,7 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electric_blast_furnace('tqqc38rw1z4iyb') // remapped from original line 100
+  event.recipes.gtceu.electric_blast_furnace('a1ydre5quvyzds') // remapped from original line 100
     .itemInputs('2x #forge:dusts/enargite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 19000))
     .itemOutputs('1x #forge:ingots/blister_copper')
@@ -90,7 +72,7 @@ ServerEvents.recipes(event => {
     .EUt(480)
     .duration(40)
 
-  event.recipes.susy.roaster('zvbkheypemebki') // remapped from original line 147
+  event.recipes.susy.roaster('knvumovx5d2vxu') // remapped from original line 147
     .inputFluids(safeFluidOf('susy:acidic_arsenate_v_solution', 2000))
     .itemOutputs('21x #forge:dusts/arsenic_v_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 15000))
@@ -99,7 +81,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(360)
 
-  event.recipes.susy.roaster('6f3hzn9gdaqfmj') // remapped from original line 158
+  event.recipes.susy.roaster('kg0f7j4xsgml1o') // remapped from original line 158
     .itemInputs('3x #forge:dusts/any_purity_carbon')
     .itemInputs('5x #forge:dusts/arsenic_trioxide')
     .itemOutputs('2x #forge:dusts/arsenic')
@@ -107,7 +89,7 @@ ServerEvents.recipes(event => {
     .duration(30)
     .EUt(16)
 
-  event.recipes.susy.roaster('rcjyocu8man0rt') // remapped from original line 167
+  event.recipes.susy.roaster('kkyr9pkfevojx1') // remapped from original line 167
     .itemInputs('5x #forge:dusts/any_purity_carbon')
     .itemInputs('5x #forge:dusts/arsenic_trioxide')
     .itemOutputs('2x #forge:dusts/arsenic')
@@ -115,17 +97,17 @@ ServerEvents.recipes(event => {
     .duration(30)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('1p09ewvenu9jbd') // remapped from original line 177
+  event.recipes.susy.batch_reactor('ocj4eokeujfba5') // remapped from original line 177
     .itemInputs('7x #forge:dusts/proustite')
     .itemInputs('6x #forge:dusts/salt')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 5000))
-    .itemOutputs('6x #forge:dusts/silver_chloride') //TO SILVER PROCESSING
+    .itemOutputs('6x #forge:dusts/silver_chloride') 
     .outputFluids(safeFluidOf('susy:proustite_alkaline_leach_solution', 1000))
     .duration(240)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('gmgvbuzuqgslho') // remapped from original line 189
+  event.recipes.susy.batch_reactor('pmza0am0ma63dz') // remapped from original line 189
     .itemInputs('14x #forge:dusts/enargite')
     .itemInputs('9x #forge:dusts/sodium_sulfide')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 2000))
@@ -135,7 +117,7 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('zykehiknbvpoct') // remapped from original line 201
+  event.recipes.susy.batch_reactor('1giuptpskwxhfx') // remapped from original line 201
     .inputFluids(safeFluidOf('susy:proustite_alkaline_leach_solution', 2000))
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 6000))
     .itemOutputs('5x #forge:dusts/arsenic_iii_sulfide')
@@ -144,7 +126,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('mn4strggsytxbe') // remapped from original line 211
+  event.recipes.susy.batch_reactor('dku2hahxduo4mw') // remapped from original line 211
     .inputFluids(safeFluidOf('susy:enargite_sulfide_leach_solution', 2000))
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 6000))
     .itemOutputs('7x #forge:dusts/arsenic_v_sulfide')
@@ -152,7 +134,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('wo4zkpnttzapmg') // remapped from original line 221
+  event.recipes.susy.batch_reactor('lyh9nrzjwubv7u') // remapped from original line 221
     .itemInputs('5x #forge:dusts/arsenic_iii_sulfide')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 6000))
     .itemOutputs('2x #forge:dusts/arsenic')
@@ -160,7 +142,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('czwp1vy16k8bw9') // remapped from original line 230
+  event.recipes.susy.batch_reactor('rxzfydy15oskep') // remapped from original line 230
     .itemInputs('5x #forge:dusts/arsenic_v_sulfide')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 10000))
     .itemOutputs('2x #forge:dusts/arsenic')
@@ -168,7 +150,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('k2tcescknhnmqk') // remapped from original line 239
+  event.recipes.susy.roaster('ovbudl4vtktinm') // remapped from original line 239
     .itemInputs('7x #forge:dusts/arsenic_v_sulfide')
     .inputFluids(safeFluidOf('gtceu:oxygen', 15000))
     .itemOutputs('7x #forge:dusts/arsenic_v_oxide')
@@ -176,7 +158,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('wdtccoq2p79ls0') // remapped from original line 248
+  event.recipes.susy.roaster('uqhqfodctbw26f') // remapped from original line 248
     .itemInputs('5x #forge:dusts/arsenic_iii_sulfide')
     .inputFluids(safeFluidOf('gtceu:oxygen', 9000))
     .itemOutputs('5x #forge:dusts/arsenic_trioxide')
@@ -184,7 +166,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('wysr5pgbbx7nnj') // remapped from original line 259
+  event.recipes.susy.roaster('kkwfvnezhrmcxf') // remapped from original line 259
     .itemInputs('5x #forge:dusts/arsenic_trioxide')
     .inputFluids(safeFluidOf('susy:hydrogen_chloride', 6500))
     .outputFluids(safeFluidOf('susy:crude_arsenic_trichloride', 2000))
@@ -192,21 +174,21 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('tyzrhefds3mmuu') // remapped from original line 268
+  event.recipes.susy.batch_reactor('x8noivkpokkqyh') // remapped from original line 268
     .itemInputs('1x #forge:dusts/arsenic')
     .inputFluids(safeFluidOf('gtceu:chlorine', 3000))
     .outputFluids(safeFluidOf('susy:crude_arsenic_trichloride', 1000))
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.distillation_tower('rbtfuya236fo1l') // remapped from original line 276
+  event.recipes.gtceu.distillation_tower('2djabqweucn3kb') // remapped from original line 276
     .inputFluids(safeFluidOf('susy:crude_arsenic_trichloride', 2000))
     .outputFluids(safeFluidOf('susy:arsenic_trichloride', 2000))
     .outputFluids(safeFluidOf('susy:sulfur_dichloride', 250))
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('porg2rwh88r8mo') // remapped from original line 284
+  event.recipes.susy.batch_reactor('gio0pmt0uarnhd') // remapped from original line 284
     .inputFluids(safeFluidOf('susy:sulfur_dichloride', 1000))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('1x #forge:dusts/sulfur')
@@ -214,7 +196,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('mjnjklhadckq83') // remapped from original line 293
+  event.recipes.susy.batch_reactor('xuy1e94toz9wkc') // remapped from original line 293
     .inputFluids(safeFluidOf('susy:arsenic_trichloride', 1000))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 3000))
     .itemOutputs('1x #forge:dusts/high_purity_arsenic')
@@ -222,14 +204,14 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.arc_furnace('lzonjidpzne4zo') // remapped from original line 302
+  event.recipes.gtceu.arc_furnace('2oizwmltaee8ny') // remapped from original line 302
     .itemInputs('3x #forge:dusts/any_purity_sodium')
     .itemInputs('1x #forge:dusts/high_purity_arsenic')
     .itemOutputs('4x #forge:dusts/sodium_arsenide')
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('rlfykol38pcido') // remapped from original line 311
+  event.recipes.susy.batch_reactor('bunm3iapvcndvf') // remapped from original line 311
     .itemInputs('4x #forge:dusts/sodium_arsenide')
     .inputFluids(safeFluidOf('minecraft:water', 3000))
     .itemOutputs('9x #forge:dusts/sodium_hydroxide')
@@ -237,14 +219,14 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('pwqjclcgstpjo4') // remapped from original line 321
+  event.recipes.susy.batch_reactor('iocm7ik95xglmi') // remapped from original line 321
     .itemInputs('2x #forge:dusts/sodium_bromide')
     .inputFluids(safeFluidOf('minecraft:water', 1000))
     .outputFluids(safeFluidOf('susy:sodium_bromide_solution', 2000))
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.continuous_stirred_tank_reactor('sov0zodaqlymy9') // remapped from original line 329
+  event.recipes.susy.continuous_stirred_tank_reactor('vdxcffkqunjvs8') // remapped from original line 329
     .inputFluids(safeFluidOf('susy:sodium_bromide_solution', 100))
     .inputFluids(safeFluidOf('gtceu:chlorine', 100))
     .outputFluids(safeFluidOf('gtceu:bromine', 100))
@@ -252,7 +234,7 @@ ServerEvents.recipes(event => {
     .duration(6)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('htlpfkeqhyecnc') // remapped from original line 339
+  event.recipes.susy.batch_reactor('gm4klv3jjw7vnf') // remapped from original line 339
     .itemInputs('1x #forge:dusts/roasted_sperrylite')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 500))
     .itemOutputs('1x #forge:dusts/platinum')
@@ -260,10 +242,10 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electrolyzer('adpkwxiwlbgjov') // remapped from original line 348
+  event.recipes.gtceu.electrolyzer('plphcpal8v3cfm') // remapped from original line 348
     .inputFluids(safeFluidOf('susy:sperrylite_waste', 6000))
     .notConsumable('1x #forge:rods/nickel')
-    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .itemOutputs('1x #forge:dusts/cobalt')
     .itemOutputs('1x #forge:dusts/nickel')
     .outputFluids(safeFluidOf('gtceu:chlorine', 4000))
@@ -271,7 +253,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('41zraasdnlai2x') // remapped from original line 361
+  event.recipes.susy.batch_reactor('ticbakix4jlgfb') // remapped from original line 361
     .itemInputs('3x #forge:dusts/enargite_residue')
     .inputFluids(safeFluidOf('gtceu:nitric_acid', 8000))
     .itemOutputs('1x #forge:dusts/small_gold')
@@ -280,10 +262,10 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('isra6hh16o1sci') // remapped from original line 371
+  event.recipes.susy.roaster('3twmjvo5wm3xj1') // remapped from original line 371
     .inputFluids(safeFluidOf('susy:acidic_copper_solution', 2000))
     .itemOutputs('24x #forge:dusts/copper_sulfate')
-    .outputFluids(safeFluidOf('susy:dense_steam', 10000)))
+    .outputFluids(safeFluidOf('susy:dense_steam', 10000))
     .outputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .outputFluids(safeFluidOf('gtceu:nitrogen_dioxide', 4000))
     .duration(120)

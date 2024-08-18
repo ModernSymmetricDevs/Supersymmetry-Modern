@@ -1,29 +1,12 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.recipemap('fluid_solidifier')('lq9xf2w9c9ouoy') // remapped from original line 186
-    .inputFluids(safeFluidOf('susy:gtfo_sodium_stearate', 100))
-    .notConsumable(metaitem('shape.mold.ball'))
-    .itemOutputs(safeItemId('1x armourers_workshop:item.soap'))
-    .duration(80)
-    .EUt(16)
+  // Contains GTFO resources
+  //event.recipes.gtceu.fluid_solidifier('xczqaju5wpztsw') // remapped from original line 186
+    //.inputFluids(safeFluidOf('susy:gtfo_sodium_stearate', 100))
+    //.notConsumable(safeItemId('1x susy:shape.mold.ball'))
+    //.itemOutputs(safeItemId('1x armourers_workshop:item.soap'))
+    //.duration(80)
+    //.EUt(16)
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
   // for (name in name_removals) {

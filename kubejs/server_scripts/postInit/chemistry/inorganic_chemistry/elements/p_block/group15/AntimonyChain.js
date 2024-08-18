@@ -1,24 +1,6 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.roaster('x6ta8waa4vfmjz') // remapped from original line 16
+  event.recipes.susy.roaster('nzzi9hfgbml3r7') // remapped from original line 16
     .itemInputs('2x #forge:dusts/impure_stibnite')
     .notConsumable(safeFluidOf('gtceu:nitrogen', 8000))
     .itemOutputs('3x #forge:dusts/stibnite')
@@ -26,14 +8,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.gtceu.mixer('kyg1bs5v0nit6u') // remapped from original line 27
+  event.recipes.gtceu.mixer('lqlxz8x1tivgwf') // remapped from original line 27
     .itemInputs('8x #forge:dusts/impure_stibnite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_stibnite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('tzwngxkxxcincf') // remapped from original line 35
+  event.recipes.susy.froth_flotation('yumklt63kvyvod') // remapped from original line 35
     .inputFluids(safeFluidOf('susy:impure_stibnite_slurry', 2000))
     .notConsumable('1x #forge:dusts/sodium_isobutyl_xanthate')
     .notConsumable('1x #forge:dusts/lead_nitrate')
@@ -43,14 +25,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('7rqqafblc9uicw') // remapped from original line 46
+  event.recipes.susy.clarifier('hwbqqflvbwkh2k') // remapped from original line 46
     .inputFluids(safeFluidOf('susy:stibnite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/stibnite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.susy.roaster('um8u52d19hfxaf') // remapped from original line 56
+  event.recipes.susy.roaster('fxud4r1rc8bbm7') // remapped from original line 56
     .itemInputs('5x #forge:dusts/antimony_iii_sulfide')
     .inputFluids(safeFluidOf('gtceu:oxygen', 9000))
     .itemOutputs('5x #forge:dusts/antimony_trioxide')
@@ -58,7 +40,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.susy.roaster('qi3xq27ngllob0') // remapped from original line 65
+  event.recipes.susy.roaster('3mnwyqa0xxygit') // remapped from original line 65
     .itemInputs('1x #forge:dusts/stibnite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 9000))
     .itemOutputs('5x #forge:dusts/antimony_trioxide')
@@ -66,7 +48,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.gtceu.electric_blast_furnace('rkkjlrcqvzkgw6') // remapped from original line 74
+  event.recipes.gtceu.electric_blast_furnace('9lddarmftljkpt') // remapped from original line 74
     .itemInputs('1x #forge:dusts/stibnite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 6000))
     .itemOutputs('2x #forge:ingots/antimony')
@@ -74,7 +56,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2] * 2)
     .duration(200)
 
-  event.recipes.gtceu.electric_blast_furnace('s7cm11nx74nm4r') // remapped from original line 83
+  event.recipes.gtceu.electric_blast_furnace('lrfpbua7slvsx0') // remapped from original line 83
     .itemInputs('5x #forge:dusts/antimony_iii_sulfide')
     .inputFluids(safeFluidOf('gtceu:oxygen', 6000))
     .itemOutputs('2x #forge:ingots/antimony')
@@ -82,18 +64,19 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2] * 2)
     .duration(200)
 
-  event.recipes.susy.batch_reactor('2ppsijjsl8vwf8') // remapped from original line 94
-    .notConsumable('1x #forge:springs/cupronickel')
-    .itemInputs('4x #forge:dusts/tetrahedrite')
-    .itemInputs('18x #forge:dusts/sodium_sulfide')
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 12000))
-    .itemOutputs('15x #forge:dusts/copper_i_sulfide')
-    .itemOutputs('4x #forge:dusts/copper_ii_sulfide')
-    .outputFluids(safeFluidOf('susy:sodium_thioantimonite_solution', 12000))
-    .EUt(voltAmps[2])
-    .duration(200)
+  // Contains GTFO resources
+  //event.recipes.susy.batch_reactor('niiduugjifm6ct') // remapped from original line 94
+    //.notConsumable('1x #forge:springs/cupronickel')
+    //.itemInputs('4x #forge:dusts/tetrahedrite')
+    //.itemInputs('18x #forge:dusts/sodium_sulfide')
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 12000))
+    //.itemOutputs('15x #forge:dusts/copper_i_sulfide')
+    //.itemOutputs('4x #forge:dusts/copper_ii_sulfide')
+    //.outputFluids(safeFluidOf('susy:sodium_thioantimonite_solution', 12000))
+    //.EUt(voltAmps[2])
+    //.duration(200)
 
-  event.recipes.susy.batch_reactor('uf2qkfnvehocco') // remapped from original line 106
+  event.recipes.susy.batch_reactor('cfmawwaz1gfzqu') // remapped from original line 106
     .inputFluids(safeFluidOf('susy:sodium_thioantimonite_solution', 12000))
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 12000))
     .itemOutputs('10x #forge:dusts/antimony_iii_sulfide')
@@ -102,7 +85,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('3ralb5cioutmoz') // remapped from original line 118
+  event.recipes.susy.batch_reactor('uic3vgjquewcmd') // remapped from original line 118
     .inputFluids(safeFluidOf('susy:antimony_dross', 720))
     .inputFluids(safeFluidOf('gtceu:chlorine', 6000))
     .itemOutputs('2x #forge:dusts/antimony')
@@ -111,7 +94,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.susy.roaster('nkplufrqbqifhf') // remapped from original line 130
+  event.recipes.susy.roaster('7skvjlqz1wz7dq') // remapped from original line 130
     .itemInputs('5x #forge:dusts/antimony_arsenic_flue_dust')
     .itemInputs('54x #forge:dusts/sodium_hydroxide')
     .itemOutputs('4x #forge:dusts/antimony')
@@ -120,13 +103,13 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.susy.VACUUM_DT('oj2v4axbmobvh0') // remapped from original line 142
+  event.recipes.susy.VACUUM_DT('f9tv5ewlghh6mc') // remapped from original line 142
     .inputFluids(safeFluidOf('susy:antimony_trichloride', 1000))
     .outputFluids(safeFluidOf('susy:purified_antimony_trichloride', 1000))
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.susy.batch_reactor('uzipcl6ndf8av8') // remapped from original line 149
+  event.recipes.susy.batch_reactor('n3spgi5wh1ve2y') // remapped from original line 149
     .inputFluids(safeFluidOf('susy:purified_antimony_trichloride', 2000))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 6000))
     .itemOutputs('5x #forge:dusts/purified_antimony_trioxide')
@@ -134,7 +117,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(400)
 
-  event.recipes.susy.reaction_furnace('f1c6ollffdkv9k') // remapped from original line 158
+  event.recipes.susy.reaction_furnace('rvzzv58fb6stws') // remapped from original line 158
     .itemInputs('5x #forge:dusts/purified_antimony_trioxide')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 6000))
     .itemOutputs('2x #forge:dusts/high_purity_antimony')

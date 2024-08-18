@@ -1,31 +1,13 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.mixer('yubyriqo0qczmy') // remapped from original line 17
+  event.recipes.gtceu.mixer('4b0m0t9njuxjlh') // remapped from original line 17
     .itemInputs('8x #forge:dusts/impure_pollucite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_pollucite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('oebbdimvtkjqu7') // remapped from original line 25
+  event.recipes.susy.froth_flotation('wtvfrpotmu3ypx') // remapped from original line 25
     .inputFluids(safeFluidOf('susy:impure_pollucite_slurry', 2000))
     .inputFluids(safeFluidOf('susy:aluminium_sulfate_solution', 50))
     .notConsumable(safeFluidOf('susy:coco_amine_acetate', 1000))
@@ -35,14 +17,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('7ax3dzkmjwjkmc') // remapped from original line 36
+  event.recipes.susy.clarifier('cbm54y0jkj1od7') // remapped from original line 36
     .inputFluids(safeFluidOf('susy:pollucite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/pollucite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.chemical_bath('nqeukujuuyastw') // remapped from original line 44
+  event.recipes.gtceu.chemical_bath('y4n0spetdbsbf8') // remapped from original line 44
     .itemInputs('1x #forge:dusts/pollucite')
     .inputFluids(safeFluidOf('susy:hot_sulfuric_acid', 4000))
     .itemOutputs('12x #forge:dusts/silicon_dioxide')
@@ -50,29 +32,30 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.susy.crystallizer('ssktheropgfpds') // remapped from original line 53
+  event.recipes.susy.crystallizer('6tsjd7jsvvdker') // remapped from original line 53
     .inputFluids(safeFluidOf('susy:pollucite_leach', 4000))
     .outputFluids(safeFluidOf('susy:sodium_alum_solution', 4000))
     .itemOutputs('1x #forge:dusts/caesium_rubidium_alum_mixture')
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.gtceu.distillery('wtykp64gc3a3ak') // remapped from original line 61
+  event.recipes.gtceu.distillery('kromlgxczw9hdw') // remapped from original line 61
     .inputFluids(safeFluidOf('susy:sodium_alum_solution', 4000))
     .itemOutputs('12x #forge:dusts/sodium_alum')
     .outputFluids(safeFluidOf('minecraft:water', 4000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.susy.crystallizer('tvimlx29znrfqf') // remapped from original line 69
-    .itemInputs('1x #forge:dusts/caesium_rubidium_alum_mixture')
-    .outputFluids(safeFluidOf('susy:gtfo_heated_water', 10000))
-    .chancedOutput('12x #forge:dusts/caesium_alum', 9500, 0)
-    .chancedOutput('12x #forge:dusts/rubidium_alum', 500, 0)
-    .EUt(voltAmps[1])
-    .duration(800)
+  // Contains GTFO resources
+  //event.recipes.susy.crystallizer('jlp1tsyqc9rqui') // remapped from original line 69
+    //.itemInputs('1x #forge:dusts/caesium_rubidium_alum_mixture')
+    //.outputFluids(safeFluidOf('susy:gtfo_heated_water', 10000))
+    //.chancedOutput('12x #forge:dusts/caesium_alum', 9500, 0)
+    //.chancedOutput('12x #forge:dusts/rubidium_alum', 500, 0)
+    //.EUt(voltAmps[1])
+    //.duration(800)
 
-  event.recipes.gtceu.chemical_bath('mw0aesbi6txrz3') // remapped from original line 92
+  event.recipes.gtceu.chemical_bath('iyf9aib5pttw25') // remapped from original line 92
     .itemInputs('8x #forge:dusts/caesium_alumina_mixture')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .itemOutputs('5x #forge:dusts/alumina')
@@ -80,7 +63,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[1])
     .duration(80)
 
-  event.recipes.gtceu.chemical_bath('yoycnomezj64hq') // remapped from original line 101
+  event.recipes.gtceu.chemical_bath('qzfljkr9bqe73j') // remapped from original line 101
     .itemInputs('8x #forge:dusts/caesium_alumina_mixture')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 2000))
     .itemOutputs('5x #forge:dusts/alumina')
@@ -88,28 +71,28 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[1])
     .duration(80)
 
-  event.recipes.gtceu.distillery('qhmynyljndm0qp') // remapped from original line 110
+  event.recipes.gtceu.distillery('z7iegbdzelmq5c') // remapped from original line 110
     .inputFluids(safeFluidOf('susy:caesium_chloride_solution', 3000))
     .itemOutputs('4x #forge:dusts/caesium_chloride')
     .outputFluids(safeFluidOf('minecraft:water', 3000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.susy.reaction_furnace('6etxwipl6so8am') // remapped from original line 118
+  event.recipes.susy.reaction_furnace('8vuuneavc1luhu') // remapped from original line 118
     .itemInputs('4x #forge:dusts/caesium_chloride')
     .itemInputs('1x #forge:dusts/calcium')
     .itemOutputs('5x #forge:dusts/reduced_caesium_mixture')
     .EUt(voltAmps[1])
     .duration(80)
 
-  event.recipes.susy.vacuum_distillation('dkpbebvsnvnojg') // remapped from original line 126
+  event.recipes.susy.vacuum_distillation('dbk1b9dnmvq3sf') // remapped from original line 126
     .itemInputs('5x #forge:dusts/reduced_caesium_mixture')
     .itemOutputs('3x #forge:dusts/calcium_chloride')
     .outputFluids(safeFluidOf('gtceu:caesium', 288))
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.susy.batch_reactor('rxx4ytzgg0ukcg') // remapped from original line 136
+  event.recipes.susy.batch_reactor('v2gvfef0yt9kat') // remapped from original line 136
     .inputFluids(safeFluidOf('susy:caesium_sulfate_solution', 1000))
     .inputFluids(safeFluidOf('susy:calcium_hydroxide_slurry', 1000))
     .itemOutputs('6x #forge:dusts/calcium_sulfate')
@@ -117,14 +100,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.susy.CSTR('9xp4p4j7nwmbss') // remapped from original line 145
+  event.recipes.susy.CSTR('qhzclpdvirxn7i') // remapped from original line 145
     .inputFluids(safeFluidOf('susy:caesium_hydroxide_solution', 50))
     .inputFluids(safeFluidOf('susy:formic_acid', 50))
     .outputFluids(safeFluidOf('susy:caesium_formate_solution', 100))
     .EUt(voltAmps[2])
     .duration(4)
 
-  event.recipes.gtceu.fluid_solidifier('va8gpjd8inbn9n') // remapped from original line 153
+  event.recipes.gtceu.fluid_solidifier('uytoqeicpzs4tp') // remapped from original line 153
     .inputFluids(safeFluidOf('gtceu:caesium', 144))
     .itemOutputs('1x #forge:dusts/caesium')
     .EUt(voltAmps[1])

@@ -1,24 +1,6 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.assembler('18aygb4czvxos2') // remapped from original line 178
+  event.recipes.susy.mods.gregtech.assembler('vzdphivlhsq7tn') // remapped from original line 178
     .itemInputs('1x #forge:plates/rubber')
     .itemInputs('1x #forge:wires/gt_single_copper')
     .circuit(2)
@@ -26,66 +8,66 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('3oeo86xt0zzxgv') // remapped from original line 187
+  event.recipes.susy.mods.gregtech.assembler('mfgqbbe22lbipm') // remapped from original line 187
     .circuit(2)
     .itemInputs('4x #forge:cables/gt_single_copper')
-    .itemInputs(metaitem('hull.mv'))
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:adapter'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('qo7qurgeisabbl') // remapped from original line 198
+  event.recipes.susy.mods.gregtech.assembler('bl2lyv9kscyn6b') // remapped from original line 198
     .itemInputs('4x #forge:cables/gt_single_copper')
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(metaitem('robot.arm.mv'))
-    .itemInputs(metaitem('conveyor.module.mv') * 2)
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x susy:robot.arm.mv'))
+    .itemInputs(safeItemId('2x susy:conveyor.module.mv'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:assembler'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('vot2bemhgqlf3z') // remapped from original line 210
+  event.recipes.susy.mods.gregtech.assembler('dplewbp4xsofhb') // remapped from original line 210
     .circuit(1)
     .itemInputs('4x #forge:cables/gt_single_copper')
-    .itemInputs(metaitem('hull.mv'))
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('4x #forge:screws/aluminium')
     .itemInputs('2x #forge:rotors/steel')
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('1x opencomputers:case1')'))
+    .itemOutputs(safeItemId('1x opencomputers:case1'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ahyn8xeus7trce') // remapped from original line 224
+  event.recipes.susy.mods.gregtech.assembler('jwcbcxc3x2orgg') // remapped from original line 224
     .itemInputs('4x #forge:cables/gt_single_gold')
-    .itemInputs(metaitem('hull.hv'))
+    .itemInputs(safeItemId('1x susy:hull.hv'))
     .itemInputs('4x #forge:screws/stainless_steel')
     .itemInputs('2x #forge:rotors/stainless_steel')
-    .itemInputs(safeItemId('4x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('1x #forge:circuits/hv')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x opencomputers:case2')'))
+    .itemOutputs(safeItemId('1x opencomputers:case2'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('vyz32asv2v7wvx') // remapped from original line 237
+  event.recipes.susy.mods.gregtech.assembler('9xanu6exg7ewvk') // remapped from original line 237
     .itemInputs('4x #forge:cables/gt_single_aluminium')
-    .itemInputs(metaitem('hull.ev'))
+    .itemInputs(safeItemId('1x susy:hull.ev'))
     .itemInputs('4x #forge:screws/titanium')
     .itemInputs('2x #forge:rotors/titanium')
-    .itemInputs(safeItemId('5x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('1x #forge:circuits/ev')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('3x opencomputers:case3')'))
+    .itemOutputs(safeItemId('1x opencomputers:case3'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('5rk9e1kmpkux6j') // remapped from original line 250
-    .itemInputs(metaitem('hull.mv'))
+  event.recipes.susy.mods.gregtech.assembler('spstyfihmjdnfv') // remapped from original line 250
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('4x #forge:cables/gt_single_copper')
     .circuitMeta([4])
     .inputFluids(solder)
@@ -93,57 +75,57 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('fcoo6111g1gzjd') // remapped from original line 260
-    .itemInputs(metaitem('hull.mv'))
+  event.recipes.susy.mods.gregtech.assembler('xhmhvjv61pdwek') // remapped from original line 260
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('1x #forge:circuits/mv')
-    .itemInputs(metaitem('sensor.mv'))
-    .itemInputs(metaitem('emitter.mv'))
+    .itemInputs(safeItemId('1x susy:sensor.mv'))
+    .itemInputs(safeItemId('1x susy:emitter.mv'))
     .itemInputs('1x #forge:lenss/glass')
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:diskdrive'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('qderwgchfbqswr') // remapped from original line 272
-    .itemInputs(metaitem('hull.hv'))
+  event.recipes.susy.mods.gregtech.assembler('8fvosmcvcxxdnu') // remapped from original line 272
+    .itemInputs(safeItemId('1x susy:hull.hv'))
     .itemInputs('1x #forge:circuits/hv')
-    .itemInputs(metaitem('sensor.hv') * 2)
+    .itemInputs(safeItemId('2x susy:sensor.hv'))
     .circuitMeta([1])
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:geolyzer'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('5c6b6p0h4xnrkh') // remapped from original line 283
-    .itemInputs(metaitem('hull.hv'))
+  event.recipes.susy.mods.gregtech.assembler('tvy9mttyhusmgg') // remapped from original line 283
+    .itemInputs(safeItemId('1x susy:hull.hv'))
     .itemInputs('1x #forge:circuits/hv')
-    .itemInputs(metaitem('emitter.hv') * 2)
+    .itemInputs(safeItemId('2x susy:emitter.hv'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('1x opencomputers:hologram1')'))
+    .itemOutputs(safeItemId('1x opencomputers:hologram1'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('ojdehxgckglppp') // remapped from original line 293
-    .itemInputs(metaitem('hull.ev'))
+  event.recipes.susy.mods.gregtech.assembler('sxpwnyqt9zxzd3') // remapped from original line 293
+    .itemInputs(safeItemId('1x susy:hull.ev'))
     .itemInputs('1x #forge:circuits/ev')
-    .itemInputs(metaitem('emitter.ev') * 2)
+    .itemInputs(safeItemId('2x susy:emitter.ev'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x opencomputers:hologram2')'))
+    .itemOutputs(safeItemId('1x opencomputers:hologram2'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('plmxzomklxe1al') // remapped from original line 303
-    .itemInputs(metaitem('hull.hv'))
+  event.recipes.susy.mods.gregtech.assembler('6ia5p5iw9dw8ba') // remapped from original line 303
+    .itemInputs(safeItemId('1x susy:hull.hv'))
     .itemInputs('1x #forge:circuits/hv')
-    .itemInputs(metaitem('sensor.hv'))
+    .itemInputs(safeItemId('1x susy:sensor.hv'))
     .circuitMeta([2])
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:motionsensor'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('rzdqsztx3zu44v') // remapped from original line 314
-    .itemInputs(metaitem('hull.mv'))
+  event.recipes.susy.mods.gregtech.assembler('4li2espt2ofqqi') // remapped from original line 314
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('1x #forge:plates/iron')
     .itemInputs('2x #forge:wires/gt_single_copper')
     .itemInputs('4x #forge:cables/gt_single_copper')
@@ -153,19 +135,19 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('7eiob4rh4leveo') // remapped from original line 326
-    .itemInputs(metaitem('hull.ev'))
-    .itemInputs(metaitem('drum.stainless_steel'))
-    .itemInputs(metaitem('electric.pump.ev') * 2)
+  event.recipes.susy.mods.gregtech.assembler('cijskevvawk2ak') // remapped from original line 326
+    .itemInputs(safeItemId('1x susy:hull.ev'))
+    .itemInputs(safeItemId('1x susy:drum.stainless_steel'))
+    .itemInputs(safeItemId('2x susy:electric.pump.ev'))
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:printer'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('1v3aq2bkfulyae') // remapped from original line 336
-    .itemInputs(metaitem('hull.hv'))
-    .itemInputs(metaitem('plate.random_access_memory'))
-    .itemInputs(metaitem('plate.central_processing_unit'))
+  event.recipes.susy.mods.gregtech.assembler('3jyzp2bjh7ednn') // remapped from original line 336
+    .itemInputs(safeItemId('1x susy:hull.hv'))
+    .itemInputs(safeItemId('1x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:plate.central_processing_unit'))
     .itemInputs(safeItemId('3x opencomputers:diskdrive'))
     .itemInputs('1x #forge:circuits/hv')
     .inputFluids(solder)
@@ -173,18 +155,18 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('phagzoleh3hgtd') // remapped from original line 348
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(safeItemId('4x opencomputers:card', ')))
+  event.recipes.susy.mods.gregtech.assembler('sdz5emfdmj6a30') // remapped from original line 348
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x opencomputers:card'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:redstone'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('gjduv553k6ecl5') // remapped from original line 358
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(safeItemId('6x opencomputers:card', ')))
+  event.recipes.susy.mods.gregtech.assembler('nhrdbiswe8mcyw') // remapped from original line 358
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x opencomputers:card'))
     .itemInputs('4x #forge:cables/gt_single_copper')
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
@@ -193,51 +175,51 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('td5unysj6fgdmu') // remapped from original line 370
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(metaitem('monitor_screen'))
+  event.recipes.susy.mods.gregtech.assembler('9rmqx0klzzaup5') // remapped from original line 370
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x susy:monitor_screen'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('1x opencomputers:screen1')'))
+    .itemOutputs(safeItemId('1x opencomputers:screen1'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('lyjno6ddqn22ap') // remapped from original line 379
-    .itemInputs(metaitem('hull.hv'))
-    .itemInputs(metaitem('monitor_screen') * 2)
+  event.recipes.susy.mods.gregtech.assembler('hqtzw6flu40fm5') // remapped from original line 379
+    .itemInputs(safeItemId('1x susy:hull.hv'))
+    .itemInputs(safeItemId('2x susy:monitor_screen'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x opencomputers:screen2')'))
+    .itemOutputs(safeItemId('1x opencomputers:screen2'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('h0zokik2lrupxn') // remapped from original line 388
-    .itemInputs(metaitem('hull.ev'))
-    .itemInputs(metaitem('monitor_screen') * 4)
+  event.recipes.susy.mods.gregtech.assembler('ty3zuiubltbtav') // remapped from original line 388
+    .itemInputs(safeItemId('1x susy:hull.ev'))
+    .itemInputs(safeItemId('4x susy:monitor_screen'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('3x opencomputers:screen3')'))
+    .itemOutputs(safeItemId('1x opencomputers:screen3'))
     .duration(200)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('g4tpq1uysmsum4') // remapped from original line 397
+  event.recipes.susy.mods.gregtech.assembler('x9ejnxzkik53ir') // remapped from original line 397
     .itemInputs(safeItemId('1x opencomputers:relay'))
     .itemInputs(safeItemId('1x opencomputers:powerdistributor'))
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(safeItemId('31x opencomputers:upgrade', 3')1))
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x opencomputers:upgrade'))
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:rack'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ms57kxb9zbavei') // remapped from original line 408
-    .itemInputs(metaitem('hull.mv'))
-    .itemInputs(safeItemId('6x opencomputers:card', ')))
+  event.recipes.susy.mods.gregtech.assembler('vgy0guzwp6q0uh') // remapped from original line 408
+    .itemInputs(safeItemId('1x susy:hull.mv'))
+    .itemInputs(safeItemId('1x opencomputers:card'))
     .circuitMeta([2])
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:waypoint'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('nxw09boqxpr7pm') // remapped from original line 418
-    .itemInputs(metaitem('hull.mv'))
+  event.recipes.susy.mods.gregtech.assembler('h4pfsbvwgohpc4') // remapped from original line 418
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('2x #forge:cables/gt_single_copper')
     .itemInputs('2x #forge:circuits/lv')
     .circuitMeta([2])
@@ -246,8 +228,8 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('khw4yfuhkbuvco') // remapped from original line 429
-    .itemInputs(metaitem('hull.mv'))
+  event.recipes.susy.mods.gregtech.assembler('k9em2s8ztshmwe') // remapped from original line 429
+    .itemInputs(safeItemId('1x susy:hull.mv'))
     .itemInputs('2x #forge:pipes/normal_item_polyvinyl_chloride')
     .itemInputs('2x #forge:pipes/normal_fluid_aluminium')
     .itemInputs('2x #forge:circuits/lv')
@@ -256,107 +238,107 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('toawtlby8rt7ja') // remapped from original line 440
+  event.recipes.susy.mods.gregtech.assembler('klec853kkrodcs') // remapped from original line 440
     .itemInputs('1x #forge:rods/iron')
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('5x opencomputers:material', ')))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('hv3lkl7m2jusib') // remapped from original line 449
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('s1ot4e0cv9js9d') // remapped from original line 449
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('4x #forge:cables/gt_single_copper')
     .itemInputs('2x #forge:screws/aluminium')
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('17x opencomputers:material', 1')7))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('2slpwkiek2p13y') // remapped from original line 462
-    .inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('ox3yydvrwop73u') // remapped from original line 462
+    .inputNBT(safeItemId('1x susy:power_unit.hv').item, 1, safeItemId('1x susy:power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('2x #forge:screws/stainless_steel')
     .itemInputs('4x #forge:cables/gt_single_gold')
-    .itemInputs(safeItemId('4x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('18x opencomputers:material', 1')8))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .circuitMeta([1])
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('bqzhwrfwii3aga') // remapped from original line 475
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('jtmiylsto45n9g') // remapped from original line 475
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('2x #forge:cables/gt_single_copper')
     .itemInputs('1x #forge:plates/aluminium')
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('20x opencomputers:material', 2')0))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('va0w6wkaigqyng') // remapped from original line 487
-    .inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('8mcavnopaptd7f') // remapped from original line 487
+    .inputNBT(safeItemId('1x susy:power_unit.hv').item, 1, safeItemId('1x susy:power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('4x #forge:cables/gt_single_gold')
-    .itemInputs(safeItemId('4x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('21x opencomputers:material', 2')1))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .circuitMeta([2])
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('fzmbijz6akuopm') // remapped from original line 499
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('q7mu8nhtzqsuly') // remapped from original line 499
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('2x #forge:cables/gt_single_copper')
     .itemInputs('1x #forge:plates/aluminium')
-    .itemInputs(safeItemId('20x opencomputers:material', 2')0))
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:material'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
     .circuitMeta([4])
-    .itemOutputs(safeItemId('23x opencomputers:material', 2')3))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('0czszu9dsrfoag') // remapped from original line 512
-    .inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('d4gfjc1edj8xzj') // remapped from original line 512
+    .inputNBT(safeItemId('1x susy:power_unit.hv').item, 1, safeItemId('1x susy:power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('4x #forge:cables/gt_single_gold')
-    .itemInputs(safeItemId('21x opencomputers:material', 2')1))
-    .itemInputs(safeItemId('4x opencomputers:component', ')))
+    .itemInputs(safeItemId('1x opencomputers:material'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('24x opencomputers:material', 2')4))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .circuitMeta([4])
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('sy9raonkcfuveu') // remapped from original line 525
+  event.recipes.susy.mods.gregtech.assembler('6ebnqjpgnx0dar') // remapped from original line 525
     .itemInputs('4x #forge:plates/plastic')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('26x opencomputers:material', 2')6))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .circuitMeta([15])
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ktmnwhbqbksbpl') // remapped from original line 534
+  event.recipes.susy.mods.gregtech.assembler('wh6hcwocxkuw8a') // remapped from original line 534
     .itemInputs('1x #forge:dyes/black')
     .itemInputs('1x #forge:dyes/cyan')
     .itemInputs('1x #forge:dyes/yellow')
     .itemInputs('1x #forge:dyes/magenta')
-    .itemInputs(safeItemId('26x opencomputers:material', 2')6))
-    .itemOutputs(safeItemId('27x opencomputers:material', 2')7))
+    .itemInputs(safeItemId('1x opencomputers:material'))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('7v0i3jbrrsqbzd') // remapped from original line 545
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+  event.recipes.susy.mods.gregtech.assembler('v2w5flz6zpnrrr') // remapped from original line 545
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
     .itemInputs('1x #forge:cables/gt_single_copper')
     .itemInputs('2x #forge:plates/aluminium')
-    .itemInputs(metaitem('sensor.mv'))
+    .itemInputs(safeItemId('1x susy:sensor.mv'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .circuitMeta([3])
@@ -364,626 +346,626 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('vikzomeneawtrw') // remapped from original line 558
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
-    .itemInputs(safeItemId('7x opencomputers:card', ')))
+  event.recipes.susy.mods.gregtech.assembler('7uhika1zzdhjso') // remapped from original line 558
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+    .itemInputs(safeItemId('1x opencomputers:card'))
     .itemInputs('2x #forge:plates/aluminium')
-    .itemInputs(metaitem('monitor_screen'))
+    .itemInputs(safeItemId('1x susy:monitor_screen'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('2x opencomputers:tool', ')))
+    .itemOutputs(safeItemId('1x opencomputers:tool'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('sbutgz3mfckpq9') // remapped from original line 571
+  event.recipes.susy.mods.gregtech.assembler('qbixn3marhdmnk') // remapped from original line 571
     .itemInputs('2x #forge:plates/aluminium')
-    .itemInputs(metaitem('sensor.lv'))
+    .itemInputs(safeItemId('1x susy:sensor.lv'))
     .itemInputs('1x #forge:circuits/mv')
     .inputFluids(solder)
     .circuitMeta([4])
-    .itemOutputs(safeItemId('3x opencomputers:tool', ')))
+    .itemOutputs(safeItemId('1x opencomputers:tool'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('j4xla7gdegzttp') // remapped from original line 582
-    .itemInputs(metaitem('plate.central_processing_unit'))
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('2wp7pkv4fzn3ax') // remapped from original line 582
+    .itemInputs(safeItemId('1x susy:plate.central_processing_unit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
     .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('fc1y6bf50dicy4') // remapped from original line 592
-    .itemInputs(metaitem('plate.central_processing_unit') * 2)
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('wioehei2i3lfwi') // remapped from original line 592
+    .itemInputs(safeItemId('2x susy:plate.central_processing_unit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('1x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('a0blqdzl4v6amj') // remapped from original line 602
-    .itemInputs(metaitem('plate.central_processing_unit') * 4)
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('mkle5hujce9vxk') // remapped from original line 602
+    .itemInputs(safeItemId('4x susy:plate.central_processing_unit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('2x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('kcvwuoobni54mc') // remapped from original line 612
-    .itemInputs(metaitem('plate.integrated_logic_circuit'))
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('39xpqpkejaqhez') // remapped from original line 612
+    .itemInputs(safeItemId('1x susy:plate.integrated_logic_circuit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('3x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('gaha4pv1ptftvw') // remapped from original line 622
-    .itemInputs(metaitem('plate.integrated_logic_circuit') * 2)
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('menq8z7cxa1wvx') // remapped from original line 622
+    .itemInputs(safeItemId('2x susy:plate.integrated_logic_circuit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('4x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('lbvqxwfev13jzs') // remapped from original line 632
-    .itemInputs(metaitem('plate.integrated_logic_circuit') * 4)
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('zrnomszkfydcd7') // remapped from original line 632
+    .itemInputs(safeItemId('4x susy:plate.integrated_logic_circuit'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('5x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('pjlxcyakfglglb') // remapped from original line 642
-    .itemInputs(metaitem('plate.random_access_memory'))
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('gpgxifqxbusyu9') // remapped from original line 642
+    .itemInputs(safeItemId('1x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('6x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('v0olxzsgopcpzz') // remapped from original line 652
-    .itemInputs(metaitem('plate.random_access_memory') * 2)
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('fbo3zyasztz10p') // remapped from original line 652
+    .itemInputs(safeItemId('2x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('7x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('ifhz1bghptijlx') // remapped from original line 662
-    .itemInputs(metaitem('plate.random_access_memory') * 4)
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('8bz7vzxaqxwonf') // remapped from original line 662
+    .itemInputs(safeItemId('4x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('8x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('gmjq4c80ktvuy5') // remapped from original line 672
-    .itemInputs(metaitem('plate.random_access_memory') * 6)
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('5plc2ygosykozv') // remapped from original line 672
+    .itemInputs(safeItemId('6x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([4])
-    .itemOutputs(safeItemId('9x opencomputers:component', ')))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('zomunzfxogkfvn') // remapped from original line 682
-    .itemInputs(metaitem('plate.random_access_memory') * 8)
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('0zd20ywpvyklsw') // remapped from original line 682
+    .itemInputs(safeItemId('8x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([5])
-    .itemOutputs(safeItemId('10x opencomputers:component', 1')0))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('sv4pq5ooikma9i') // remapped from original line 692
-    .itemInputs(metaitem('plate.random_access_memory') * 12)
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('zpyqst6ubqh0jr') // remapped from original line 692
+    .itemInputs(safeItemId('12x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([6])
-    .itemOutputs(safeItemId('11x opencomputers:component', 1')1))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('uddjxwvgrk21ru') // remapped from original line 702
-    .itemInputs(safeItemId('7x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('wiap6pzpgcxjq3') // remapped from original line 702
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([15])
-    .itemOutputs(safeItemId('13x opencomputers:component', 1')3))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('aaudwujys46u8o') // remapped from original line 714
-    .itemInputs(safeItemId('9x opencomputers:component', ')))
-    .itemInputs(safeItemId('1x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('9ptw789ucp5oxj') // remapped from original line 714
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('8x #forge:wires/fine_gold')
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([15])
-    .itemOutputs(safeItemId('14x opencomputers:component', 1')4))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('cz1vejcf5ipesb') // remapped from original line 726
-    .itemInputs(safeItemId('11x opencomputers:component', 1')1))
-    .itemInputs(safeItemId('2x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('xr7pvugn8tsfnh') // remapped from original line 726
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('16x #forge:wires/fine_aluminium')
-    .itemInputs(metaitem('circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([15])
-    .itemOutputs(safeItemId('15x opencomputers:component', 1')5))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('oj85vspoxxprjm') // remapped from original line 738
-    .itemInputs(safeItemId('2x opencomputers:card', ')))
-    .itemInputs(safeItemId('4x opencomputers:component', ')))
-    .itemInputs(safeItemId('1x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('s73iw6ggjsccfs') // remapped from original line 738
+    .itemInputs(safeItemId('1x opencomputers:card'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('16x #forge:wires/fine_copper')
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('16x opencomputers:component', 1')6))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('4hlkeabuo1bzsw') // remapped from original line 751
-    .itemInputs(safeItemId('3x opencomputers:card', ')))
-    .itemInputs(safeItemId('5x opencomputers:component', ')))
-    .itemInputs(safeItemId('2x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('qqv0l0sbzzf9j6') // remapped from original line 751
+    .itemInputs(safeItemId('1x opencomputers:card'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_gold')
-    .itemInputs(metaitem('circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('17x opencomputers:component', 1')7))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('qwbz4zt0ctoscg') // remapped from original line 764
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.assembler('1duqly4ebqv5ae') // remapped from original line 764
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .itemInputs('1x #forge:circuits/mv')
-    .itemInputs(metaitem('sensor.mv'))
-    .itemInputs(metaitem('emitter.mv'))
+    .itemInputs(safeItemId('1x susy:sensor.mv'))
+    .itemInputs(safeItemId('1x susy:emitter.mv'))
     .itemInputs('1x #forge:lenss/glass')
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x opencomputers:diskdrive'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('q2n1xioxj3yf7s') // remapped from original line 776
-    .itemInputs(safeItemId('6x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('r1jjux21hp8rxm') // remapped from original line 776
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('1x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('e3ddg87ch2bfla') // remapped from original line 788
-    .itemInputs(safeItemId('8x opencomputers:component', ')))
-    .itemInputs(safeItemId('1x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('ffgnaavyawe7tg') // remapped from original line 788
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_gold')
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('2x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('uekvw0ykofgwdr') // remapped from original line 800
-    .itemInputs(safeItemId('9x opencomputers:component', ')))
-    .itemInputs(safeItemId('2x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('pchexaj0nuqtyc') // remapped from original line 800
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_aluminium')
-    .itemInputs(metaitem('circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('3x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('1k7hftcpbdvcxu') // remapped from original line 812
+  event.recipes.susy.mods.gregtech.circuit_assembler('f4aqtdhk8ecivd') // remapped from original line 812
     .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('4x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('l3h3tdpwn89jci') // remapped from original line 823
-    .itemInputs(safeItemId('1x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('dcjczbv3auibzw') // remapped from original line 823
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('16x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('5x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('nq60mrxucq49wh') // remapped from original line 834
+  event.recipes.susy.mods.gregtech.circuit_assembler('domv0ya2volywq') // remapped from original line 834
     .itemInputs('1x #forge:wires/gt_single_copper')
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemInputs(metaitem('sensor.mv'))
-    .itemInputs(metaitem('emitter.mv'))
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:sensor.mv'))
+    .itemInputs(safeItemId('1x susy:emitter.mv'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('6x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('ei5okiardlfgqr') // remapped from original line 847
+  event.recipes.susy.mods.gregtech.circuit_assembler('cizedzuslzfjhj') // remapped from original line 847
     .itemInputs('8x #forge:wires/fine_gold')
-    .itemInputs(metaitem('sensor.hv'))
-    .itemInputs(metaitem('emitter.hv'))
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:sensor.hv'))
+    .itemInputs(safeItemId('1x susy:emitter.hv'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('7x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('oi4gx3gqix7w0o') // remapped from original line 859
+  event.recipes.susy.mods.gregtech.circuit_assembler('ye1sjxni4xn6cc') // remapped from original line 859
     .itemInputs('8x #forge:wires/fine_aluminium')
-    .itemInputs(metaitem('sensor.ev'))
-    .itemInputs(metaitem('emitter.ev'))
-    .itemInputs(metaitem('circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:sensor.ev'))
+    .itemInputs(safeItemId('1x susy:emitter.ev'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('8x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('zkwpb96pufdsrm') // remapped from original line 871
+  event.recipes.susy.mods.gregtech.circuit_assembler('x9jg4yxjgqrq1g') // remapped from original line 871
     .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemInputs(metaitem('circuit_board.good'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([10])
-    .itemOutputs(safeItemId('10x opencomputers:card', 1')0))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('c4khl5urdlgrss') // remapped from original line 882
-    .itemInputs(safeItemId('1x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('phmgdxebs1wllc') // remapped from original line 882
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_gold')
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([11])
-    .itemOutputs(safeItemId('11x opencomputers:card', 1')1))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('lt5hks3biwuz5u') // remapped from original line 893
-    .itemInputs(safeItemId('2x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('4djlitdhxf2wqp') // remapped from original line 893
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_aluminium')
-    .itemInputs(metaitem('circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([12])
-    .itemOutputs(safeItemId('12x opencomputers:card', 1')2))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('2dv0dahosbgnaz') // remapped from original line 904
-    .inputNBT(metaitem('power_unit.mv').item, 1, metaitem('power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.assembler('o6a0rcgnspwaem') // remapped from original line 904
+    .inputNBT(safeItemId('1x susy:power_unit.mv').item, 1, safeItemId('1x susy:power_unit.mv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('1x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('4zwv4vnzy8razr') // remapped from original line 914
-    .inputNBT(metaitem('power_unit.hv').item, 1, metaitem('power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.assembler('zracawhinro822') // remapped from original line 914
+    .inputNBT(safeItemId('1x susy:power_unit.hv').item, 1, safeItemId('1x susy:power_unit.hv').metadata, NBTMatcher.ANY, NBTCondition.ANY)
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('2x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('mttryehtc7nj62') // remapped from original line 924
-    .itemInputs(metaitem('power_unit.ev'))
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.assembler('aoqprsigk86hnl') // remapped from original line 924
+    .itemInputs(safeItemId('1x susy:power_unit.ev'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('3x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('red3wb0c6orhnm') // remapped from original line 934
+  event.recipes.susy.mods.gregtech.assembler('r38afucwaeqjcc') // remapped from original line 934
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(safeItemId('5x opencomputers:material', ')))
+    .itemInputs(safeItemId('1x opencomputers:material'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('5x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('exhbksnrlnki88') // remapped from original line 944
+  event.recipes.susy.mods.gregtech.assembler('wbsosfnymfrupb') // remapped from original line 944
     .itemInputs('4x #forge:plates/stainless_steel')
-    .itemInputs(safeItemId('5x opencomputers:material', ')))
+    .itemInputs(safeItemId('1x opencomputers:material'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('6x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('uy1saa5aswafvn') // remapped from original line 954
+  event.recipes.susy.mods.gregtech.assembler('q9u6rcncxct5wn') // remapped from original line 954
     .itemInputs('4x #forge:plates/titanium')
-    .itemInputs(safeItemId('5x opencomputers:material', ')))
+    .itemInputs(safeItemId('1x opencomputers:material'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('7x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('6vjkjzwwxed53v') // remapped from original line 964
+  event.recipes.susy.mods.gregtech.assembler('0khpzmz4z86eyx') // remapped from original line 964
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs('4x #forge:screws/aluminium')
     .inputFluids(solder)
     .circuitMeta([11])
-    .itemOutputs(safeItemId('8x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('unwrzt0sbhayxe') // remapped from original line 974
+  event.recipes.susy.mods.gregtech.assembler('kg9lorxrw9rgmk') // remapped from original line 974
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('4x #forge:screws/stainless_steel')
     .inputFluids(solder)
     .circuitMeta([12])
-    .itemOutputs(safeItemId('9x opencomputers:upgrade', ')))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('l8wpihd1o4jw4x') // remapped from original line 984
+  event.recipes.susy.mods.gregtech.assembler('ewc0j5lqeavckm') // remapped from original line 984
     .itemInputs('4x #forge:plates/titanium')
     .itemInputs('4x #forge:screws/titanium')
     .inputFluids(solder)
     .circuitMeta([13])
-    .itemOutputs(safeItemId('10x opencomputers:upgrade', 1')0))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('mfauyc6va0ooit') // remapped from original line 994
+  event.recipes.susy.mods.gregtech.assembler('4pegk8y1amkhlk') // remapped from original line 994
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs(safeItemId('1x minecraft:crafting_table'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('11x opencomputers:upgrade', 1')1))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('w9twyi7kqbhbye') // remapped from original line 1004
+  event.recipes.susy.mods.gregtech.assembler('cc1ryl0os8zbte') // remapped from original line 1004
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(safeItemId('1x oc:hdd1')'))
+    .itemInputs(safeItemId('1x oc:hdd1'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('12x opencomputers:upgrade', 1')2))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('vpwpgdkwb9iocv') // remapped from original line 1014
+  event.recipes.susy.mods.gregtech.assembler('gjhnizljixjhd9') // remapped from original line 1014
     .itemInputs('4x #forge:plates/stainless_steel')
-    .itemInputs(safeItemId('2x oc:hdd2')'))
+    .itemInputs(safeItemId('1x oc:hdd2'))
     .inputFluids(solder)
     .circuitMeta([2])
-    .itemOutputs(safeItemId('13x opencomputers:upgrade', 1')3))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('zgzrrkdc74kwse') // remapped from original line 1024
+  event.recipes.susy.mods.gregtech.assembler('syccbhqyqqcgkx') // remapped from original line 1024
     .itemInputs('4x #forge:plates/titanium')
-    .itemInputs(safeItemId('3x oc:hdd3')'))
+    .itemInputs(safeItemId('1x oc:hdd3'))
     .inputFluids(solder)
     .circuitMeta([3])
-    .itemOutputs(safeItemId('14x opencomputers:upgrade', 1')4))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ow6ry1iszv5ykp') // remapped from original line 1034
+  event.recipes.susy.mods.gregtech.assembler('vlayk6xkscwejk') // remapped from original line 1034
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('crate.steel'))
+    .itemInputs(safeItemId('1x susy:crate.steel'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('17x opencomputers:upgrade', 1')7))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('lacw1qzza0pg6e') // remapped from original line 1044
+  event.recipes.susy.mods.gregtech.assembler('mth502egdqouda') // remapped from original line 1044
     .itemInputs('4x #forge:plates/stainless_steel')
-    .itemInputs(metaitem('robot.arm.hv'))
+    .itemInputs(safeItemId('1x susy:robot.arm.hv'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('18x opencomputers:upgrade', 1')8))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('xv4xy6rlcuozcl') // remapped from original line 1054
+  event.recipes.susy.mods.gregtech.assembler('bftwr194xlo9qx') // remapped from original line 1054
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs(safeItemId('1x minecraft:compass'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('19x opencomputers:upgrade', 1')9))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('zhc0k8wmxtewbf') // remapped from original line 1064
+  event.recipes.susy.mods.gregtech.assembler('4nlrcnn4aezryc') // remapped from original line 1064
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('electric.piston.mv'))
+    .itemInputs(safeItemId('1x susy:electric.piston.mv'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('20x opencomputers:upgrade', 2')0))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ff3mqdk7cvj7cl') // remapped from original line 1074
+  event.recipes.susy.mods.gregtech.assembler('opjziidxvwq1bz') // remapped from original line 1074
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs('2x #forge:dyes/black')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('21x opencomputers:upgrade', 2')1))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('d6soegk4wtcwsq') // remapped from original line 1084
+  event.recipes.susy.mods.gregtech.assembler('l98jnsufgvfqgf') // remapped from original line 1084
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('drum.aluminium'))
+    .itemInputs(safeItemId('1x susy:drum.aluminium'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('23x opencomputers:upgrade', 2')3))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('ktkaur6nvwdcul') // remapped from original line 1094
+  event.recipes.susy.mods.gregtech.assembler('p1nrl0ickf65ee') // remapped from original line 1094
     .itemInputs('4x #forge:plates/stainless_steel')
-    .itemInputs(metaitem('electric.pump.hv'))
+    .itemInputs(safeItemId('1x susy:electric.pump.hv'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('24x opencomputers:upgrade', 2')4))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('7vr0p2vmancq3u') // remapped from original line 1104
+  event.recipes.susy.mods.gregtech.assembler('tcnkhcstyfr5kt') // remapped from original line 1104
     .itemInputs('4x #forge:plates/titanium')
     .itemInputs('1x #forge:rods/neodymium_alloy_magnetic')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('25x opencomputers:upgrade', 2')5))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('p6qjvlwzkynmkq') // remapped from original line 1114
+  event.recipes.susy.mods.gregtech.assembler('rdwkldhpvtmtuk') // remapped from original line 1114
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs(safeItemId('1x minecraft:lead'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('26x opencomputers:upgrade', 2')6))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('z5odnpwxd2rhaw') // remapped from original line 1124
+  event.recipes.susy.mods.gregtech.assembler('mj4zpv1j6jnvd8') // remapped from original line 1124
     .itemInputs('4x #forge:plates/titanium')
-    .itemInputs(metaitem('sensor.ev'))
-    .itemInputs(metaitem('emitter.ev'))
+    .itemInputs(safeItemId('1x susy:sensor.ev'))
+    .itemInputs(safeItemId('1x susy:emitter.ev'))
     .inputFluids(solder)
     .circuitMeta([10])
-    .itemOutputs(safeItemId('30x opencomputers:upgrade', 3')0))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('qewqqram4dpb0t') // remapped from original line 1135
+  event.recipes.susy.mods.gregtech.assembler('snqhhl1h3wdbmu') // remapped from original line 1135
     .itemInputs('4x #forge:plates/steel')
     .itemInputs('4x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('sensor.lv'))
-    .itemInputs(metaitem('emitter.lv'))
+    .itemInputs(safeItemId('1x susy:sensor.lv'))
+    .itemInputs(safeItemId('1x susy:emitter.lv'))
     .inputFluids(solder)
     .circuitMeta([10])
-    .itemOutputs(safeItemId('6x opencomputers:card', ')))
+    .itemOutputs(safeItemId('1x opencomputers:card'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('8jwbar7nwvwhsc') // remapped from original line 1147
+  event.recipes.susy.mods.gregtech.assembler('gq9qojjkejthda') // remapped from original line 1147
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs('4x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('sensor.mv'))
-    .itemInputs(metaitem('emitter.mv'))
+    .itemInputs(safeItemId('1x susy:sensor.mv'))
+    .itemInputs(safeItemId('1x susy:emitter.mv'))
     .inputFluids(solder)
     .circuitMeta([10])
-    .itemOutputs(safeItemId('31x opencomputers:upgrade', 3')1))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('814myokysfccab') // remapped from original line 1159
+  event.recipes.susy.mods.gregtech.assembler('7jutdzhjh8hai3') // remapped from original line 1159
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('electric.piston.lv'))
+    .itemInputs(safeItemId('1x susy:electric.piston.lv'))
     .inputFluids(safeFluidOf('gtceu:glue', 36))
     .circuitMeta([10])
-    .itemOutputs(safeItemId('33x opencomputers:upgrade', 3')3))
+    .itemOutputs(safeItemId('1x opencomputers:upgrade'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('l9s1lk9dbp6lkc') // remapped from original line 1169
-    .itemInputs(metaitem('component.transistor') * 16)
-    .itemInputs(metaitem('circuit_board.good'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('euibieoppmtq1g') // remapped from original line 1169
+    .itemInputs(safeItemId('16x susy:component.transistor'))
+    .itemInputs(safeItemId('1x susy:circuit_board.good'))
     .inputFluids(solder)
     .circuitMeta([1])
     .itemOutputs(safeItemId('1x opencomputers:storage'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('q64c7uxx1tptjn') // remapped from original line 1179
-    .itemInputs(safeItemId('12x opencomputers:material', 1')2))
+  event.recipes.susy.mods.gregtech.assembler('emslbs7ze9zrk1') // remapped from original line 1179
+    .itemInputs(safeItemId('1x opencomputers:material'))
     .itemInputs('1x #forge:plates/plastic')
     .itemInputs('1x #forge:dyes/black')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('1x opencomputers:storage', ')))
+    .itemOutputs(safeItemId('1x opencomputers:storage'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('bjvvqr5gewqivf') // remapped from original line 1190
-    .itemInputs(safeItemId('12x opencomputers:material', 1')2))
+  event.recipes.susy.mods.gregtech.assembler('zyt9snaylmi8vi') // remapped from original line 1190
+    .itemInputs(safeItemId('1x opencomputers:material'))
     .itemInputs('4x #forge:plates/aluminium')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('2x opencomputers:storage', ')))
+    .itemOutputs(safeItemId('1x opencomputers:storage'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('nbnbkarfnplouo') // remapped from original line 1200
-    .itemInputs(safeItemId('12x opencomputers:material', 1')) * 2)
+  event.recipes.susy.mods.gregtech.assembler('7lc2egbcw6ojdl') // remapped from original line 1200
+    .itemInputs(safeItemId('2x opencomputers:material'))
     .itemInputs('4x #forge:plates/stainless_steel')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('3x opencomputers:storage', ')))
+    .itemOutputs(safeItemId('1x opencomputers:storage'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('hpp6ulkkdddtou') // remapped from original line 1210
-    .itemInputs(safeItemId('12x opencomputers:material', 1')) * 4)
+  event.recipes.susy.mods.gregtech.assembler('id5bhyuyhixegt') // remapped from original line 1210
+    .itemInputs(safeItemId('4x opencomputers:material'))
     .itemInputs('4x #forge:plates/titanium')
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('4x opencomputers:storage', ')))
+    .itemOutputs(safeItemId('1x opencomputers:storage'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('qkep2nrmlacw5p') // remapped from original line 1220
+  event.recipes.susy.mods.gregtech.circuit_assembler('fqllywaylavjxs') // remapped from original line 1220
     .itemInputs('1x #forge:circuits/hv')
-    .itemInputs(safeItemId('2x oc:wlanCard2')'))
-    .itemInputs(metaitem('circuit_board.plastic'))
+    .itemInputs(safeItemId('1x oc:wlanCard2'))
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .inputFluids(solder)
     .circuitMeta([1])
-    .itemOutputs(safeItemId('19x opencomputers:component', 1')9))
+    .itemOutputs(safeItemId('1x opencomputers:component'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.forming_press('v2wzap0bist5xx') // remapped from original line 1231
+  event.recipes.susy.mods.gregtech.forming_press('dmxrmk5ciknjqf') // remapped from original line 1231
     .itemInputs('4x #forge:foils/polycaprolactam')
-    .itemOutputs(safeItemId('28x opencomputers:material', 2')8))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(160)
     .EUt(120)
 
-  event.recipes.susy.	mods.gregtech.assembler('lfvs9ry1qvz7tb') // remapped from original line 1245
+  event.recipes.susy.	mods.gregtech.assembler('snkifhfces8sqk') // remapped from original line 1245
     .itemInputs('4x #forge:lenss/glass')
     .itemInputs('1x #forge:dusts/small_cobalt')
-    .itemOutputs(safeItemId('12x opencomputers:material', 1')2))
+    .itemOutputs(safeItemId('1x opencomputers:material'))
     .duration(400)
     .EUt(120)
 

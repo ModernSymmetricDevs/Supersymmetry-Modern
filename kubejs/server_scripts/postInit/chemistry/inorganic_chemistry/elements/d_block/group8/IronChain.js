@@ -1,35 +1,17 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:primitive_blast_furnace', input: '#forge:ingots/wrought_iron' && '#forge:dusts/coke'})
   event.remove({ type: 'gtceu:primitive_blast_furnace', input: '#forge:ingots/wrought_iron' && '#forge:gems/coke'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:coal' && '#forge:ingots/wrought_iron'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:coal') && '#forge:ingots/wrought_iron'})
   event.remove({ type: 'gtceu:primitive_blast_furnace', input: '#forge:ingots/wrought_iron' && '#forge:dusts/coal'})
   event.remove({ type: 'gtceu:primitive_blast_furnace', input: '#forge:ingots/wrought_iron' && '#forge:dusts/charcoal'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:coal' && '#forge:ingots/wrought_iron'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && '#forge:dusts/coke'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && '#forge:gems/coke'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && '#forge:dusts/coal'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && '#forge:dusts/charcoal'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && 'minecraft:coal'})
-  event.remove({ type: 'gtceu:primitive_blast_furnace', input: 'minecraft:iron_ingot' && 'minecraft:coal'})
-  event.remove({ type: 'gtceu:electric_blast_furnace', input: 'minecraft:iron_ingot' && safeFluidOf('gtceu:oxygen')})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:coal') && '#forge:ingots/wrought_iron'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && '#forge:dusts/coke'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && '#forge:gems/coke'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && '#forge:dusts/coal'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && '#forge:dusts/charcoal'})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && safeItemId('minecraft:coal')})
+  event.remove({ type: 'gtceu:primitive_blast_furnace', input: safeItemId('minecraft:iron_ingot') && safeItemId('minecraft:coal')})
+  event.remove({ type: 'gtceu:electric_blast_furnace', input: safeItemId('minecraft:iron_ingot') && safeFluidOf('gtceu:oxygen')})
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/iron' && 'susy:circuit.integrated' && safeFluidOf('gtceu:oxygen')})
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:ingots/wrought_iron' && safeFluidOf('gtceu:oxygen')})
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/wrought_iron' && 'susy:circuit.integrated' && safeFluidOf('gtceu:oxygen')})
@@ -38,27 +20,27 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/steel'})
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/steel_magnetic'})
 
-  event.recipes.susy.EBF_RECIPES('8vo4ft7kzgkuoi') // remapped from original line 151
+  event.recipes.gtceu.electric_blast_furnace('ni3wzylbk2gsed') // remapped from original line 151
     .itemInputs('1x #forge:dusts/steel')
     .itemOutputs('1x #forge:ingots/steel')
     .duration(60)
     .blastFurnaceTemp(1750)
     .EUt(60)
 
-  event.recipes.susy.EBF_RECIPES('lnhnxqi0u2qhbj') // remapped from original line 158
+  event.recipes.gtceu.electric_blast_furnace('gfzpsemhniqn95') // remapped from original line 158
     .itemInputs('1x #forge:dusts/steel_magnetic')
     .itemOutputs('1x #forge:ingots/steel')
     .duration(60)
     .blastFurnaceTemp(1750)
     .EUt(60)
 
-  event.recipes.gtceu.forge_hammer('9lpckscm3ebapc') // remapped from original line 172
+  event.recipes.gtceu.forge_hammer('84blqpqqffdasx') // remapped from original line 172
     .itemInputs('1x #forge:ingots/pig_iron')
     .itemOutputs('1x #forge:ingots/wrought_iron')
     .duration(20)
     .EUt(voltAmps[0])
 
-  event.recipes.susy.EBF_RECIPES('cbcwkjxleyv5uq') // remapped from original line 180
+  event.recipes.gtceu.electric_blast_furnace('ff1sqh1lcdmwkq') // remapped from original line 180
     .itemInputs('1x #forge:ingots/pig_iron')
     .inputFluids(safeFluidOf('gtceu:oxygen', 50))
     .itemOutputs('1x #forge:ingots/steel')
@@ -67,7 +49,7 @@ ServerEvents.recipes(event => {
     .duration(10)
     .circuit(1)
 
-  event.recipes.susy.EBF_RECIPES('6zbqqqdiazxmau') // remapped from original line 190
+  event.recipes.gtceu.electric_blast_furnace('apjm3bx6aytxr9') // remapped from original line 190
     .itemInputs('1x #forge:ingots/pig_iron')
     .inputFluids(safeFluidOf('gtceu:oxygen', 50))
     .itemOutputs(safeItemId('1x minecraft:iron_ingot'))
@@ -76,27 +58,27 @@ ServerEvents.recipes(event => {
     .duration(10)
     .circuit(2)
 
-  event.recipes.susy.reaction_furnace('zfe8gayefzyad6') // remapped from original line 222
+  event.recipes.susy.reaction_furnace('mypb34xvdfrayz') // remapped from original line 222
     .itemInputs('1x #forge:dusts/iron')
     .inputFluids(safeFluidOf('gtceu:carbon_monoxide', 5000))
     .outputFluids(safeFluidOf('susy:crude_iron_pentacarbonyl', 1000))
     .duration(200)
     .EUt(60)
 
-  event.recipes.gtceu.distillery('h9t0wumjmsmnij') // remapped from original line 230
+  event.recipes.gtceu.distillery('gyeaqeuexohnfr') // remapped from original line 230
     .inputFluids(safeFluidOf('susy:crude_iron_pentacarbonyl', 1000))
     .outputFluids(safeFluidOf('susy:iron_pentacarbonyl', 1000))
     .duration(300)
     .EUt(30)
 
-  event.recipes.susy.roaster('ll45vf2jr3r9bg') // remapped from original line 237
+  event.recipes.susy.roaster('bxohzizmtvfdju') // remapped from original line 237
     .inputFluids(safeFluidOf('susy:iron_pentacarbonyl', 1000))
     .itemOutputs('1x #forge:dusts/high_purity_iron')
     .outputFluids(safeFluidOf('gtceu:carbon_monoxide', 5000))
     .duration(300)
     .EUt(30)
 
-  event.recipes.susy.EBF_RECIPES('jkwm5a12snpbrj') // remapped from original line 245
+  event.recipes.gtceu.electric_blast_furnace('nc7nlul9njdybi') // remapped from original line 245
     .circuit(1)
     .itemInputs('1x #forge:dusts/any_purity_iron')
     .itemOutputs(safeItemId('1x minecraft:iron_ingot'))
@@ -104,21 +86,21 @@ ServerEvents.recipes(event => {
     .blastFurnaceTemp(1750)
     .EUt(60)
 
-  event.recipes.susy.roaster('pnztjwvzed3mjg') // remapped from original line 256
+  event.recipes.susy.roaster('9mfefp71fhonf5') // remapped from original line 256
     .itemInputs('14x #forge:dusts/iron_iii_hydroxide')
     .itemOutputs('5x #forge:dusts/iron_iii_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 3000))
     .duration(80)
     .EUt(30)
 
-  event.recipes.susy.roaster('ow7tbhrsi1dq7b') // remapped from original line 264
+  event.recipes.susy.roaster('fkpzfrez9i2q2v') // remapped from original line 264
     .itemInputs('5x #forge:dusts/iron_ii_hydroxide')
     .itemOutputs('2x #forge:dusts/iron_ii_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 1000))
     .EUt(voltAmps[1])
     .duration(200)
 
-  event.recipes.gtceu.BR('bzdax4gpirkpza') // remapped from original line 273
+  event.recipes.gtceu.BR('fsfxxt6j3csqta') // remapped from original line 273
     .itemInputs('4x #forge:dusts/iron_iii_chloride')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 3000))
     .itemOutputs('7x #forge:dusts/iron_iii_hydroxide')

@@ -1,62 +1,44 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:redstone_torch' && 'minecraft:redstone' && safeFluidOf('gtceu:concrete')})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:planks' && 'minecraft:cobblestone' && 'minecraft:redstone' && '#forge:plates/bronze'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:planks' && 'minecraft:cobblestone' && 'minecraft:redstone' && '#forge:plates/iron'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:planks' && 'minecraft:cobblestone' && 'minecraft:redstone' && '#forge:plates/steel'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:planks' && 'minecraft:cobblestone' && 'minecraft:redstone' && '#forge:plates/aluminium'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:planks' && 'minecraft:cobblestone' && 'minecraft:redstone' && '#forge:plates/titanium'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:stick' && 'minecraft:redstone' && '#forge:rods/gold' && 'susy:circuit.integrated'})
-  event.remove({ type: 'gtceu:arc_furnace', input: 'minecraft:golden_rail' && safeFluidOf('gtceu:oxygen')})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:cobblestone' && 'minecraft:bow' && 'minecraft:redstone'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:cobblestone' && 'minecraft:redstone'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:obsidian' && 'minecraft:diamond' && 'minecraft:book'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:obsidian' && 'minecraft:ender_eye'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:chorus_fruit_popped' && 'minecraft:blaze_rod'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:ghast_tear' && 'minecraft:ender_eye' && safeFluidOf('gtceu:glass')})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:chest' && 'minecraft:shulker_shell'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:stick' && 'minecraft:redstone' && '#forge:rods/gold'})
-  event.remove({ type: 'gtceu:assembler', input: 'biomesoplenty:bamboo' && 'minecraft:redstone' && '#forge:rods/gold' && 'susy:circuit.integrated'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:stick' && 'minecraft:redstone' && '#forge:rods/iron'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:stick' && '#forge:rods/iron'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:stick' && 'minecraft:redstone_torch' && '#forge:rods/iron'})
-  event.remove({ type: 'gtceu:centrifuge', input: 'minecraft:magma_cream'})
-  event.remove({ type: 'gtceu:chemical_bath', input: 'minecraft:ender_pearl' && safeFluidOf('gtceu:blaze')})
-  event.remove({ type: 'gtceu:chemical_bath', input: 'minecraft:reeds' && safeFluidOf('minecraft:water')})
-  event.remove({ type: 'gtceu:chemical_bath', input: 'minecraft:reeds' && safeFluidOf('gtceu:distilled_water')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:redstone_torch') && safeItemId('minecraft:redstone') && safeFluidOf('gtceu:concrete')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:planks') && safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone') && '#forge:plates/bronze'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:planks') && safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone') && '#forge:plates/iron'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:planks') && safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone') && '#forge:plates/steel'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:planks') && safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone') && '#forge:plates/aluminium'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:planks') && safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone') && '#forge:plates/titanium'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:stick') && safeItemId('minecraft:redstone') && '#forge:rods/gold' && 'susy:circuit.integrated'})
+  event.remove({ type: 'gtceu:arc_furnace', input: safeItemId('minecraft:golden_rail') && safeFluidOf('gtceu:oxygen')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:cobblestone') && safeItemId('minecraft:bow') && safeItemId('minecraft:redstone')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:cobblestone') && safeItemId('minecraft:redstone')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:obsidian') && safeItemId('minecraft:diamond') && safeItemId('minecraft:book')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:obsidian') && safeItemId('minecraft:ender_eye')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:chorus_fruit_popped') && safeItemId('minecraft:blaze_rod')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:ghast_tear') && safeItemId('minecraft:ender_eye') && safeFluidOf('gtceu:glass')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:chest') && safeItemId('minecraft:shulker_shell')})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:stick') && safeItemId('minecraft:redstone') && '#forge:rods/gold'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('biomesoplenty:bamboo') && safeItemId('minecraft:redstone') && '#forge:rods/gold' && 'susy:circuit.integrated'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:stick') && safeItemId('minecraft:redstone') && '#forge:rods/iron'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:stick') && '#forge:rods/iron'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:stick') && safeItemId('minecraft:redstone_torch') && '#forge:rods/iron'})
+  event.remove({ type: 'gtceu:centrifuge', input: safeItemId('minecraft:magma_cream')})
+  event.remove({ type: 'gtceu:chemical_bath', input: safeItemId('minecraft:ender_pearl') && safeFluidOf('gtceu:blaze')})
+  event.remove({ type: 'gtceu:chemical_bath', input: safeItemId('minecraft:reeds') && safeFluidOf('minecraft:water')})
+  event.remove({ type: 'gtceu:chemical_bath', input: safeItemId('minecraft:reeds') && safeFluidOf('gtceu:distilled_water')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:dusts/wood' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:dusts/wood' && safeFluidOf('gtceu:distilled_water')})
-  event.remove({ type: 'gtceu:macerator', input: 'minecraft:reeds'})
-  event.remove({ type: 'gtceu:mixer', input: 'minecraft:sugar' && 'minecraft:red_mushroom' && 'minecraft:spider_eye'})
-  event.remove({ type: 'gtceu:mixer', input: 'minecraft:sugar' && 'minecraft:brown_mushroom' && 'minecraft:spider_eye'})
-  event.remove({ type: 'gtceu:mixer', input: 'minecraft:gunpowder' && 'minecraft:blaze_powder' && '#forge:dusts/coal'})
+  event.remove({ type: 'gtceu:macerator', input: safeItemId('minecraft:reeds')})
+  event.remove({ type: 'gtceu:mixer', input: safeItemId('minecraft:sugar') && safeItemId('minecraft:red_mushroom') && safeItemId('minecraft:spider_eye')})
+  event.remove({ type: 'gtceu:mixer', input: safeItemId('minecraft:sugar') && safeItemId('minecraft:brown_mushroom') && safeItemId('minecraft:spider_eye')})
+  event.remove({ type: 'gtceu:mixer', input: safeItemId('minecraft:gunpowder') && safeItemId('minecraft:blaze_powder') && '#forge:dusts/coal'})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/saltpeter' && '#forge:dusts/sulfur' && '#forge:dusts/carbon' && 'susy:circuit.integrated'})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/saltpeter' && '#forge:dusts/sulfur' && '#forge:dusts/coal' && 'susy:circuit.integrated'})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/saltpeter' && '#forge:dusts/sulfur' && '#forge:dusts/charcoal' && 'susy:circuit.integrated'})
-  event.remove({ type: 'gtceu:macerator', input: 'minecraft:golden_apple'})
-  event.remove({ type: 'gtceu:arc_furnace', input: 'minecraft:golden_apple' && safeFluidOf('gtceu:oxygen')})
-  event.remove({ type: 'gtceu:macerator', input: 'minecraft:rail'})
-  event.remove({ type: 'gtceu:arc_furnace', input: 'minecraft:rail' && safeFluidOf('gtceu:oxygen')})
-  event.remove({ type: 'gtceu:macerator', input: 'minecraft:golden_rail'})
+  event.remove({ type: 'gtceu:macerator', input: safeItemId('minecraft:golden_apple')})
+  event.remove({ type: 'gtceu:arc_furnace', input: safeItemId('minecraft:golden_apple') && safeFluidOf('gtceu:oxygen')})
+  event.remove({ type: 'gtceu:macerator', input: safeItemId('minecraft:rail')})
+  event.remove({ type: 'gtceu:arc_furnace', input: safeItemId('minecraft:rail') && safeFluidOf('gtceu:oxygen')})
+  event.remove({ type: 'gtceu:macerator', input: safeItemId('minecraft:golden_rail')})
 
-  event.recipes.susy.mods.gregtech.assembler('2dgmuulpy6qump') // remapped from original line 370
+  event.recipes.susy.mods.gregtech.assembler('dqkyqcxhsriive') // remapped from original line 370
     .itemInputs('1x #forge:wires/fine_red_alloy')
     .itemInputs('1x #forge:plates/stone')
     .itemInputs(safeItemId('2x minecraft:redstone_torch'))
@@ -64,7 +46,7 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.mods.gregtech.assembler('yadlm8qq9nnhm2') // remapped from original line 395
+  event.recipes.susy.mods.gregtech.assembler('bctwnpakklfsyz') // remapped from original line 395
     .circuit(2)
     .itemInputs('12x #forge:rods/brass')
     .itemInputs('1x #forge:rods/wood')
@@ -73,7 +55,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.arc_furnace('5uordimsi9ezor') // remapped from original line 405
+  event.recipes.susy.mods.gregtech.arc_furnace('6mclttolcdi6yb') // remapped from original line 405
     .itemInputs(safeItemId('12x minecraft:golden_rail'))
     .inputFluids(safeFluidOf('gtceu:oxygen', 87))
     .itemOutputs('6x #forge:ingots/brass')
@@ -81,111 +63,111 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('f8qahzh382bwox') // remapped from original line 414
+  event.recipes.susy.mods.gregtech.assembler('3rhkfgj8kvbwcm') // remapped from original line 414
     .circuit(10)
-    .itemInputs(ore('cobblestone') * 4)
+    .itemInputs(safeItemId('4x susy:cobblestone'))
     .itemInputs('3x #forge:planks/wood')
     .itemInputs('1x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('electric.piston.lv'))
+    .itemInputs(safeItemId('1x susy:electric.piston.lv'))
     .itemOutputs(safeItemId('1x minecraft:piston'))
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.mods.gregtech.assembler('pzfr0apqi57r1t') // remapped from original line 427
+  event.recipes.susy.mods.gregtech.assembler('cuk07c3hupwyie') // remapped from original line 427
     .circuit(11)
-    .itemInputs(ore('cobblestone'))
+    .itemInputs(safeItemId('1x susy:cobblestone'))
     .itemInputs('1x #forge:springs/steel')
-    .itemInputs(ore('string'))
+    .itemInputs(safeItemId('1x susy:string'))
     .itemInputs('1x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('electric.motor.lv'))
+    .itemInputs(safeItemId('1x susy:electric.motor.lv'))
     .itemOutputs(safeItemId('1x minecraft:dispenser'))
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.mods.gregtech.assembler('r78hvocy9e7jzo') // remapped from original line 441
+  event.recipes.susy.mods.gregtech.assembler('kcx0ksjayrgq3n') // remapped from original line 441
     .circuit(12)
-    .itemInputs(ore('cobblestone'))
+    .itemInputs(safeItemId('1x susy:cobblestone'))
     .itemInputs('1x #forge:wires/fine_red_alloy')
-    .itemInputs(metaitem('electric.piston.lv'))
+    .itemInputs(safeItemId('1x susy:electric.piston.lv'))
     .itemOutputs(safeItemId('1x minecraft:dropper'))
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.mods.gregtech.assembler('gmefoakfpbazxi') // remapped from original line 469
+  event.recipes.susy.mods.gregtech.assembler('9pxn2gfp0r6der') // remapped from original line 469
     .itemInputs('1x #forge:rods/wood')
     .inputFluids(safeFluidOf('gtceu:steel', 144))
     .itemOutputs(safeItemId('16x minecraft:rail'))
     .duration(20)
     .EUt(10)
 
-  event.recipes.susy.mods.gregtech.autoclave('igsc4vcay3grga') // remapped from original line 481
+  event.recipes.susy.mods.gregtech.autoclave('y2s9wi4rfm86m9') // remapped from original line 481
     .itemInputs('1x #forge:dusts/wood')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 100))
     .itemOutputs('1x #forge:dusts/paper')
     .duration(200)
     .EUt(4)
 
-  event.recipes.susy.mods.gregtech.autoclave('scuhz2bqihrvqw') // remapped from original line 489
+  event.recipes.susy.mods.gregtech.autoclave('2scmnkrsuydwp3') // remapped from original line 489
     .itemInputs('1x #forge:dusts/wood')
     .inputFluids(safeFluidOf('minecraft:water', 100))
     .itemOutputs('1x #forge:dusts/paper')
     .duration(200)
     .EUt(4)
 
-  event.recipes.susy.mods.gregtech.centrifuge('nd4jmre8ng11f1') // remapped from original line 501
-    .itemInputs(metaitem('sugar_cane_dust') * 1)
+  event.recipes.susy.mods.gregtech.centrifuge('r3n7vpaoa48zl5') // remapped from original line 501
+    .itemInputs(safeItemId('1x susy:sugar_cane_dust'))
     .inputFluids(safeFluidOf('minecraft:water', 250))
     .itemOutputs('1x #forge:dusts/wood')
     .outputFluids(safeFluidOf('susy:sugary_water', 250))
     .duration(100)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('ijhfdmjunlmn8z') // remapped from original line 524
+  event.recipes.susy.mods.gregtech.chemical_bath('egscrmighb4og8') // remapped from original line 524
     .itemInputs(safeItemId('1x minecraft:rotten_flesh'))
     .inputFluids(safeFluidOf('minecraft:water', 100))
-    .itemOutputs(metaitem('washed_rotten_flesh'))
+    .itemOutputs(safeItemId('1x susy:washed_rotten_flesh'))
     .duration(200)
     .EUt(4)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('boc2f9vy2mtw0z') // remapped from original line 532
+  event.recipes.susy.mods.gregtech.chemical_bath('tfczvpgyrs9ku8') // remapped from original line 532
     .itemInputs(safeItemId('1x minecraft:rotten_flesh'))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 100))
-    .itemOutputs(metaitem('washed_rotten_flesh'))
+    .itemOutputs(safeItemId('1x susy:washed_rotten_flesh'))
     .duration(200)
     .EUt(4)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('ksbcrkjznaaxy4') // remapped from original line 540
-    .itemInputs(metaitem('washed_rotten_flesh'))
+  event.recipes.susy.mods.gregtech.chemical_bath('ua4dv9mlce7f6o') // remapped from original line 540
+    .itemInputs(safeItemId('1x susy:washed_rotten_flesh'))
     .inputFluids(safeFluidOf('gtceu:creosote', 50))
     .itemOutputs(safeItemId('1x minecraft:leather'))
     .duration(200)
     .EUt(4)
 
-  event.recipes.susy.recipemap('crystallizer')('1bxizu4p5neoiv') // remapped from original line 550
+  event.recipes.susy.crystallizer('onvef44qge307y') // remapped from original line 550
     .inputFluids(safeFluidOf('susy:clarified_sugary_water', 1000))
     .itemOutputs(safeItemId('6x minecraft:sugar'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.recipemap('crystallizer')('k6pkpvhcq2thfl') // remapped from original line 557
+  event.recipes.susy.crystallizer('6coc2b68wlht2c') // remapped from original line 557
     .inputFluids(safeFluidOf('susy:sugary_water', 1000))
     .itemOutputs(safeItemId('3x minecraft:sugar'))
     .duration(300)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.extractor('4mswdpcqwlpkcx') // remapped from original line 565
-    .itemInputs(safeItemId('1x quark:glass_shards:0')'))
+  event.recipes.susy.mods.gregtech.extractor('rt7nwvcxdbsszx') // remapped from original line 565
+    .itemInputs(safeItemId('1x quark:glass_shards:0'))
     .outputFluids(safeFluidOf('gtceu:glass', 36))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.macerator('biwkkrsqhfodut') // remapped from original line 577
+  event.recipes.susy.mods.gregtech.macerator('ifk6v4afsfnk2p') // remapped from original line 577
     .itemInputs(safeItemId('1x minecraft:reeds'))
-    .itemOutputs(metaitem('sugar_cane_dust'))
+    .itemOutputs(safeItemId('1x susy:sugar_cane_dust'))
     .duration(400)
     .EUt(2)
 
-  event.recipes.susy.mods.gregtech.mixer('acxudndgm2i9cc') // remapped from original line 591
+  event.recipes.susy.mods.gregtech.mixer('ow7okr7xwcws7o') // remapped from original line 591
     .itemInputs('1x #forge:dusts/coal')
     .itemInputs('1x #forge:dusts/gunpowder')
     .itemInputs('1x #forge:dusts/magnesium')
@@ -193,21 +175,21 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.mixer('cdxydtapnith7x') // remapped from original line 600
+  event.recipes.susy.mods.gregtech.mixer('ehaqxuvohgn6nh') // remapped from original line 600
     .itemInputs('1x #forge:dusts/quicklime')
     .inputFluids(safeFluidOf('susy:sugary_water', 10000))
     .outputFluids(safeFluidOf('susy:clarified_sugary_water', 10000))
     .duration(400)
     .EUt(7)
 
-  event.recipes.susy.recipemap('assembler')('f4n2ywyco54uma') // remapped from original line 662
+  event.recipes.gtceu.assembler('o5secx4bvv6fph') // remapped from original line 662
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
     .itemOutputs(safeItemId('1x minecraft:elytra'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.recipemap('mixer')('s97m65slqt3ioj') // remapped from original line 746
+  event.recipes.gtceu.mixer('0jqmdwbusoguup') // remapped from original line 746
     .itemInputs('2x #forge:dusts/saltpeter')
     .itemInputs('1x #forge:dusts/sulfur')
     .itemInputs('3x #forge:dusts/coal')
@@ -215,7 +197,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(16)
 
-  event.recipes.susy.recipemap('mixer')('6vb7frj2qvpxz7') // remapped from original line 755
+  event.recipes.gtceu.mixer('cu1nf6unkfcz0d') // remapped from original line 755
     .itemInputs('2x #forge:dusts/saltpeter')
     .itemInputs('1x #forge:dusts/sulfur')
     .itemInputs('3x #forge:dusts/lignite')
@@ -223,7 +205,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(16)
 
-  event.recipes.susy.recipemap('mixer')('xyocdjuxud65lz') // remapped from original line 764
+  event.recipes.gtceu.mixer('yhh65j2o6a4tzx') // remapped from original line 764
     .itemInputs('2x #forge:dusts/saltpeter')
     .itemInputs('1x #forge:dusts/sulfur')
     .itemInputs('3x #forge:dusts/anthracite')
@@ -231,7 +213,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(16)
 
-  event.recipes.susy.recipemap('mixer')('ri9evbtk5xpl1a') // remapped from original line 773
+  event.recipes.gtceu.mixer('irfasyqhxh8ijx') // remapped from original line 773
     .itemInputs('2x #forge:dusts/saltpeter')
     .itemInputs('1x #forge:dusts/sulfur')
     .itemInputs('3x #forge:dusts/charcoal')
@@ -239,7 +221,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(16)
 
-  event.recipes.susy.recipemap('mixer')('j04xwjcx27ouha') // remapped from original line 782
+  event.recipes.gtceu.mixer('utstj3rjaeige0') // remapped from original line 782
     .itemInputs('2x #forge:dusts/saltpeter')
     .itemInputs('1x #forge:dusts/sulfur')
     .itemInputs('3x #forge:dusts/carbon')
@@ -247,7 +229,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(16)
 
-  event.recipes.susy.mods.gregtech.mixer('jfxgyadxtn25dl') // remapped from original line 801
+  event.recipes.susy.mods.gregtech.mixer('epa4tvgvnvijpu') // remapped from original line 801
     .itemInputs('6x #forge:dusts/sodium_bicarbonate')
     .inputFluids(safeFluidOf('gtceu:polyvinyl_acetate', 576))
     .inputFluids(safeFluidOf('gtceu:salt_water', 1000))
@@ -255,7 +237,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.mixer('qqz8dxyockgwcd') // remapped from original line 810
+  event.recipes.susy.mods.gregtech.mixer('h4pdavxsilqwts') // remapped from original line 810
     .itemInputs('6x #forge:dusts/sodium_bicarbonate')
     .inputFluids(safeFluidOf('gtceu:glue', 576))
     .inputFluids(safeFluidOf('gtceu:salt_water', 1000))

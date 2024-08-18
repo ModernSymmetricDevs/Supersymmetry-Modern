@@ -1,122 +1,104 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.CHEMICAL_BATH('vcvmjs5vdiy9uh') // remapped from original line 45
+  event.recipes.gtceu.CHEMICAL_BATH('ip936hd3lwqhzh') // remapped from original line 45
     .inputFluids(safeFluidOf('susy:dye_orange', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_orange'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('q836adye7wqw3k') // remapped from original line 53
+  event.recipes.gtceu.CHEMICAL_BATH('cjtwg30rg1izix') // remapped from original line 53
     .inputFluids(safeFluidOf('susy:dye_pink', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_pink'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('nphjux5495il98') // remapped from original line 61
+  event.recipes.gtceu.CHEMICAL_BATH('jvfvghlnyassla') // remapped from original line 61
     .inputFluids(safeFluidOf('susy:dye_light_blue', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_light_blue'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('2ugr0cishqeahr') // remapped from original line 69
+  event.recipes.gtceu.CHEMICAL_BATH('aw9d8bv06q2tp0') // remapped from original line 69
     .inputFluids(safeFluidOf('susy:dye_yellow', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_yellow'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('fg3sgrsblnpj4i') // remapped from original line 77
+  event.recipes.gtceu.CHEMICAL_BATH('mt1wzasnnfrxll') // remapped from original line 77
     .inputFluids(safeFluidOf('susy:dye_lime', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_lime'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('cnwj1igzk298ml') // remapped from original line 85
+  event.recipes.gtceu.CHEMICAL_BATH('kbcffp7w2tk1n6') // remapped from original line 85
     .inputFluids(safeFluidOf('susy:dye_gray', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_gray'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('dbsvluf80xjv7d') // remapped from original line 93
+  event.recipes.gtceu.CHEMICAL_BATH('7kzovrzkk30tjs') // remapped from original line 93
     .inputFluids(safeFluidOf('susy:dye_light_gray', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_silver'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('1tpiyr4zsiqm5o') // remapped from original line 101
+  event.recipes.gtceu.CHEMICAL_BATH('yfohbhkrkpkfug') // remapped from original line 101
     .inputFluids(safeFluidOf('susy:dye_cyan', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_cyan'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('a1glkxb84xtzci') // remapped from original line 109
+  event.recipes.gtceu.CHEMICAL_BATH('jkx8euf1ekqcai') // remapped from original line 109
     .inputFluids(safeFluidOf('susy:dye_purple', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_purple'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('a3awy05zq1gpag') // remapped from original line 117
+  event.recipes.gtceu.CHEMICAL_BATH('pt89oit4y2peoz') // remapped from original line 117
     .inputFluids(safeFluidOf('susy:dye_blue', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_blue'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('zianmgnocrfyqk') // remapped from original line 125
+  event.recipes.gtceu.CHEMICAL_BATH('luhmxsmbhorv7k') // remapped from original line 125
     .inputFluids(safeFluidOf('susy:dye_brown', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_brown'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('j450pf4wg45gn0') // remapped from original line 133
+  event.recipes.gtceu.CHEMICAL_BATH('8ujgjia2qgzr18') // remapped from original line 133
     .inputFluids(safeFluidOf('susy:dye_green', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_green'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('qtmd9iw1spaqfi') // remapped from original line 141
+  event.recipes.gtceu.CHEMICAL_BATH('r87on25zkfarte') // remapped from original line 141
     .inputFluids(safeFluidOf('susy:dye_red', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_red'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('vbetroasjd3obu') // remapped from original line 149
+  event.recipes.gtceu.CHEMICAL_BATH('2386lqobifhq85') // remapped from original line 149
     .inputFluids(safeFluidOf('susy:dye_black', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_black'))
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.CHEMICAL_BATH('lbh6kiqkvlwvf8') // remapped from original line 157
+  event.recipes.gtceu.CHEMICAL_BATH('zhiewk5p9tpc7n') // remapped from original line 157
     .inputFluids(safeFluidOf('susy:dye_white', 144))
     .itemInputs('1x #forge:blocks/elevator')
     .itemOutputs(safeItemId('1x elevatorid:elevator_white'))

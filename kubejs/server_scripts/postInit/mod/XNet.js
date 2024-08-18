@@ -1,104 +1,86 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.chemical_bath('lc8yycnejd9slp') // remapped from original line 84
+  event.recipes.susy.mods.gregtech.chemical_bath('hi46ewdhbg6ph6') // remapped from original line 84
     .inputFluids(safeFluidOf('susy:dye_yellow', 18))
     .itemInputs(safeItemId('1x xnet:netcable'))
-    .itemOutputs(safeItemId('2x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('s8b51soixjivmu') // remapped from original line 92
+  event.recipes.susy.mods.gregtech.chemical_bath('pmaqb2fddeg25x') // remapped from original line 92
     .inputFluids(safeFluidOf('susy:dye_yellow', 18))
-    .itemInputs(safeItemId('1x xnet:netcable', ')))
-    .itemOutputs(safeItemId('2x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('rqjckvigrcyuls') // remapped from original line 100
+  event.recipes.susy.mods.gregtech.chemical_bath('athpa6mmyydmdx') // remapped from original line 100
     .inputFluids(safeFluidOf('susy:dye_yellow', 18))
-    .itemInputs(safeItemId('3x xnet:netcable', ')))
-    .itemOutputs(safeItemId('2x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_yellow.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('jwrmtmnuqek2se') // remapped from original line 108
+  event.recipes.susy.mods.gregtech.chemical_bath('fnttfpp56ntkjv') // remapped from original line 108
     .inputFluids(safeFluidOf('susy:dye_blue', 18))
-    .itemInputs(safeItemId('2x xnet:netcable', ')))
+    .itemInputs(safeItemId('1x xnet:netcable'))
     .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_blue.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('ybbcj9dquojkyu') // remapped from original line 116
+  event.recipes.susy.mods.gregtech.chemical_bath('awyjtphq1pksyc') // remapped from original line 116
     .inputFluids(safeFluidOf('susy:dye_blue', 18))
-    .itemInputs(safeItemId('1x xnet:netcable', ')))
+    .itemInputs(safeItemId('1x xnet:netcable'))
     .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_blue.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('o40abt7eltus8e') // remapped from original line 124
+  event.recipes.susy.mods.gregtech.chemical_bath('8ontr9l3ljbaa7') // remapped from original line 124
     .inputFluids(safeFluidOf('susy:dye_blue', 18))
-    .itemInputs(safeItemId('3x xnet:netcable', ')))
+    .itemInputs(safeItemId('1x xnet:netcable'))
     .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_blue.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('wuqucymgquqwtu') // remapped from original line 132
-    .inputFluids(safeFluidOf('susy:dye_red', 18))
-    .itemInputs(safeItemId('2x xnet:netcable', ')))
-    .itemOutputs(safeItemId('1x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
-    .duration(20)
-    .EUt(7)
-
-  event.recipes.susy.mods.gregtech.chemical_bath('lsctkk1vrtmdfl') // remapped from original line 140
+  event.recipes.susy.mods.gregtech.chemical_bath('klwkzxj3vv1kxn') // remapped from original line 132
     .inputFluids(safeFluidOf('susy:dye_red', 18))
     .itemInputs(safeItemId('1x xnet:netcable'))
-    .itemOutputs(safeItemId('1x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('zadhmuonvadqoe') // remapped from original line 148
+  event.recipes.susy.mods.gregtech.chemical_bath('cvi76xextug5vd') // remapped from original line 140
     .inputFluids(safeFluidOf('susy:dye_red', 18))
-    .itemInputs(safeItemId('3x xnet:netcable', ')))
-    .itemOutputs(safeItemId('1x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('x189gso7drgcw8') // remapped from original line 156
-    .inputFluids(safeFluidOf('susy:dye_green', 18))
-    .itemInputs(safeItemId('2x xnet:netcable', ')))
-    .itemOutputs(safeItemId('3x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
+  event.recipes.susy.mods.gregtech.chemical_bath('nu2kfg7yqyagpy') // remapped from original line 148
+    .inputFluids(safeFluidOf('susy:dye_red', 18))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_red.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('xsibhuehyetjek') // remapped from original line 164
+  event.recipes.susy.mods.gregtech.chemical_bath('wfg6yi2u2oslry') // remapped from original line 156
     .inputFluids(safeFluidOf('susy:dye_green', 18))
     .itemInputs(safeItemId('1x xnet:netcable'))
-    .itemOutputs(safeItemId('3x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
     .duration(20)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.chemical_bath('ws2eqhaoumk80q') // remapped from original line 172
+  event.recipes.susy.mods.gregtech.chemical_bath('pouomnqxfdbkju') // remapped from original line 164
     .inputFluids(safeFluidOf('susy:dye_green', 18))
-    .itemInputs(safeItemId('1x xnet:netcable', ')))
-    .itemOutputs(safeItemId('3x xnet:netcable', ')).withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
+    .duration(20)
+    .EUt(7)
+
+  event.recipes.susy.mods.gregtech.chemical_bath('brvx0ibwyncg8r') // remapped from original line 172
+    .inputFluids(safeFluidOf('susy:dye_green', 18))
+    .itemInputs(safeItemId('1x xnet:netcable'))
+    .itemOutputs(safeItemId('1x xnet:netcable').withNbt(["display": ["LocName": "tile.xnet.netcable_green.name"]]))
     .duration(20)
     .EUt(7)
 

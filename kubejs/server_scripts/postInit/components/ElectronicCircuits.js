@@ -1,21 +1,3 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:assembler', input: '#forge:wires/fine_annealed_copper' && '#forge:dusts/small_gallium_arsenide' && safeFluidOf('gtceu:glass')})
   event.remove({ type: 'gtceu:assembler', input: '#forge:wires/fine_copper' && '#forge:dusts/small_gallium_arsenide' && safeFluidOf('gtceu:glass')})
@@ -30,23 +12,23 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:assembler', input: '#forge:dusts/charcoal' && '#forge:wires/fine_annealed_copper' && safeFluidOf('gtceu:glue')})
   event.remove({ type: 'gtceu:assembler', input: '#forge:dusts/carbon' && '#forge:wires/fine_annealed_copper' && safeFluidOf('gtceu:glue')})
 
-  event.recipes.susy.mods.gregtech.assembler('gu6knovldongcz') // remapped from original line 51
+  event.recipes.susy.mods.gregtech.assembler('uogouv0dager7t') // remapped from original line 51
     .inputFluids(safeFluidOf('gtceu:glue', 100))
     .input(new GTRecipeItemInput(carbons, 1))
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemOutputs(metaitem('component.resistor') * 2)
+    .itemOutputs(safeItemId('2x susy:component.resistor'))
     .duration(160)
     .EUt(6)
 
-  event.recipes.susy.mods.gregtech.assembler('w9rqe1ewphghed') // remapped from original line 60
+  event.recipes.susy.mods.gregtech.assembler('8ethxxiocvnn5m') // remapped from original line 60
     .inputFluids(safeFluidOf('gtceu:glue', 100))
     .input(new GTRecipeItemInput(carbons, 1))
     .itemInputs('4x #forge:wires/fine_annealed_copper')
-    .itemOutputs(metaitem('component.resistor') * 4)
+    .itemOutputs(safeItemId('4x susy:component.resistor'))
     .duration(160)
     .EUt(6)
     .name('resistor_wire')
-    .output(metaitem('component.resistor') * 2)  
+    .output(safeItemId('2x susy:component.resistor'))  
     .matrix('RPR',  
     .key('R', metaitem('rubber_drop'))  
     .key('P', item('minecraft:paper')) 
@@ -54,67 +36,67 @@ ServerEvents.recipes(event => {
     .key('C', ore('dustAnthracite') | ore('dustCoke') | ore('dustCarbon') | ore('dustCoal') | ore('dustCharcoal')) 
     .register() 
 
-  event.recipes.susy.mods.gregtech.assembler('vmzbyjtnl1juww') // remapped from original line 81
+  event.recipes.susy.mods.gregtech.assembler('hfngkuzb9ldk0m') // remapped from original line 81
     .inputFluids(safeFluidOf('gtceu:glass', 144))
     .itemInputs('4x #forge:wires/fine_copper')
     .itemInputs('1x #forge:dusts/small_galena')
-    .itemOutputs(metaitem('component.diode'))
+    .itemOutputs(safeItemId('1x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('w5z8oq94zks7fp') // remapped from original line 90
+  event.recipes.susy.mods.gregtech.assembler('8hrkrhhqtultrv') // remapped from original line 90
     .inputFluids(safeFluidOf('gtceu:glass', 144))
     .itemInputs('4x #forge:wires/fine_annealed_copper')
     .itemInputs('1x #forge:dusts/small_galena')
-    .itemOutputs(metaitem('component.diode') * 2)
+    .itemOutputs(safeItemId('2x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('h6evkf3gte76si') // remapped from original line 99
+  event.recipes.susy.mods.gregtech.assembler('cj0brxkcodbrse') // remapped from original line 99
     .inputFluids(safeFluidOf('gtceu:glass', 144))
     .itemInputs('4x #forge:wires/fine_copper')
     .itemInputs('1x #forge:dusts/small_gallium_arsenide')
-    .itemOutputs(metaitem('component.diode') * 3)
+    .itemOutputs(safeItemId('3x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('ziapupkddtyzsj') // remapped from original line 108
+  event.recipes.susy.mods.gregtech.assembler('f9efmbip7cerz1') // remapped from original line 108
     .inputFluids(safeFluidOf('gtceu:glass', 144))
     .itemInputs('4x #forge:wires/fine_annealed_copper')
     .itemInputs('1x #forge:dusts/small_gallium_arsenide')
-    .itemOutputs(metaitem('component.diode') * 4)
+    .itemOutputs(safeItemId('4x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('xosr9suwmoxi9y') // remapped from original line 117
+  event.recipes.susy.mods.gregtech.assembler('1tocevrnvnhdci') // remapped from original line 117
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('4x #forge:wires/fine_copper')
     .itemInputs('1x #forge:dusts/small_gallium_arsenide')
-    .itemOutputs(metaitem('component.diode') * 6)
+    .itemOutputs(safeItemId('6x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('fmi4zwixuoa3it') // remapped from original line 126
+  event.recipes.susy.mods.gregtech.assembler('hwqhdonqx6yjhn') // remapped from original line 126
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('4x #forge:wires/fine_annealed_copper')
     .itemInputs('1x #forge:dusts/small_gallium_arsenide')
-    .itemOutputs(metaitem('component.diode') * 8)
+    .itemOutputs(safeItemId('8x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('bycfng4snkegwv') // remapped from original line 135
+  event.recipes.susy.mods.gregtech.assembler('fnqi7festiwgsy') // remapped from original line 135
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('4x #forge:wires/fine_copper')
-    .itemInputs(metaitem('wafer.silicon') * 1)
-    .itemOutputs(metaitem('component.diode') * 12)
+    .itemInputs(safeItemId('1x susy:wafer.silicon'))
+    .itemOutputs(safeItemId('12x susy:component.diode'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('alsmoqye286fs0') // remapped from original line 144
+  event.recipes.susy.mods.gregtech.assembler('s33czcqjakvbad') // remapped from original line 144
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('4x #forge:wires/fine_annealed_copper')
-    .itemInputs(metaitem('wafer.silicon') * 1)
-    .itemOutputs(metaitem('component.diode') * 16)
+    .itemInputs(safeItemId('1x susy:wafer.silicon'))
+    .itemOutputs(safeItemId('16x susy:component.diode'))
     .duration(400)
     .EUt(30)
 

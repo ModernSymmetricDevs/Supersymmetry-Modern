@@ -1,26 +1,8 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:centrifuge', input: '#forge:dusts/raw_electrum'})
   event.remove({ type: 'gtceu:mixer', input: safeFluidOf('gtceu:nitric_acid') && safeFluidOf('gtceu:hydrochloric_acid')})
 
-  event.recipes.gtceu.mixer('c5pdo5imllgjkx') // remapped from original line 19
+  event.recipes.gtceu.mixer('7ahjlayz4kmaet') // remapped from original line 19
     .itemInputs('2x #forge:dusts/raw_electrum')
     .inputFluids(safeFluidOf('gtceu:mercury', 1000))
     .itemOutputs('1x #forge:dusts/silver')
@@ -28,14 +10,14 @@ ServerEvents.recipes(event => {
     .duration(60)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('gyxlp5gt9fnuof') // remapped from original line 28
+  event.recipes.susy.roaster('8sg1vc74gfeiyc') // remapped from original line 28
     .inputFluids(safeFluidOf('susy:gold_amalgam', 1000))
     .itemOutputs('1x #forge:dusts/gold')
     .outputFluids(safeFluidOf('gtceu:mercury', 1000))
     .duration(360)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('modfmvaxhquwqb') // remapped from original line 37
+  event.recipes.susy.batch_reactor('rtsnpz8qt0g1cn') // remapped from original line 37
     .itemInputs('3x #forge:dusts/raw_electrum')
     .inputFluids(safeFluidOf('gtceu:nitric_acid', 4000))
     .itemOutputs('2x #forge:dusts/gold')
@@ -44,7 +26,7 @@ ServerEvents.recipes(event => {
     .duration(360)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('jglb2wtqlr3nf0') // remapped from original line 50
+  event.recipes.susy.batch_reactor('mtdgcxjk6gb3yx') // remapped from original line 50
     .inputFluids(safeFluidOf('susy:raw_electrum', 144))
     .inputFluids(safeFluidOf('gtceu:chlorine', 500))
     .itemOutputs('1x #forge:dusts/silver_chloride')
@@ -52,37 +34,37 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[3])
 
-  event.recipes.gtceu.macerator('9p0h99okzbbpx8') // remapped from original line 62
-    .itemInputs(safeItemId('11x susy:resource_block:11')1'))
+  event.recipes.gtceu.macerator('3rqcycyw1ccxwx') // remapped from original line 62
+    .itemInputs(safeItemId('1x susy:resource_block:11'))
     .itemOutputs('8x #forge:dusts/gold_concentrate')
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.mixer('mkpudn3c40zgoe') // remapped from original line 69
+  event.recipes.gtceu.mixer('cmrnat1cpjbslt') // remapped from original line 69
     .itemInputs('20x #forge:dusts/gold_concentrate')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 6000))
     .outputFluids(safeFluidOf('susy:gold_ore_slurry', 6000))
     .duration(160)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('yzhi6vl8pv8xns') // remapped from original line 77
+  event.recipes.susy.batch_reactor('187ekd7ejkq1a3') // remapped from original line 77
     .itemInputs('24x #forge:dusts/sodium_cyanide')
     .itemInputs('1x #forge:dusts/tiny_quicklime')
     .inputFluids(safeFluidOf('susy:gold_ore_slurry', 6000))
     .inputFluids(safeFluidOf('gtceu:air', 10000))
-    .itemOutputs(metaitem('sand.dust') * 16)
+    .itemOutputs(safeItemId('16x susy:sand.dust'))
     .outputFluids(safeFluidOf('susy:gold_leach_solution', 6000))
     .duration(160)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('rvrtfcihjvchau') // remapped from original line 88
+  event.recipes.susy.roaster('qtug93vre2gfns') // remapped from original line 88
     .itemInputs('1x #forge:dusts/any_purity_carbon')
     .inputFluids(safeFluidOf('gtceu:nitrogen', 1000))
     .itemOutputs('1x #forge:dusts/activated_carbon')
     .duration(1440)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.chemical_bath('hyws3zjprnlyxa') // remapped from original line 96
+  event.recipes.gtceu.chemical_bath('91qpkmlciqupge') // remapped from original line 96
     .itemInputs('4x #forge:dusts/activated_carbon')
     .inputFluids(safeFluidOf('susy:gold_leach_solution', 6000))
     .itemOutputs('4x #forge:dusts/loaded_carbon')
@@ -90,7 +72,7 @@ ServerEvents.recipes(event => {
     .duration(160)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('bv00nuwwbx3yvx') // remapped from original line 105
+  event.recipes.susy.batch_reactor('uohdumog9ltezk') // remapped from original line 105
     .itemInputs('1x #forge:dusts/sodium_cyanide')
     .itemInputs('1x #forge:dusts/sodium_hydroxide')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 9000))
@@ -98,7 +80,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.chemical_bath('nyievmscxgdg4e') // remapped from original line 114
+  event.recipes.gtceu.chemical_bath('kbltz7eib1fhzs') // remapped from original line 114
     .itemInputs('1x #forge:dusts/loaded_carbon')
     .inputFluids(safeFluidOf('susy:gold_eluent', 1000))
     .itemOutputs('1x #forge:dusts/spent_activated_carbon')
@@ -106,21 +88,21 @@ ServerEvents.recipes(event => {
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.chemical_bath('tueaqgtnqaxynt') // remapped from original line 123
+  event.recipes.gtceu.chemical_bath('w3wdobzztnwa8v') // remapped from original line 123
     .itemInputs('1x #forge:dusts/spent_activated_carbon')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 5))
     .itemOutputs('1x #forge:dusts/washed_activated_carbon')
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('dd5fgrebfiwjx2') // remapped from original line 131
+  event.recipes.susy.roaster('0bae0voydibbpl') // remapped from original line 131
     .itemInputs('1x #forge:dusts/washed_activated_carbon')
     .inputFluids(safeFluidOf('gtceu:air', 100))
     .itemOutputs('1x #forge:dusts/activated_carbon')
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electrolytic_cell('jy6uc8kjwpx9eq') // remapped from original line 139
+  event.recipes.gtceu.electrolytic_cell('5gcosgzjfzogsg') // remapped from original line 139
     .itemInputs('8x #forge:wires/fine_steel')
     .notConsumable('8x #forge:plates/stainless_steel')
     .notConsumable('8x #forge:plates/plastic')
@@ -131,15 +113,16 @@ ServerEvents.recipes(event => {
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.distillation_tower('rhrr4dg88i9wwl') // remapped from original line 151
-    .inputFluids(safeFluidOf('susy:mixed_cyanide_solution', 500))
-    .itemOutputs('3x #forge:dusts/sodium_cyanide')
-    .outputFluids(safeFluidOf('minecraft:water', 500))
-    .outputFluids(safeFluidOf('susy:gtfo_hydrogen_cyanide', 1000))
-    .duration(40)
-    .EUt(voltAmps[2])
+  // Contains GTFO resources
+  //event.recipes.gtceu.distillation_tower('1jpvdfk74uvuls') // remapped from original line 151
+    //.inputFluids(safeFluidOf('susy:mixed_cyanide_solution', 500))
+    //.itemOutputs('3x #forge:dusts/sodium_cyanide')
+    //.outputFluids(safeFluidOf('minecraft:water', 500))
+    //.outputFluids(safeFluidOf('susy:gtfo_hydrogen_cyanide', 1000))
+    //.duration(40)
+    //.EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('qrev89yomcf5zm') // remapped from original line 160
+  event.recipes.susy.batch_reactor('k8hpq2i8iubltn') // remapped from original line 160
     .itemInputs('16x #forge:wires/fine_gold_plated_steel')
     .inputFluids(safeFluidOf('gtceu:nitric_acid', 6000))
     .itemOutputs('1x #forge:dusts/gold')
@@ -148,7 +131,7 @@ ServerEvents.recipes(event => {
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('fznpbaa2qiy7j5') // remapped from original line 170
+  event.recipes.susy.roaster('vly6pfmodvyfs0') // remapped from original line 170
     .inputFluids(safeFluidOf('susy:iron_iii_nitrate_solution', 6000))
     .itemOutputs('5x #forge:dusts/iron_iii_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 6000))
@@ -157,22 +140,22 @@ ServerEvents.recipes(event => {
     .duration(80)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.continuous_stirred_tank_reactor('zsttoq56tolbvy') // remapped from original line 181
+  event.recipes.susy.continuous_stirred_tank_reactor('tibqs3aldd2rt6') // remapped from original line 181
     .inputFluids(safeFluidOf('susy:hydrogen_chloride', 150))
     .inputFluids(safeFluidOf('gtceu:nitric_acid', 50))
     .outputFluids(safeFluidOf('gtceu:aqua_regia', 200))
     .duration(6)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('ozuoswxyhbyg34') // remapped from original line 189
+  event.recipes.susy.batch_reactor('wbhmxqt2iz86zv') // remapped from original line 189
     .itemInputs('3x #forge:dusts/gold')
     .inputFluids(safeFluidOf('gtceu:aqua_regia', 16000))
     .outputFluids(safeFluidOf('susy:chloroauric_acid_solution', 1000))
-    .chancedOutput('1000x #forge:dusts/silver_chloride', 1000, 0)
+    .chancedOutput('1x #forge:dusts/silver_chloride', 1000, 0)
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.roaster('dxf9tkuyo3txwa') // remapped from original line 198
+  event.recipes.susy.roaster('cwhiu97uxkfphm') // remapped from original line 198
     .inputFluids(safeFluidOf('susy:chloroauric_acid_solution', 1000))
     .itemOutputs('15x #forge:dusts/chloroauric_acid')
     .outputFluids(safeFluidOf('susy:dense_steam', 6500))
@@ -181,7 +164,7 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('on46vtmg8ozb7o') // remapped from original line 208
+  event.recipes.susy.batch_reactor('ygdk9aekw3tkvj') // remapped from original line 208
     .itemInputs('5x #forge:dusts/chloroauric_acid')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 2000))
@@ -189,29 +172,29 @@ ServerEvents.recipes(event => {
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electrolytic_cell('zw3vvlbdvywl5h') // remapped from original line 217
+  event.recipes.gtceu.electrolytic_cell('guxcme1bzoxlld') // remapped from original line 217
     .itemInputs('1x #forge:plates/gold')
     .inputFluids(safeFluidOf('susy:wohlwill_electrolyte', 250))
     .notConsumable('1x #forge:plates/titanium')
     .notConsumable(safeFluidOf('susy:wohlwill_electrolyte', 1000))
     .itemOutputs('1x #forge:dusts/high_purity_gold')
-    .chancedOutput(metaitem('anode_slime.gold'), 600, 0)
+    .chancedOutput(safeItemId('1x susy:anode_slime.gold'), 600, 0)
     .outputFluids(safeFluidOf('susy:spent_wohlwill_electrolyte', 250))
     .duration(480)
     .EUt(voltAmps[3])
 
-  event.recipes.gtceu.electrolytic_cell('qbm9gsnvd9fwxo') // remapped from original line 229
+  event.recipes.gtceu.electrolytic_cell('a4yaqwf1p2tdbr') // remapped from original line 229
     .itemInputs('1x #forge:plates/gold')
     .inputFluids(safeFluidOf('susy:wohlwill_electrolyte', 250))
     .notConsumable('1x #forge:plates/high_purity_gold')
     .notConsumable(safeFluidOf('susy:wohlwill_electrolyte', 1000))
     .itemOutputs('1x #forge:dusts/high_purity_gold')
-    .chancedOutput(metaitem('anode_slime.gold'), 600, 0)
+    .chancedOutput(safeItemId('1x susy:anode_slime.gold'), 600, 0)
     .outputFluids(safeFluidOf('susy:spent_wohlwill_electrolyte', 250))
     .duration(560)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.batch_reactor('kivjg4dcon08le') // remapped from original line 241
+  event.recipes.susy.batch_reactor('qph740e52o5blg') // remapped from original line 241
     .inputFluids(safeFluidOf('susy:spent_wohlwill_electrolyte', 2000))
     .inputFluids(safeFluidOf('gtceu:sulfur_dioxide', 3000))
     .itemOutputs('1x #forge:dusts/gold')
@@ -219,7 +202,7 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.batch_reactor('tmlv1hrtnm0slw') // remapped from original line 257
+  event.recipes.susy.batch_reactor('xjc4e3fqbokys9') // remapped from original line 257
     .itemInputs('15x #forge:dusts/calcium_hydroxide')
     .inputFluids(safeFluidOf('susy:sulfuric_pgm_solution', 1000))
     .itemOutputs('18x #forge:dusts/calcium_sulfate')
@@ -227,15 +210,15 @@ ServerEvents.recipes(event => {
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('j3vffhx237jiwv') // remapped from original line 267
-    .itemInputs(metaitem('anode_slime.silver'))
+  event.recipes.susy.batch_reactor('r0x2w9bff2bkd6') // remapped from original line 267
+    .itemInputs(safeItemId('1x susy:anode_slime.silver'))
     .inputFluids(safeFluidOf('gtceu:aqua_regia', 16000))
     .outputFluids(safeFluidOf('susy:chloroauric_acid_solution', 1000))
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('olfgdjkpoeb2rx') // remapped from original line 275
-    .itemInputs(metaitem('anode_slime.gold'))
+  event.recipes.susy.batch_reactor('qib0ywcggwp7bj') // remapped from original line 275
+    .itemInputs(safeItemId('1x susy:anode_slime.gold'))
     .inputFluids(safeFluidOf('gtceu:nitric_acid', 2000))
     .outputFluids(safeFluidOf('susy:pgm_solution', 1000))
     .outputFluids(safeFluidOf('susy:silver_nitrate_solution', 1000))

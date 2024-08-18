@@ -1,56 +1,38 @@
-const voltageTiers = ["ulv", "lv", "mv", "hv", "ev", "iv", "luv", "zpm", "uv", "uhv", "uev", "uiv", "uxv", "opv", "max"];
-const voltageTiersInt = [8, 32, 128, 512, 2048, 8192, 32768, 131072, 524288, 2097152, 8388608, 33554432, 134217728, 536870912, 2147483647];
-const voltAmps = [7, 30, 120, 480, 1920, 7680, 30720, 122880, 491520, 1966080, 7864320, 31457280, 125829120, 503316480, 2013265920];
-
-function safeFluidOf(fluidId, amount) {
-    if (Fluid.exists(fluidId)) {
-        return Fluid.of(fluidId, amount);
-    }
-    throw new Error(`Fluid ${fluidId} does not exist.`);
-}
-function safeItemId(itemIdWithQuantifier) {
-    const itemId = itemIdWithQuantifier.split(" ")[1];
-    if (Item.exists(itemId)) {
-        return itemIdWithQuantifier;
-    }
-    throw new Error(`ItemId ${itemId} does not exist.`);
-}
-
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mining_drill('j70zye9yvwvtsv') // remapped from original line 6
+  event.recipes.susy.mining_drill('qk8eovvvyitthb') // remapped from original line 6
     .notConsumable(safeItemId('1x susy:deposit_block'))
-    .itemOutputs(metaitem('rock.orthomagmatic'))
+    .itemOutputs(safeItemId('1x susy:rock.orthomagmatic'))
     .duration(20)
     .EUt(30)
 
-  event.recipes.susy.mining_drill('a5ivdsjkeldqyy') // remapped from original line 13
-    .notConsumable(safeItemId('1x susy:deposit_block', ')))
-    .itemOutputs(metaitem('rock.metamorphic'))
+  event.recipes.susy.mining_drill('n4sxqc7jrr1gph') // remapped from original line 13
+    .notConsumable(safeItemId('1x susy:deposit_block'))
+    .itemOutputs(safeItemId('1x susy:rock.metamorphic'))
     .duration(20)
     .EUt(30)
 
-  event.recipes.susy.mining_drill('mf3do3ypearcca') // remapped from original line 20
-    .notConsumable(safeItemId('2x susy:deposit_block', ')))
-    .itemOutputs(metaitem('rock.sedimentary'))
+  event.recipes.susy.mining_drill('1hxyga0m4pwtj1') // remapped from original line 20
+    .notConsumable(safeItemId('1x susy:deposit_block'))
+    .itemOutputs(safeItemId('1x susy:rock.sedimentary'))
     .duration(20)
     .EUt(30)
 
-  event.recipes.susy.mining_drill('gwvhvz2ld1roy7') // remapped from original line 27
-    .notConsumable(safeItemId('3x susy:deposit_block', ')))
-    .itemOutputs(metaitem('rock.hydrothermal'))
+  event.recipes.susy.mining_drill('8axkragdjxoaof') // remapped from original line 27
+    .notConsumable(safeItemId('1x susy:deposit_block'))
+    .itemOutputs(safeItemId('1x susy:rock.hydrothermal'))
     .duration(20)
     .EUt(30)
 
-  event.recipes.susy.mining_drill('nurlfhcxop7msi') // remapped from original line 34
-    .notConsumable(safeItemId('4x susy:deposit_block', ')))
-    .itemOutputs(metaitem('rock.alluvial'))
+  event.recipes.susy.mining_drill('f7xinlodwzw4f7') // remapped from original line 34
+    .notConsumable(safeItemId('1x susy:deposit_block'))
+    .itemOutputs(safeItemId('1x susy:rock.alluvial'))
     .duration(20)
     .EUt(30)
 
-  event.recipes.susy.mining_drill('xmnkgd3k4nh2td') // remapped from original line 41
-    .notConsumable(safeItemId('5x susy:deposit_block', ')))
-    .itemOutputs(metaitem('rock.magmatic_hydrothermal'))
+  event.recipes.susy.mining_drill('i8iqjyizhtjkmu') // remapped from original line 41
+    .notConsumable(safeItemId('1x susy:deposit_block'))
+    .itemOutputs(safeItemId('1x susy:rock.magmatic_hydrothermal'))
     .duration(20)
     .EUt(30)
 
