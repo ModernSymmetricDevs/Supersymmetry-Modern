@@ -1,13 +1,13 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.ROASTER_RECIPES('valfqtsw1rhrob') // remapped from original line 10
+  event.recipes.susy.roaster('odbgiqvnldnmun') // remapped from original line 10
     .itemInputs('2x #forge:dusts/pyrite')
     .itemOutputs('1x #forge:dusts/iron_iii_sulfate')
     .itemOutputs('1x #forge:dusts/sulfur')
     .duration(80)
     .EUt(7)
 
-  event.recipes.susy.ROASTER_RECIPES('lydzcl0sj0dyie') // remapped from original line 18
+  event.recipes.susy.roaster('ghnwmdaut78hi9') // remapped from original line 18
     .itemInputs('1x #forge:dusts/iron_iii_sulfate')
     .itemOutputs('1x #forge:dusts/banded_iron')
     .outputFluids(safeFluidOf('gtceu:sulfur_trioxide', 3000))

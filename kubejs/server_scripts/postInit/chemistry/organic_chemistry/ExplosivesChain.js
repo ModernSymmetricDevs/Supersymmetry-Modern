@@ -1,10 +1,10 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.WEAPONS_FACTORY('oof9xv4uyjfpqd') // remapped from original line 7
+  event.recipes.susy.weapons_factory('hfiswext7jxxci') // remapped from original line 7
     .itemInputs(safeItemId('1x minecraft:paper'))
     .itemInputs(safeItemId('1x minecraft:string'))
     .inputFluids(safeFluidOf('gtceu:glyceryl_trinitrate', 100))
-    .itemOutputs(metaitem('dynamite') * 4)
+    .itemOutputs(safeItemId('4x susy:dynamite'))
     .EUt(30)
     .duration(60)
 

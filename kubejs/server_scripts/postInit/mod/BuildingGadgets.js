@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.CENTRIFUGE('9wpctrcrozbnqt') // remapped from original line 40
+  event.recipes.gtceu.CENTRIFUGE('6m5vhllk7mxz9k') // remapped from original line 40
     .inputFluids(safeFluidOf('gtceu:construction_foam', 3000))
     .itemOutputs(safeItemId('16x buildinggadgets:constructionpaste'))
     .duration(20)

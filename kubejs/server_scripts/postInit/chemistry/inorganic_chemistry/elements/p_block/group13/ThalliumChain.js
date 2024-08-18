@@ -1,22 +1,22 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.batch_reactor('bskjtbhgnop9bg') // remapped from original line 5
+  event.recipes.susy.batch_reactor('pqratmxiyelrjv') // remapped from original line 5
     .itemInputs('4x #forge:dusts/thallium_i_chloride')
     .inputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 2000))
-    .outputFluids(safeFluidOf('susy:acidic_thallium_sulfate_solution', 1000) HCl 
+    .outputFluids(safeFluidOf('susy:acidic_thallium_sulfate_solution', 1000)) 
     .EUt(30)
     .duration(20)
 
-  event.recipes.gtceu.distillation_tower('jhhjrrbmiy8dmg') // remapped from original line 13
+  event.recipes.gtceu.distillation_tower('ewstnclvxu8tko') // remapped from original line 13
     .inputFluids(safeFluidOf('susy:acidic_thallium_sulfate_solution', 1000))
     .outputFluids(safeFluidOf('susy:thallium_sulfate_solution', 1000))
     .outputFluids(safeFluidOf('susy:hydrogen_chloride', 2000))
     .EUt(30)
     .duration(20)
 
-  event.recipes.gtceu.electrolytic_cell('4woiojukqtadsa') // remapped from original line 21
+  event.recipes.gtceu.electrolytic_cell('cofuhknvwzhq5o') // remapped from original line 21
     .notConsumable('1x #forge:rods/platinum')
-    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .inputFluids(safeFluidOf('susy:thallium_sulfate_solution', 1000))
     .itemOutputs('1x #forge:dusts/thallium')
     .outputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))

@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.polymerization_tank('z0aofskncjykkc') // remapped from original line 7
+  event.recipes.susy.polymerization_tank('oeuaa8doaptkhk') // remapped from original line 7
     .inputFluids(safeFluidOf('susy:ethylene_glycol', 1000))
     .inputFluids(safeFluidOf('susy:terephthalic_acid', 2592))
     .itemOutputs('2x #forge:dusts/polyethylene_terephthalate')
@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.batch_reactor('cpfrgf0jiddyba') // remapped from original line 16
+  event.recipes.susy.batch_reactor('g2aglycrh5jcmm') // remapped from original line 16
     .itemInputs('2x #forge:dusts/cobalt_oxide')
     .inputFluids(safeFluidOf('gtceu:acetic_acid', 2000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 3000))
@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.susy.polymerization_tank('memilp6skzv62y') // remapped from original line 25
+  event.recipes.susy.polymerization_tank('vfpjefmjhrjd7q') // remapped from original line 25
     .notConsumable('1x #forge:dusts/cobalt_ii_acetate')
     .inputFluids(safeFluidOf('susy:ethylene_glycol', 1000))
     .inputFluids(safeFluidOf('susy:dimethyl_terephthalate', 3456))
@@ -25,16 +25,16 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(80)
 
-  event.recipes.gtceu.extruder('fp1o5uwh8uyofm') // remapped from original line 35
-    .notConsumable(metaitem('spinneret'))
+  event.recipes.gtceu.extruder('nql6qrhlc3htg3') // remapped from original line 35
+    .notConsumable(safeItemId('1x susy:spinneret'))
     .inputFluids(safeFluidOf('susy:polyethylene_terephthalate', 144))
     .itemOutputs('8x #forge:fibers/polyethylene_terephthalate')
     .EUt(480)
     .duration(20)
 
-  event.recipes.gtceu.extruder('doq4nc3hghp9d3') // remapped from original line 43
+  event.recipes.gtceu.extruder('ktcbtvdgbp6tb5') // remapped from original line 43
     .itemInputs('1x #forge:foils/polyethylene_terephthalate')
-    .itemOutputs(metaitem('mylar'))
+    .itemOutputs(safeItemId('1x susy:mylar'))
     .EUt(120)
     .duration(10)
 

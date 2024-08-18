@@ -1,250 +1,250 @@
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:assembler', input: 'susy:hull.mv' && '#forge:frames/steel' && 'susy:circuit.good_integrated' && 'susy:electric.motor.mv' && 'susy:electric.pump.mv' && '#forge:gears/vanadium_steel' && 'susy:circuit.integrated'})
 
-  event.recipes.susy.recipemap('mixer')('vofrzx0gp2w1xm') // remapped from original line 226
+  event.recipes.gtceu.mixer('qadroagb2a3tvf') // remapped from original line 226
     .inputFluids(safeFluidOf('gtceu:coal_tar', 1000))
     .itemInputs('4x #forge:dusts/coke')
-    .itemOutputs(metaitem('pitch_binder') * 4)
+    .itemOutputs(safeItemId('4x susy:pitch_binder'))
     .EUt(30)
     .duration(200)
 
-  event.recipes.susy.recipemap('extruder')('tz79kjqvr9hhl4') // remapped from original line 234
-    .notConsumable(metaitem('shape.extruder.rod'))
-    .itemInputs(metaitem('pitch_binder'))
-    .itemOutputs(metaitem('raw_electrode'))
+  event.recipes.gtceu.extruder('mn9gokupkw5vyf') // remapped from original line 234
+    .notConsumable(safeItemId('1x susy:shape.extruder.rod'))
+    .itemInputs(safeItemId('1x susy:pitch_binder'))
+    .itemOutputs(safeItemId('1x susy:raw_electrode'))
     .EUt(30)
     .duration(200)
 
-  event.recipes.susy.recipemap('sintering_oven')('dqj2xfkrpvlou4') // remapped from original line 242
-    .itemInputs(metaitem('raw_electrode'))
+  event.recipes.susy.sintering_oven('6c8jvngahjkjze') // remapped from original line 242
+    .itemInputs(safeItemId('1x susy:raw_electrode'))
     .inputFluids(safeFluidOf('susy:syngas', 100))
     .inputFluids(safeFluidOf('gtceu:air', 100))
-    .itemOutputs(metaitem('graphite_electrode'))
+    .itemOutputs(safeItemId('1x susy:graphite_electrode'))
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 50))
     .EUt(30)
     .duration(150)
 
-  event.recipes.susy.recipemap('sintering_oven')('nzp7mmyw7ir40t') // remapped from original line 252
-    .itemInputs(metaitem('raw_electrode'))
+  event.recipes.susy.sintering_oven('de96powyw7yzer') // remapped from original line 252
+    .itemInputs(safeItemId('1x susy:raw_electrode'))
     .inputFluids(safeFluidOf('gtceu:methane', 100))
     .inputFluids(safeFluidOf('gtceu:air', 100))
-    .itemOutputs(metaitem('graphite_electrode'))
+    .itemOutputs(safeItemId('1x susy:graphite_electrode'))
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 50))
     .EUt(30)
     .duration(150)
 
-  event.recipes.susy.recipemap('sintering_oven')('py1zpvo0h22bob') // remapped from original line 262
-    .itemInputs(metaitem('raw_electrode'))
+  event.recipes.susy.sintering_oven('8g5dj5yfqrpmaj') // remapped from original line 262
+    .itemInputs(safeItemId('1x susy:raw_electrode'))
     .inputFluids(safeFluidOf('susy:syngas', 100))
     .inputFluids(safeFluidOf('gtceu:oxygen', 80))
-    .itemOutputs(metaitem('graphite_electrode'))
+    .itemOutputs(safeItemId('1x susy:graphite_electrode'))
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 50))
     .EUt(30)
     .duration(150)
 
-  event.recipes.susy.recipemap('sintering_oven')('pxu0fmhhi1io6u') // remapped from original line 272
-    .itemInputs(metaitem('raw_electrode'))
+  event.recipes.susy.sintering_oven('xwru2qjo9ctxtb') // remapped from original line 272
+    .itemInputs(safeItemId('1x susy:raw_electrode'))
     .inputFluids(safeFluidOf('gtceu:methane', 100))
     .inputFluids(safeFluidOf('gtceu:oxygen', 80))
-    .itemOutputs(metaitem('graphite_electrode'))
+    .itemOutputs(safeItemId('1x susy:graphite_electrode'))
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 50))
     .EUt(30)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('2tnrkqqpj985f9') // remapped from original line 561
+  event.recipes.gtceu.assembler('ltybic3rohxdjq') // remapped from original line 561
     .circuit(6)
     .itemInputs('6x #forge:plates/silicon_carbide')
-    .itemInputs(safeItemId('5x gregtech:metal_casing', ')))
+    .itemInputs(safeItemId('1x gregtech:metal_casing'))
     .itemOutputs(safeItemId('2x susy:susy_multiblock_casing'))
     .EUt(16)
     .duration(50)
 
-  event.recipes.susy.recipemap('assembler')('g4jk7btr5dvzcs') // remapped from original line 572
-    .itemInputs(metaitem('transformer.lv'))
-    .itemInputs(metaitem('energy_hatch.output.lv'))
-    .itemInputs(metaitem('voltage_coil.lv'))
+  event.recipes.gtceu.assembler('eqfwte3i70ave6') // remapped from original line 572
+    .itemInputs(safeItemId('1x susy:transformer.lv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output.lv'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.lv'))
     .itemInputs('2x #forge:wires/gt_quadruple_tin')
-    .itemOutputs(metaitem('energy_hatch.output_4a.lv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_4a.lv'))
     .EUt(7)
     .duration(100)
 
-  event.recipes.susy.recipemap('assembler')('psj2sih7vmwfrc') // remapped from original line 582
-    .itemInputs(metaitem('transformer.adjustable.lv'))
-    .itemInputs(metaitem('energy_hatch.output_4a.lv'))
-    .itemInputs(metaitem('voltage_coil.lv'))
+  event.recipes.gtceu.assembler('eimv81eavwk1mg') // remapped from original line 582
+    .itemInputs(safeItemId('1x susy:transformer.adjustable.lv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output_4a.lv'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.lv'))
     .itemInputs('2x #forge:wires/gt_octal_tin')
-    .itemOutputs(metaitem('energy_hatch.output_16a.lv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_16a.lv'))
     .EUt(7)
     .duration(200)
 
-  event.recipes.susy.recipemap('assembler')('2lzay1wokas6o8') // remapped from original line 592
-    .itemInputs(metaitem('transformer.mv'))
-    .itemInputs(metaitem('energy_hatch.output.mv'))
-    .itemInputs(metaitem('plate.ultra_low_power_integrated_circuit'))
-    .itemInputs(metaitem('voltage_coil.mv'))
+  event.recipes.gtceu.assembler('pvprzppfozd6uj') // remapped from original line 592
+    .itemInputs(safeItemId('1x susy:transformer.mv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output.mv'))
+    .itemInputs(safeItemId('1x susy:plate.ultra_low_power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.mv'))
     .itemInputs('2x #forge:wires/gt_quadruple_copper')
-    .itemOutputs(metaitem('energy_hatch.output_4a.mv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_4a.mv'))
     .EUt(30)
     .duration(100)
 
-  event.recipes.susy.recipemap('assembler')('g1e6ocdnntekk0') // remapped from original line 603
-    .itemInputs(metaitem('transformer.adjustable.mv'))
-    .itemInputs(metaitem('energy_hatch.output_4a.mv'))
-    .itemInputs(metaitem('plate.ultra_low_power_integrated_circuit') * 2)
-    .itemInputs(metaitem('voltage_coil.mv'))
+  event.recipes.gtceu.assembler('qqxc6jmbg3kclm') // remapped from original line 603
+    .itemInputs(safeItemId('1x susy:transformer.adjustable.mv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output_4a.mv'))
+    .itemInputs(safeItemId('2x susy:plate.ultra_low_power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.mv'))
     .itemInputs('2x #forge:wires/gt_octal_copper')
-    .itemOutputs(metaitem('energy_hatch.output_16a.mv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_16a.mv'))
     .EUt(30)
     .duration(200)
 
-  event.recipes.susy.recipemap('assembler')('4wvgd6ugy5ih3d') // remapped from original line 614
-    .itemInputs(metaitem('transformer.hv'))
-    .itemInputs(metaitem('energy_hatch.output.hv'))
-    .itemInputs(metaitem('plate.low_power_integrated_circuit'))
-    .itemInputs(metaitem('voltage_coil.hv'))
+  event.recipes.gtceu.assembler('gbjok507esaw2a') // remapped from original line 614
+    .itemInputs(safeItemId('1x susy:transformer.hv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output.hv'))
+    .itemInputs(safeItemId('1x susy:plate.low_power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.hv'))
     .itemInputs('2x #forge:wires/gt_quadruple_gold')
-    .itemOutputs(metaitem('energy_hatch.output_4a.hv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_4a.hv'))
     .EUt(120)
     .duration(100)
 
-  event.recipes.susy.recipemap('assembler')('nuyta2swzegjim') // remapped from original line 625
-    .itemInputs(metaitem('transformer.adjustable.hv'))
-    .itemInputs(metaitem('energy_hatch.output_4a.hv'))
-    .itemInputs(metaitem('plate.low_power_integrated_circuit') * 2)
-    .itemInputs(metaitem('voltage_coil.hv'))
+  event.recipes.gtceu.assembler('q5mel6mkoxwsjl') // remapped from original line 625
+    .itemInputs(safeItemId('1x susy:transformer.adjustable.hv'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output_4a.hv'))
+    .itemInputs(safeItemId('2x susy:plate.low_power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.hv'))
     .itemInputs('2x #forge:wires/gt_octal_gold')
-    .itemOutputs(metaitem('energy_hatch.output_16a.hv'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_16a.hv'))
     .EUt(120)
     .duration(200)
 
-  event.recipes.susy.recipemap('assembler')('rhfahjwatgpv1c') // remapped from original line 636
-    .itemInputs(metaitem('transformer.adjustable.ev'))
-    .itemInputs(metaitem('energy_hatch.output_4a.ev'))
-    .itemInputs(metaitem('plate.power_integrated_circuit') * 2)
-    .itemInputs(metaitem('voltage_coil.ev'))
+  event.recipes.gtceu.assembler('yyz6urprclc8nu') // remapped from original line 636
+    .itemInputs(safeItemId('1x susy:transformer.adjustable.ev'))
+    .itemInputs(safeItemId('1x susy:energy_hatch.output_4a.ev'))
+    .itemInputs(safeItemId('2x susy:plate.power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:voltage_coil.ev'))
     .itemInputs('2x #forge:wires/gt_octal_aluminium')
-    .itemOutputs(metaitem('energy_hatch.output_16a.ev'))
+    .itemOutputs(safeItemId('1x susy:energy_hatch.output_16a.ev'))
     .EUt(480)
     .duration(200)
 
-  event.recipes.susy.recipemap('assembler')('upqihshuuhjdog') // remapped from original line 952
-    .itemInputs(metaitem('hull.lv'))
+  event.recipes.gtceu.assembler('tin88gqjo0zbdv') // remapped from original line 952
+    .itemInputs(safeItemId('1x susy:hull.lv'))
     .itemInputs('4x #forge:frames/steel')
     .itemInputs('4x #forge:circuits/lv')
-    .itemInputs(metaitem('electric.pump.lv') * 4)
-    .itemInputs(metaitem('electric.motor.lv') * 4)
+    .itemInputs(safeItemId('4x susy:electric.pump.lv'))
+    .itemInputs(safeItemId('4x susy:electric.motor.lv'))
     .itemInputs('4x #forge:gears/steel')
     .circuit(2)
-    .itemOutputs(metaitem('fluid_drilling_rig.mv'))
+    .itemOutputs(safeItemId('1x susy:fluid_drilling_rig.mv'))
     .EUt(30)
     .duration(600)
 
-  event.recipes.susy.recipemap('assembler')('wmh74kfa4hikma') // remapped from original line 967
-    .itemInputs(metaitem('hull.ev'))
+  event.recipes.gtceu.assembler('e2dscszqdhmu4j') // remapped from original line 967
+    .itemInputs(safeItemId('1x susy:hull.ev'))
     .itemInputs('4x #forge:frames/titanium')
-    .itemInputs(metaitem('electric.pump.ev') * 2)
+    .itemInputs(safeItemId('2x susy:electric.pump.ev'))
     .itemInputs('1x #forge:pipes/huge_fluid_titanium')
     .itemInputs('1x #forge:rotors/titanium')
     .itemInputs('1x #forge:circuits/ev')
-    .itemOutputs(metaitem('catalytic_reformer'))
+    .itemOutputs(safeItemId('1x susy:catalytic_reformer'))
     .circuit(3)
     .EUt(480)
     .duration(600)
 
-  event.recipes.susy.recipemap('assembler')('z0wlct7kvqlxse') // remapped from original line 981
+  event.recipes.gtceu.assembler('iuervaymg7yadi') // remapped from original line 981
     .itemInputs('2x #forge:gears/small_steel')
     .itemInputs('2x #forge:bolts/steel')
-    .itemInputs(metaitem('electric.motor.lv') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.lv'))
     .itemInputs('1x #forge:batterys/lv')
-    .itemOutputs(metaitem('power_unit.lv'))
+    .itemOutputs(safeItemId('1x susy:power_unit.lv'))
     .EUt(30)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('kqye75c56xmxvs') // remapped from original line 991
+  event.recipes.gtceu.assembler('vmwy9pqjsiejgo') // remapped from original line 991
     .itemInputs('2x #forge:gears/small_aluminium')
     .itemInputs('2x #forge:bolts/aluminium')
-    .itemInputs(metaitem('electric.motor.mv') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.mv'))
     .itemInputs('1x #forge:batterys/mv')
-    .itemOutputs(metaitem('power_unit.mv'))
+    .itemOutputs(safeItemId('1x susy:power_unit.mv'))
     .EUt(120)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('juh8yzslrolqjp') // remapped from original line 1001
+  event.recipes.gtceu.assembler('4n81q2vyyfh0uh') // remapped from original line 1001
     .itemInputs('2x #forge:gears/small_stainless_steel')
     .itemInputs('2x #forge:bolts/stainless_steel')
-    .itemInputs(metaitem('electric.motor.hv') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.hv'))
     .itemInputs('1x #forge:batterys/hv')
-    .itemOutputs(metaitem('power_unit.hv'))
+    .itemOutputs(safeItemId('1x susy:power_unit.hv'))
     .EUt(480)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('fjdgfwpvrc5clm') // remapped from original line 1011
+  event.recipes.gtceu.assembler('kgwvsyvuxyegsj') // remapped from original line 1011
     .itemInputs('2x #forge:gears/small_titanium')
     .itemInputs('2x #forge:bolts/titanium')
-    .itemInputs(metaitem('electric.motor.ev') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.ev'))
     .itemInputs('1x #forge:batterys/ev')
-    .itemOutputs(metaitem('power_unit.ev'))
+    .itemOutputs(safeItemId('1x susy:power_unit.ev'))
     .EUt(1920)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('c9mzb778wukidd') // remapped from original line 1021
+  event.recipes.gtceu.assembler('0b0ztc5q5wi84t') // remapped from original line 1021
     .itemInputs('2x #forge:gears/small_tungsten_steel')
     .itemInputs('2x #forge:bolts/tungsten_steel')
-    .itemInputs(metaitem('electric.motor.iv') * 2)
+    .itemInputs(safeItemId('2x susy:electric.motor.iv'))
     .itemInputs('1x #forge:batterys/iv')
-    .itemOutputs(metaitem('power_unit.iv'))
+    .itemOutputs(safeItemId('1x susy:power_unit.iv'))
     .EUt(7680)
     .duration(150)
 
-  event.recipes.susy.recipemap('assembler')('wgoapokihhup8u') // remapped from original line 1033
+  event.recipes.gtceu.assembler('jocjgphxvv8ijb') // remapped from original line 1033
     .circuit(2)
-    .itemInputs(metaitem('hull.Hv'))
+    .itemInputs(safeItemId('1x susy:hull.Hv'))
     .itemInputs('3x #forge:frames/aluminium')
     .itemInputs('4x #forge:circuits/hv')
-    .itemInputs(metaitem('electric.pump.hv') * 4)
+    .itemInputs(safeItemId('4x susy:electric.pump.hv'))
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('mineral_wool') * 64)
+    .itemInputs(safeItemId('64x susy:mineral_wool'))
     .inputFluids(safeFluidOf('susy:cryogenic_solder', 1296))
-    .itemOutputs(metaitem('single_column_cryogenic_distillation_plant'))
+    .itemOutputs(safeItemId('1x susy:single_column_cryogenic_distillation_plant'))
     .EUt(30)
     .duration(600)
 
-  event.recipes.susy.recipemap('assembler')('wipa8dqrzgktsm') // remapped from original line 1047
+  event.recipes.gtceu.assembler('l35jymegzes79p') // remapped from original line 1047
     .circuit(3)
-    .itemInputs(metaitem('hull.Hv'))
+    .itemInputs(safeItemId('1x susy:hull.Hv'))
     .itemInputs('3x #forge:frames/aluminium')
     .itemInputs('2x #forge:circuits/hv')
-    .itemInputs(metaitem('electric.pump.hv') * 4)
+    .itemInputs(safeItemId('4x susy:electric.pump.hv'))
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs(safeItemId('6x susy:serpentine'))
-    .itemInputs(metaitem('mineral_wool') * 64)
+    .itemInputs(safeItemId('64x susy:mineral_wool'))
     .inputFluids(safeFluidOf('susy:cryogenic_solder', 1296))
-    .itemOutputs(metaitem('low_pressure_cryogenic_distillation_plant'))
+    .itemOutputs(safeItemId('1x susy:low_pressure_cryogenic_distillation_plant'))
     .EUt(30)
     .duration(600)
 
-  event.recipes.susy.recipemap('assembler')('g7huozigb4uv7y') // remapped from original line 1062
+  event.recipes.gtceu.assembler('gncllat5ua7wae') // remapped from original line 1062
     .circuit(4)
-    .itemInputs(metaitem('hull.Hv'))
+    .itemInputs(safeItemId('1x susy:hull.Hv'))
     .itemInputs('12x #forge:frames/aluminium')
     .itemInputs('6x #forge:circuits/hv')
-    .itemInputs(metaitem('electric.pump.hv') * 8)
+    .itemInputs(safeItemId('8x susy:electric.pump.hv'))
     .itemInputs('4x #forge:plates/aluminium')
-    .itemInputs(metaitem('mineral_wool') * 64)
+    .itemInputs(safeItemId('64x susy:mineral_wool'))
     .inputFluids(safeFluidOf('susy:cryogenic_solder', 1296))
-    .itemOutputs(metaitem('high_pressure_cryogenic_distillation_plant'))
+    .itemOutputs(safeItemId('1x susy:high_pressure_cryogenic_distillation_plant'))
     .EUt(30)
     .duration(600)
 
-  event.recipes.susy.recipemap('assembler')('hl3wmytblhdi30') // remapped from original line 1076
+  event.recipes.gtceu.assembler('nbsvqvot4l07ig') // remapped from original line 1076
     .circuit(3)
-    .itemInputs(metaitem('hull.Hv'))
+    .itemInputs(safeItemId('1x susy:hull.Hv'))
     .itemInputs('1x #forge:frames/stainless_steel')
     .itemInputs('4x #forge:plates/polytetrafluoroethylene')
     .itemInputs('2x #forge:circuits/hv')
-    .itemInputs(metaitem('electric.motor.hv'))
-    .itemInputs(metaitem('electric.pump.hv') * 4)
-    .itemOutputs(metaitem('blender'))
+    .itemInputs(safeItemId('1x susy:electric.motor.hv'))
+    .itemInputs(safeItemId('4x susy:electric.pump.hv'))
+    .itemOutputs(safeItemId('1x susy:blender'))
     .EUt(30)
     .duration(600)
 

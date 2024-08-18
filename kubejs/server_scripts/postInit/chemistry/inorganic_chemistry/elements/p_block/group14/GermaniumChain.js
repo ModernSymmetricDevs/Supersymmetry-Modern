@@ -1,42 +1,42 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.chemical_bath('ug35mnd67yvrel') // remapped from original line 19
+  event.recipes.gtceu.chemical_bath('p9zxprwir8m2wn') // remapped from original line 19
     .itemInputs('1x #forge:logs/wood')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 100))
     .outputFluids(safeFluidOf('susy:tannic_acid_solution', 100))
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.autoclave('a6b5kv8eugeixw') // remapped from original line 54
+  event.recipes.gtceu.autoclave('zysk8qjl4bgzdo') // remapped from original line 54
     .itemInputs('1x #forge:dusts/germanium_rich_oxide')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .outputFluids(safeFluidOf('susy:germanium_leach', 1000))
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.autoclave('epwjsu5vqvqotl') // remapped from original line 62
+  event.recipes.gtceu.autoclave('12zatt6xg99b3r') // remapped from original line 62
     .itemInputs('1x #forge:dusts/waelz_oxide')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .outputFluids(safeFluidOf('susy:germanium_leach', 1000))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('gqwdmq3p8tupv8') // remapped from original line 70
+  event.recipes.susy.batch_reactor('xnpepz6xyonjuo') // remapped from original line 70
     .inputFluids(safeFluidOf('susy:tannic_acid_solution', 100))
     .inputFluids(safeFluidOf('susy:germanium_leach', 1000))
-    .chancedOutput('8000x #forge:dusts/germanium_concentrate', 8000, 0)
+    .chancedOutput('1x #forge:dusts/germanium_concentrate', 8000, 0)
     .outputFluids(safeFluidOf('susy:zinc_leach', 1000))
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.mixer('vfmn3bilp8xija') // remapped from original line 81
+  event.recipes.gtceu.mixer('nwgqivgbxbdaxe') // remapped from original line 81
     .itemInputs('1x #forge:dusts/oxalic_acid')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
     .outputFluids(safeFluidOf('susy:oxalic_acid_solution', 1000))
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.autoclave('mnn4am9xptlywb') // remapped from original line 89
+  event.recipes.gtceu.autoclave('aqzzegarojlbxi') // remapped from original line 89
     .itemInputs('2x #forge:dusts/germanium_rich_oxide')
     .inputFluids(safeFluidOf('susy:oxalic_acid_solution', 1000))
     .itemOutputs('1x #forge:dusts/lead_silica_residue')
@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('kidh3zgvtjy4va') // remapped from original line 98
+  event.recipes.susy.batch_reactor('rleknjfwqvimha') // remapped from original line 98
     .itemInputs('2x #forge:dusts/small_iron')
     .inputFluids(safeFluidOf('susy:germanium_oxalate_leach', 8000))
     .itemOutputs('9x #forge:dusts/iron_oxalate_dihydrate')
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.roaster('rgrin4nkdmw8di') // remapped from original line 107
+  event.recipes.susy.roaster('8wyuwopwh1utsw') // remapped from original line 107
     .itemInputs('9x #forge:dusts/iron_oxalate_dihydrate')
     .itemOutputs('2x #forge:dusts/iron_ii_oxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 2000))
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.blender('9aslegaul2ebzs') // remapped from original line 117
+  event.recipes.susy.blender('89jcwplbzrz9fv') // remapped from original line 117
     .inputFluids(safeFluidOf('susy:kerosene', 700))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 200))
     .inputFluids(safeFluidOf('susy:tri_octyl_decyl_amine', 200))
@@ -70,7 +70,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.centrifuge('s6ztxefskkvjju') // remapped from original line 127
+  event.recipes.gtceu.centrifuge('prgnmxpxc8tfmo') // remapped from original line 127
     .inputFluids(safeFluidOf('susy:germanium_gallium_extraction_mixture', 1000))
     .inputFluids(safeFluidOf('susy:purified_germanium_oxalate_leach', 1000))
     .outputFluids(safeFluidOf('susy:germanium_gallium_extract', 1000))
@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.centrifuge('2el3nxdmthwhts') // remapped from original line 136
+  event.recipes.gtceu.centrifuge('ceidrgnhtspz5v') // remapped from original line 136
     .inputFluids(safeFluidOf('susy:germanium_gallium_extract', 1000))
     .inputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 600))
     .outputFluids(safeFluidOf('susy:germanium_extract', 1000))
@@ -86,9 +86,9 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.ELECTROLYZER('gw7dt30o06izx8') // remapped from original line 146
+  event.recipes.gtceu.ELECTROLYZER('iwcu81cjyhwnlo') // remapped from original line 146
     .notConsumable('1x #forge:rods/steel')
-    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .inputFluids(safeFluidOf('susy:gallium_sulfate_solution', 3000))
     .itemOutputs('2x #forge:dusts/gallium')
     .itemOutputs('6x #forge:dusts/oxalic_acid')
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.centrifuge('duvhrawlotaiky') // remapped from original line 158
+  event.recipes.gtceu.centrifuge('zu0jlbpalhpnax') // remapped from original line 158
     .inputFluids(safeFluidOf('susy:germanium_extract', 1000))
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 200))
     .outputFluids(safeFluidOf('susy:germanium_gallium_extraction_mixture', 1000))
@@ -105,7 +105,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('6rznmwpu8ddubi') // remapped from original line 167
+  event.recipes.susy.batch_reactor('q1mknokhfsxcwo') // remapped from original line 167
     .notConsumable('1x #forge:springs/cupronickel')
     .inputFluids(safeFluidOf('susy:germanium_oxalate_solution', 400))
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 400))
@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('xiskg8qk1onx8r') // remapped from original line 180
+  event.recipes.susy.batch_reactor('x7jndlwcc4f106') // remapped from original line 180
     .notConsumable('1x #forge:springs/cupronickel')
     .itemInputs('1x #forge:dusts/germanium_concentrate')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 400))
@@ -125,14 +125,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.distillation_tower('rml4ktvpv95ipe') // remapped from original line 191
+  event.recipes.gtceu.distillation_tower('icuwtafhquenzm') // remapped from original line 191
     .inputFluids(safeFluidOf('susy:impure_germanium_tetrachloride', 1000))
     .outputFluids(safeFluidOf('susy:arsenic_trichloride', 100))
     .outputFluids(safeFluidOf('susy:germanium_tetrachloride', 900))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('wmwygqozillzdy') // remapped from original line 199
+  event.recipes.susy.batch_reactor('tleyz3ycepg8hz') // remapped from original line 199
     .inputFluids(safeFluidOf('susy:germanium_tetrachloride', 1000))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 6000))
     .itemOutputs('3x #forge:dusts/germanium_dioxide')
@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.tube_furnace('otrnaqmqann9on') // remapped from original line 208
+  event.recipes.susy.tube_furnace('wovtfeqmmq6hdw') // remapped from original line 208
     .itemInputs('3x #forge:dusts/germanium_dioxide')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 4000))
     .itemOutputs('1x #forge:dusts/germanium')
@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.zone_refiner('rfggmndd5stnhk') // remapped from original line 217
+  event.recipes.susy.zone_refiner('ohyalhxjyccwcg') // remapped from original line 217
     .itemInputs('1x #forge:ingots/germanium')
     .itemOutputs('1x #forge:ingots/high_purity_germanium')
     .duration(200)

@@ -1,20 +1,20 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.gravity_separator('765dijssxj9h7w') // remapped from original line 27
+  event.recipes.susy.gravity_separator('isdawysjctycxm') // remapped from original line 27
     .itemInputs('1x #forge:dusts/zircon')
     .itemOutputs('1x #forge:dusts/sifted_zircon')
-    .chancedOutput('5000x #forge:dusts/certus_quartz', 5000, 0)
+    .chancedOutput('1x #forge:dusts/certus_quartz', 5000, 0)
     .EUt(voltAmps[1])
     .duration(40)
 
-  event.recipes.gtceu.mixer('oueku0i7q51gb4') // remapped from original line 35
+  event.recipes.gtceu.mixer('fhvvipuhoyproq') // remapped from original line 35
     .itemInputs('8x #forge:dusts/sifted_zircon')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_zircon_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('rizsgr0ykgmvf4') // remapped from original line 43
+  event.recipes.susy.froth_flotation('ptv7ogdpgmtxtq') // remapped from original line 43
     .inputFluids(safeFluidOf('susy:impure_zircon_slurry', 2000))
     .notConsumable(safeFluidOf('susy:soda_ash_solution', 1000))
     .notConsumable(safeFluidOf('susy:alkaline_sodium_oleate_solution', 1000))
@@ -26,37 +26,37 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('ziqcfnwor2i0o3') // remapped from original line 56
+  event.recipes.susy.clarifier('ct99c0qtfgwuvt') // remapped from original line 56
     .inputFluids(safeFluidOf('susy:zircon_slurry', 1000))
     .itemOutputs('16x #forge:dusts/flotated_zircon')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.electrostatic_separator('74opojymet6kgs') // remapped from original line 64
+  event.recipes.susy.electrostatic_separator('qk4ttoktbtgi5u') // remapped from original line 64
     .itemInputs('1x #forge:dusts/flotated_zircon')
     .itemOutputs('1x #forge:dusts/concentrate_zircon')
-    .chancedOutput('500x #forge:dusts/ilmenite', 500, 100)
-    .chancedOutput('500x #forge:dusts/chromite', 500, 100)
-    .chancedOutput('500x #forge:dusts/hematite', 500, 100)
-    .chancedOutput('500x #forge:dusts/rutile', 500, 100)
+    .chancedOutput('1x #forge:dusts/ilmenite', 500, 100)
+    .chancedOutput('1x #forge:dusts/chromite', 500, 100)
+    .chancedOutput('1x #forge:dusts/hematite', 500, 100)
+    .chancedOutput('1x #forge:dusts/rutile', 500, 100)
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.advanced_arc_furnace('z6oidjpec1hp7y') // remapped from original line 76
+  event.recipes.susy.advanced_arc_furnace('t7bdienb6hcq8p') // remapped from original line 76
     .itemInputs('1x #forge:dusts/concentrate_zircon')
     .chancedOutput('3x #forge:dusts/fused_zirconia', 9000, 0)
     .itemOutputs('3x #forge:dusts/silicon_dioxide')
     .duration(20)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.advanced_arc_furnace('bybsmipkyz8fjc') // remapped from original line 101
+  event.recipes.susy.advanced_arc_furnace('3tu5p13rxosjcd') // remapped from original line 101
     .itemInputs('1x #forge:dusts/baddeleyite')
     .chancedOutput('3x #forge:dusts/fused_zirconia', 9000, 0)
     .duration(20)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.batch_reactor('shijrv1lnsijcr') // remapped from original line 109
+  event.recipes.susy.batch_reactor('glbqiknus80kmx') // remapped from original line 109
     .itemInputs('3x #forge:dusts/fused_zirconia')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1500))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 750))
@@ -64,21 +64,21 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('vk80zwtaheim6t') // remapped from original line 120
+  event.recipes.susy.roaster('e17gzhn98er7rj') // remapped from original line 120
     .itemInputs('3x #forge:dusts/fused_zirconia')
     .itemInputs('2x #forge:dusts/quicklime')
     .chancedOutput('5x #forge:dusts/calcium_zirconate', 9000, 0)
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('beqhfzv7mvp9am') // remapped from original line 128
+  event.recipes.susy.batch_reactor('7gk4vprqcmswua') // remapped from original line 128
     .itemInputs('3x #forge:dusts/calcium_zirconate')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 3000))
     .outputFluids(safeFluidOf('susy:zirconium_sulfate_solution', 3000))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('oi2rp79fu9lgj5') // remapped from original line 136
+  event.recipes.susy.batch_reactor('k6xnmtnd9zqphc') // remapped from original line 136
     .itemInputs('6x #forge:dusts/calcium_chloride')
     .inputFluids(safeFluidOf('susy:zirconium_sulfate_solution', 3000))
     .itemOutputs('6x #forge:dusts/calcium_sulfate')
@@ -86,14 +86,14 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('ipxgcjmvtdluqo') // remapped from original line 160
+  event.recipes.susy.batch_reactor('ewmyscgxijnty2') // remapped from original line 160
     .itemInputs('5x #forge:dusts/impure_zirconium_tetrachloride')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 3000))
     .outputFluids(safeFluidOf('susy:zirconyl_chloride_solution', 2000))
     .duration(40)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.mixer('v4ylqwcgpbdsxr') // remapped from original line 168
+  event.recipes.gtceu.mixer('hyklm9dbjvsyjz') // remapped from original line 168
     .itemInputs('8x #forge:dusts/ammonium_thiocyanate')
     .inputFluids(safeFluidOf('susy:kerosene', 900))
     .inputFluids(safeFluidOf('susy:methyl_isobutyl_ketone', 100))
@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[2])
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('jvvmatfp5ugolr') // remapped from original line 177
+  event.recipes.gtceu.centrifuge('dtj1xznsxarhpp') // remapped from original line 177
     .inputFluids(safeFluidOf('susy:zirconyl_chloride_solution', 2000))
     .inputFluids(safeFluidOf('susy:hafnium_extraction_mixture', 1000))
     .outputFluids(safeFluidOf('susy:purified_zirconyl_chloride_solution', 2000))
@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.susy.LCR('cb46fkqxpqbsft') // remapped from original line 186
+  event.recipes.susy.LCR('ppxhzbamnj5ghk') // remapped from original line 186
     .inputFluids(safeFluidOf('susy:purified_zirconyl_chloride_solution', 10000))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 2000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 13000))
@@ -119,7 +119,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.susy.batch_reactor('x7umldtfpsxfpq') // remapped from original line 197
+  event.recipes.susy.batch_reactor('iiow9qhjmjgorq') // remapped from original line 197
     .itemInputs('23x #forge:dusts/zirconium_basic_sulfate')
     .inputFluids(safeFluidOf('susy:ammonia_solution', 4000))
     .itemOutputs('15x #forge:dusts/zirconium_dioxide')
@@ -127,26 +127,26 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.susy.vacuum_chamber('wjkxcgkwwuvgib') // remapped from original line 232
-    .itemInputs(metaitem('sponge.zirconium.crude'))
-    .itemOutputs(metaitem('sponge.zirconium'))
+  event.recipes.susy.vacuum_chamber('nrqqu58upmubgv') // remapped from original line 232
+    .itemInputs(safeItemId('1x susy:sponge.zirconium.crude'))
+    .itemOutputs(safeItemId('1x susy:sponge.zirconium'))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.macerator('ksbyalfqm1fbgd') // remapped from original line 239
-    .itemInputs(metaitem('sponge.zirconium'))
+  event.recipes.gtceu.macerator('hyujwt35znfnpx') // remapped from original line 239
+    .itemInputs(safeItemId('1x susy:sponge.zirconium'))
     .itemOutputs('1x #forge:dusts/zirconium')
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('gyjjxsn4qt7vmx') // remapped from original line 248
+  event.recipes.susy.batch_reactor('83zdfhjrqoyekg') // remapped from original line 248
     .itemInputs('1x #forge:dusts/zirconium')
     .itemInputs('4x #forge:dusts/any_purity_iodine')
     .itemOutputs('5x #forge:dusts/zirconium_iodide')
     .duration(300)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.CVD('7qzrhnourewyvv') // remapped from original line 256
+  event.recipes.susy.CVD('stwf7vcplfnczg') // remapped from original line 256
     .itemInputs('5x #forge:dusts/zirconium_iodide')
     .notConsumable('1x #forge:rods/tungsten')
     .itemOutputs('1x #forge:dusts/high_purity_zirconium')

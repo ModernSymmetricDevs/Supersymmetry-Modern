@@ -1,51 +1,51 @@
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:assembler', input: '#forge:rods/electrum' && '#forge:plates/aluminium' && 'susy:circuit.good_integrated' && '#forge:gems/flawless_emerald'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:ender_eye' && '#forge:rods/chrome' && '#forge:plates/stainless_steel' && 'susy:circuit.assembly'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:ender_eye') && '#forge:rods/chrome' && '#forge:plates/stainless_steel' && 'susy:circuit.assembly'})
   event.remove({ type: 'gtceu:assembler', input: '#forge:rods/platinum' && '#forge:plates/titanium' && 'susy:circuit.nano_assembly' && 'susy:quantumeye'})
   event.remove({ type: 'gtceu:assembler', input: '#forge:rods/iridium' && '#forge:plates/tungsten_steel' && 'susy:circuit.crystal_processor' && 'susy:quantumstar'})
   event.remove({ type: 'gtceu:assembly_line', input: '#forge:frames/hsss' && 'susy:electric.motor.luv' && '#forge:plates/ruridit' && 'susy:quantumstar' && 'susy:circuit.crystal_assembly' && '#forge:foils/palladium' && '#forge:foils/palladium' && '#forge:cables/gt_single_niobium_titanium' && safeFluidOf('gtceu:soldering_alloy')})
   event.remove({ type: 'gtceu:assembly_line', input: '#forge:frames/naquadah_alloy' && 'susy:electric.motor.zpm' && '#forge:plates/osmiridium' && 'susy:quantumstar' && 'susy:circuit.wetware_assembly' && '#forge:foils/trinium' && '#forge:foils/trinium' && '#forge:cables/gt_single_vanadium_gallium' && safeFluidOf('gtceu:soldering_alloy')})
   event.remove({ type: 'gtceu:assembly_line', input: '#forge:frames/tritanium' && 'susy:electric.motor.uv' && '#forge:plates/tritanium' && 'susy:gravistar' && 'susy:circuit.wetware_computer' && '#forge:foils/naquadria' && '#forge:foils/naquadria' && '#forge:cables/gt_single_yttrium_barium_cuprate' && safeFluidOf('gtceu:soldering_alloy') && safeFluidOf('gtceu:naquadria')})
 
-  event.recipes.susy.mods.gregtech.assembler('kroruwwnj0eifu') // remapped from original line 30
+  event.recipes.susy.mods.gregtech.assembler('yagubmweeigbcw') // remapped from original line 30
     .itemInputs('1x #forge:rods/electrum')
     .itemInputs('4x #forge:plates/aluminium')
     .itemInputs('1x #forge:circuits/mv')
     .itemInputs(safeItemId('1x minecraft:emerald'))
-    .itemOutputs(metaitem('sensor.mv'))
+    .itemOutputs(safeItemId('1x susy:sensor.mv'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('ziez8cnsqtqnzh') // remapped from original line 48
+  event.recipes.susy.mods.gregtech.assembler('jq2l9kdkfa24rk') // remapped from original line 48
     .itemInputs('1x #forge:rods/chrome')
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:circuits/hv')
     .itemInputs('1x #forge:gems/gallium_phosphate')
-    .itemOutputs(metaitem('sensor.hv'))
+    .itemOutputs(safeItemId('1x susy:sensor.hv'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('rkzfigpmvutxcp') // remapped from original line 66
+  event.recipes.susy.mods.gregtech.assembler('ffuynhwbty1lhx') // remapped from original line 66
     .itemInputs('1x #forge:rods/platinum')
     .itemInputs('4x #forge:plates/titanium')
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('1x #forge:gems/lithium_niobate')
-    .itemOutputs(metaitem('sensor.ev'))
+    .itemOutputs(safeItemId('1x susy:sensor.ev'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('tauetcenwbkma2') // remapped from original line 84
+  event.recipes.susy.mods.gregtech.assembler('pgc0tvokrx9t2e') // remapped from original line 84
     .itemInputs('1x #forge:rods/iridium')
     .itemInputs('4x #forge:plates/tungsten_steel')
     .itemInputs('1x #forge:circuits/iv')
     .itemInputs('1x #forge:gems/lead_zirconate_titanate')
-    .itemOutputs(metaitem('sensor.iv'))
+    .itemOutputs(safeItemId('1x susy:sensor.iv'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembly_line('ts9ocquvsr8rqq') // remapped from original line 96
+  event.recipes.susy.mods.gregtech.assembly_line('zfbrtf55erno62') // remapped from original line 96
     .itemInputs('1x #forge:frames/hsss')
-    .itemInputs(metaitem('electric.motor.luv'))
+    .itemInputs(safeItemId('1x susy:electric.motor.luv'))
     .itemInputs('4x #forge:plates/ruridit')
     .itemInputs('4x #forge:plates/polyvinylidene_fluoride')
     .itemInputs('2x #forge:circuits/luv')
@@ -53,13 +53,13 @@ ServerEvents.recipes(event => {
     .itemInputs('32x #forge:foils/palladium')
     .itemInputs('4x #forge:cables/gt_single_niobium_titanium')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 288))
-    .itemOutputs(metaitem('sensor.luv'))
+    .itemOutputs(safeItemId('1x susy:sensor.luv'))
     .duration(600)
     .EUt(6000)
 
-  event.recipes.susy.mods.gregtech.assembly_line('wpo07pm5z7juqu') // remapped from original line 113
+  event.recipes.susy.mods.gregtech.assembly_line('vvn5eveeprsyie') // remapped from original line 113
     .itemInputs('1x #forge:frames/naquadah_alloy')
-    .itemInputs(metaitem('electric.motor.zpm'))
+    .itemInputs(safeItemId('1x susy:electric.motor.zpm'))
     .itemInputs('4x #forge:plates/osmiridium')
     .itemInputs('8x #forge:plates/polyvinylidene_fluoride')
     .itemInputs('2x #forge:circuits/zpm')
@@ -67,22 +67,22 @@ ServerEvents.recipes(event => {
     .itemInputs('32x #forge:foils/trinium')
     .itemInputs('4x #forge:cables/gt_single_vanadium_gallium')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 576))
-    .itemOutputs(metaitem('sensor.zpm'))
+    .itemOutputs(safeItemId('1x susy:sensor.zpm'))
     .duration(600)
     .EUt(24000)
 
-  event.recipes.susy.mods.gregtech.assembly_line('st3c74aqotj7mg') // remapped from original line 130
+  event.recipes.susy.mods.gregtech.assembly_line('i0eulcqhyvrl3g') // remapped from original line 130
     .itemInputs('1x #forge:frames/tritanium')
-    .itemInputs(metaitem('electric.motor.uv'))
+    .itemInputs(safeItemId('1x susy:electric.motor.uv'))
     .itemInputs('4x #forge:plates/tritanium')
-    .itemInputs(metaitem('rydberg_atom_array'))
+    .itemInputs(safeItemId('1x susy:rydberg_atom_array'))
     .itemInputs('2x #forge:circuits/uv')
     .itemInputs('64x #forge:foils/naquadria')
     .itemInputs('32x #forge:foils/naquadria')
     .itemInputs('4x #forge:cables/gt_single_yttrium_barium_cuprate')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 1152))
     .inputFluids(safeFluidOf('gtceu:naquadria', 576))
-    .itemOutputs(metaitem('sensor.uv'))
+    .itemOutputs(safeItemId('1x susy:sensor.uv'))
     .duration(600)
     .EUt(100000)
 

@@ -1,36 +1,36 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.cutter('dhooizfcbuddmv') // remapped from original line 108
+  event.recipes.susy.mods.gregtech.cutter('b76q0g8rsm7qza') // remapped from original line 108
     .itemInputs(safeItemId('1x engineersdecor:rebar_concrete'))
     .itemOutputs(safeItemId('2x engineersdecor:rebar_concrete_slab'))
     .duration(25)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.cutter('tqd8klfdsnuczh') // remapped from original line 115
+  event.recipes.susy.mods.gregtech.cutter('bx8phifqyxo2ok') // remapped from original line 115
     .itemInputs(safeItemId('1x engineersdecor:rebar_concrete_slab'))
     .itemOutputs(safeItemId('4x engineersdecor:halfslab_rebar_concrete'))
     .duration(25)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.cutter('fxgvdokiq86zp5') // remapped from original line 122
+  event.recipes.susy.mods.gregtech.cutter('ijodzg3x0nt5i8') // remapped from original line 122
     .itemInputs(safeItemId('1x engineersdecor:rebar_concrete_tile'))
     .itemOutputs(safeItemId('2x engineersdecor:rebar_concrete_tile_slab'))
     .duration(25)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.cutter('27qgoweuw1i9d6') // remapped from original line 129
+  event.recipes.susy.mods.gregtech.cutter('sseyqj8tbgaqyi') // remapped from original line 129
     .itemInputs(safeItemId('1x engineersdecor:gas_concrete'))
     .itemOutputs(safeItemId('2x engineersdecor:gas_concrete_slab'))
     .duration(25)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.cutter('0qqwrablrb289e') // remapped from original line 136
+  event.recipes.susy.mods.gregtech.cutter('r06eq4k7iuiuiz') // remapped from original line 136
     .itemInputs(safeItemId('1x engineersdecor:gas_concrete_slab'))
     .itemOutputs(safeItemId('4x engineersdecor:halfslab_gas_concrete'))
     .duration(25)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.autoclave('nttartsxu1qjrv') // remapped from original line 155
+  event.recipes.susy.mods.gregtech.autoclave('mbxj561gutqttl') // remapped from original line 155
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('1x #forge:dusts/quartzite')
     .itemInputs('1x #forge:dusts/tiny_aluminium')

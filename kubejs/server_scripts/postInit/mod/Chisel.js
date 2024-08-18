@@ -1,23 +1,23 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.assembler('vhasxsmlr2tfn4') // remapped from original line 63
-    .itemInputs(ore('stone') * 4)
+  event.recipes.gtceu.assembler('0f6sglf8u4w3mk') // remapped from original line 63
+    .itemInputs(safeItemId('4x susy:stone'))
     .itemInputs(safeItemId('4x minecraft:iron_ingot'))
     .itemOutputs(safeItemId('32x chisel:factory'))
     .circuit(1)
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.assembler('l7zqljxiksi8l0') // remapped from original line 72
-    .itemInputs(ore('stone') * 8)
+  event.recipes.gtceu.assembler('faykfpu19lb5f2') // remapped from original line 72
+    .itemInputs(safeItemId('8x susy:stone'))
     .itemInputs(safeItemId('1x minecraft:iron_ingot'))
     .itemOutputs(safeItemId('32x chisel:tyrian'))
     .circuit(2)
     .duration(20)
     .EUt(7)
 
-  event.recipes.gtceu.assembler('gcvpdsn24e5jfc') // remapped from original line 81
-    .itemInputs(ore('stone') * 8)
+  event.recipes.gtceu.assembler('wbvcinqa7afjzn') // remapped from original line 81
+    .itemInputs(safeItemId('8x susy:stone'))
     .itemInputs('1x #forge:dyes/cyan')
     .itemOutputs(safeItemId('32x chisel:temple'))
     .circuit(3)

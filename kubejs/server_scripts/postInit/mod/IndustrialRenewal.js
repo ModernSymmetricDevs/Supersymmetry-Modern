@@ -1,26 +1,26 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.assembler('uukkhx0tge5t8t') // remapped from original line 516
-    .itemInputs(metaitem('large_fluid_cell.steel'))
-    .itemInputs(metaitem('electric.pump.lv'))
+  event.recipes.susy.mods.gregtech.assembler('vlvgyou5pujare') // remapped from original line 516
+    .itemInputs(safeItemId('1x susy:large_fluid_cell.steel'))
+    .itemInputs(safeItemId('1x susy:electric.pump.lv'))
     .itemInputs('1x #forge:rings/rubber')
     .inputFluids(safeFluidOf('susy:compressed_carbon_dioxide', 8000))
     .itemOutputs(safeItemId('1x industrialrenewal:item_fire_extinguisher'))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('icoeusy6ekbbsr') // remapped from original line 526
+  event.recipes.susy.mods.gregtech.assembler('jc25bj7jfou1hw') // remapped from original line 526
     .circuit(6)
     .inputFluids(safeFluidOf('minecraft:water', 500))
     .itemInputs('1x #forge:dusts/cement')
     .itemInputs('3x #forge:dusts/stone')
     .itemInputs('16x #forge:wires/fine_steel')
-    .itemInputs(ore('sand') * 2)
+    .itemInputs(safeItemId('2x susy:sand'))
     .itemOutputs(safeItemId('4x industrialrenewal:concrete'))
     .duration(40)
     .EUt(14)
 
-  event.recipes.susy.mods.gregtech.mixer('wzkainqs14b7md') // remapped from original line 538
+  event.recipes.susy.mods.gregtech.mixer('emjjf3hn81qaur') // remapped from original line 538
     .inputFluids(safeFluidOf('minecraft:water', 250))
     .itemInputs('1x #forge:dusts/concrete')
     .itemInputs('1x #forge:dusts/cement')
@@ -29,8 +29,8 @@ ServerEvents.recipes(event => {
     .duration(60)
     .EUt(7)
 
-  event.recipes.susy.mods.gregtech.assembler('ngukeubcqbea52') // remapped from original line 548
-    .itemInputs(metaitem('sensor.lv'))
+  event.recipes.susy.mods.gregtech.assembler('isxbrrdyuxonuj') // remapped from original line 548
+    .itemInputs(safeItemId('1x susy:sensor.lv'))
     .itemInputs('4x #forge:wires/fine_red_alloy')
     .itemInputs('2x #forge:rods/steel')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
@@ -38,8 +38,8 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('lekjptiy9zkyzv') // remapped from original line 558
-    .itemInputs(safeItemId('5x gregtech:turbine_casing', ')) * 8)
+  event.recipes.susy.mods.gregtech.assembler('9ct3sflp1goyyt') // remapped from original line 558
+    .itemInputs(safeItemId('8x gregtech:turbine_casing'))
     .itemInputs('4x #forge:rods/long_steel')
     .itemInputs(safeItemId('2x industrialrenewal:high_pressure_pipe'))
     .itemInputs('6x #forge:plates/steel')
@@ -49,18 +49,18 @@ ServerEvents.recipes(event => {
     .duration(400)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.mods.gregtech.assembler('0ff5rk8llmd8dy') // remapped from original line 570
-    .itemInputs(safeItemId('5x gregtech:turbine_casing', ')) * 8)
+  event.recipes.susy.mods.gregtech.assembler('cxwvwtq36wfrbp') // remapped from original line 570
+    .itemInputs(safeItemId('8x gregtech:turbine_casing'))
     .itemInputs('4x #forge:rods/long_steel')
     .itemInputs('2x #forge:circuits/hv')
     .itemInputs('6x #forge:plates/steel')
-    .itemInputs(metaitem('electric.motor.hv'))
+    .itemInputs(safeItemId('1x susy:electric.motor.hv'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
     .itemOutputs(safeItemId('1x industrialrenewal:dam_generator'))
     .duration(400)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.mods.gregtech.assembler('uwo1qcvfhyhkzo') // remapped from original line 582
+  event.recipes.susy.mods.gregtech.assembler('4pvkelxyz6mxed') // remapped from original line 582
     .itemInputs('6x #forge:rods/long_magnalium')
     .itemInputs('1x #forge:rings/steel')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.mods.gregtech.assembler('85dodfig5dhe73') // remapped from original line 591
+  event.recipes.susy.mods.gregtech.assembler('vcxpgqyinbjvt6') // remapped from original line 591
     .itemInputs('1x #forge:pipes/large_fluid_stainless_steel')
     .itemInputs('8x #forge:bolts/steel')
     .itemInputs('1x #forge:rings/steel')
@@ -77,8 +77,8 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('oztlfptavj4m3c') // remapped from original line 601
-    .itemInputs(metaitem('drum.steel') * 8)
+  event.recipes.susy.mods.gregtech.assembler('vxwjmaaeoedirc') // remapped from original line 601
+    .itemInputs(safeItemId('8x susy:drum.steel'))
     .itemInputs('6x #forge:plates/steel')
     .itemInputs(safeItemId('4x industrialrenewal:catwalk_pillar'))
     .itemInputs(safeItemId('1x industrialrenewal:fluid_gauge'))
@@ -87,9 +87,9 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.canner('3asoerxffdgpoh') // remapped from original line 937
-    .itemInputs(safeItemId('24x techguns:itemshared:24')4'))
-    .inputFluids(liquid('carbon_dioxide')*1000)
+  event.recipes.susy.mods.gregtech.canner('dpkaa1lsrl1sek') // remapped from original line 937
+    .itemInputs(safeItemId('1x techguns:itemshared:24'))
+    .inputFluids(safeFluidOf('gtceu:carbon_dioxide', 1000))
     .itemOutputs(safeItemId('1x industrialrenewal:item_fire_extinguisher'))
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers

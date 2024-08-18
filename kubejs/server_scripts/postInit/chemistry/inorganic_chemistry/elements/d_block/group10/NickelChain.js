@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:electric_blast_furnace', input: '#forge:dusts/pentlandite' && safeFluidOf('gtceu:oxygen')})
 
-  event.recipes.gtceu.electric_blast_furnace('esk6v4qrssda59') // remapped from original line 14
+  event.recipes.gtceu.electric_blast_furnace('ewsiiyiho3ej9v') // remapped from original line 14
     .itemInputs('1x #forge:dusts/pentlandite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 3000))
     .itemOutputs('1x #forge:dusts/garnierite')
@@ -10,32 +10,32 @@ ServerEvents.recipes(event => {
     .blastFurnaceTemp(1728)
     .duration(40)
 
-  event.recipes.gtceu.ELECTROLYTIC_CELL('frabhqktwf2kfk') // remapped from original line 60
+  event.recipes.gtceu.ELECTROLYTIC_CELL('lwvcqrutavto0r') // remapped from original line 60
     .inputFluids(safeFluidOf('susy:nickel_sulfate_solution', 1000))
     .inputFluids(safeFluidOf('minecraft:water', 2000))
     .notConsumable('1x #forge:rods/nickel')
-    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .itemOutputs('1x #forge:dusts/nickel')
     .outputFluids(safeFluidOf('gtceu:diluted_sulfuric_acid', 2000))
     .outputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .duration(240)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('mnw9vcecp8a2gm') // remapped from original line 74
+  event.recipes.susy.batch_reactor('ifr3g4lrrgomyo') // remapped from original line 74
     .itemInputs('1x #forge:dusts/nickel')
     .inputFluids(safeFluidOf('gtceu:carbon_monoxide', 4000))
     .outputFluids(safeFluidOf('susy:nickel_carbonyl', 1000))
     .EUt(30)
     .duration(200)
 
-  event.recipes.susy.roaster('zqephvvezyrsua') // remapped from original line 82
+  event.recipes.susy.roaster('hzs1rwgyu2ee9g') // remapped from original line 82
     .inputFluids(safeFluidOf('susy:nickel_carbonyl', 1000))
     .itemOutputs('1x #forge:dusts/high_purity_nickel')
     .outputFluids(safeFluidOf('gtceu:carbon_monoxide', 4000))
     .EUt(30)
     .duration(200)
 
-  event.recipes.susy.reaction_furnace('uqrm2xjautmrju') // remapped from original line 90
+  event.recipes.susy.reaction_furnace('25l8kamyergc6x') // remapped from original line 90
     .itemInputs('1x #forge:dusts/garnierite')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('1x #forge:dusts/nickel')

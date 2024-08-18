@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.assembler('inna2gsehap2ov') // remapped from original line 39
-    .itemInputs(ore('stone'))
+  event.recipes.gtceu.assembler('qxb32ufcu6ouw2') // remapped from original line 39
+    .itemInputs(safeItemId('1x susy:stone'))
     .itemInputs(safeItemId('6x minecraft:stone_slab'))
     .itemOutputs(safeItemId('32x xtones:base'))
     .duration(20)

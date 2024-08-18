@@ -2,14 +2,14 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:ingots/hot_kanthal' && safeFluidOf('gtceu:distilled_water')})
 
-  event.recipes.susy.recipemap('radiator')('ccfsololl3nd4q') // remapped from original line 168
+  event.recipes.susy.radiator('cga466keld3cqx') // remapped from original line 168
     .inputFluids(safeFluidOf('susy:hot_air', 1000))
-    .outputFluids(liquid('air') * 1000)
+    .outputFluids(safeFluidOf('gtceu:air', 1000))
     .duration(100)
 
-  event.recipes.susy.recipemap('cooling_unit')('wfwib1qtbiqovp') // remapped from original line 174
+  event.recipes.susy.cooling_unit('1wczxywjkq4xek') // remapped from original line 174
     .inputFluids(safeFluidOf('susy:hot_air', 1000))
-    .outputFluids(liquid('air') * 1000)
+    .outputFluids(safeFluidOf('gtceu:air', 1000))
     .duration(50)
     .EUt(480)
 

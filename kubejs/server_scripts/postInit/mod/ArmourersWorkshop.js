@@ -1,11 +1,12 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.recipemap('fluid_solidifier')('lq9xf2w9c9ouoy') // remapped from original line 186
-    .inputFluids(safeFluidOf('susy:gtfo_sodium_stearate', 100))
-    .notConsumable(metaitem('shape.mold.ball'))
-    .itemOutputs(safeItemId('1x armourers_workshop:item.soap'))
-    .duration(80)
-    .EUt(16)
+  // Contains GTFO resources
+  //event.recipes.gtceu.fluid_solidifier('xczqaju5wpztsw') // remapped from original line 186
+    //.inputFluids(safeFluidOf('susy:gtfo_sodium_stearate', 100))
+    //.notConsumable(safeItemId('1x susy:shape.mold.ball'))
+    //.itemOutputs(safeItemId('1x armourers_workshop:item.soap'))
+    //.duration(80)
+    //.EUt(16)
 
  // The following forLoops couldn't be parsed, they were added to the forLoopBuffers
   // for (name in name_removals) {

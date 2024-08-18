@@ -1,14 +1,14 @@
 ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:centrifuge', input: safeFluidOf('susy:crude_tin')})
 
-  event.recipes.gtceu.mixer('h3oa1piiq86xr3') // remapped from original line 20
+  event.recipes.gtceu.mixer('ekrsdqieeoekbi') // remapped from original line 20
     .itemInputs('8x #forge:dusts/impure_cassiterite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_cassiterite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('ntzxsxwdl05liz') // remapped from original line 28
+  event.recipes.susy.froth_flotation('erbmmtauyzgub4') // remapped from original line 28
     .inputFluids(safeFluidOf('susy:impure_cassiterite_slurry', 2000))
     .notConsumable('1x #forge:dusts/sodium_fluorosilicate')
     .notConsumable(safeFluidOf('susy:oleic_acid', 144))
@@ -18,28 +18,28 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('yxxmtnuj9rg9kl') // remapped from original line 39
+  event.recipes.susy.clarifier('zyyggqwukahdwb') // remapped from original line 39
     .inputFluids(safeFluidOf('susy:cassiterite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/cassiterite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.centrifuge('9qyi1p8vch4gen') // remapped from original line 47
+  event.recipes.gtceu.centrifuge('6vz3yzitjhcpen') // remapped from original line 47
     .inputFluids(safeFluidOf('susy:limestone_tailing_slurry', 1000))
     .itemOutputs('2x #forge:dusts/limestone_tailings')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.electromagnetic_separator('jeyvifjwt8ccqk') // remapped from original line 55
+  event.recipes.gtceu.electromagnetic_separator('lclr6kl74x8vlw') // remapped from original line 55
     .itemInputs('1x #forge:dusts/cassiterite')
     .itemOutputs('1x #forge:dusts/concentrate_cassiterite')
-    .chancedOutput('2500x #forge:dusts/hematite', 2500, 0)
+    .chancedOutput('1x #forge:dusts/hematite', 2500, 0)
     .EUt(7)
     .duration(100)
 
-  event.recipes.gtceu.chemical_bath('x4bku0u2j2fgsi') // remapped from original line 63
+  event.recipes.gtceu.chemical_bath('rwodxrnvotfggi') // remapped from original line 63
     .itemInputs('1x #forge:dusts/concentrate_cassiterite')
     .inputFluids(safeFluidOf('susy:ammonia_solution', 120))
     .outputFluids(safeFluidOf('susy:ammonium_tungstate_solution', 60))
@@ -47,28 +47,28 @@ ServerEvents.recipes(event => {
     .EUt(1920)
     .duration(100)
 
-  event.recipes.gtceu.centrifuge('aqqyalkecc119t') // remapped from original line 97
+  event.recipes.gtceu.centrifuge('iljamswryio3l3') // remapped from original line 97
     .inputFluids(safeFluidOf('susy:tin_dross', 100))
     .outputFluids(safeFluidOf('susy:crude_tin', 85))
     .outputFluids(safeFluidOf('gtceu:iron', 15))
     .EUt(30)
     .duration(80)
 
-  event.recipes.gtceu.fluid_solidifier('jsglrofcyeqxtq') // remapped from original line 105
-    .notConsumable(metaitem('shape.mold.ingot'))
+  event.recipes.gtceu.fluid_solidifier('bbru80jekjrnor') // remapped from original line 105
+    .notConsumable(safeItemId('1x susy:shape.mold.ingot'))
     .inputFluids(safeFluidOf('susy:crude_tin', 216))
     .itemOutputs('1x #forge:ingots/tin')
     .EUt(7)
     .duration(20)
 
-  event.recipes.gtceu.fluid_solidifier('tezd3nnu1zyadz') // remapped from original line 113
-    .notConsumable(metaitem('shape.mold.ingot'))
+  event.recipes.gtceu.fluid_solidifier('pmdo6q3hcsikw5') // remapped from original line 113
+    .notConsumable(safeItemId('1x susy:shape.mold.ingot'))
     .inputFluids(safeFluidOf('susy:decopperized_tin', 180))
     .itemOutputs('1x #forge:ingots/tin')
     .EUt(7)
     .duration(20)
 
-  event.recipes.gtceu.autoclave('v1ofomqdmofkeo') // remapped from original line 121
+  event.recipes.gtceu.autoclave('t9avaljaoe85bj') // remapped from original line 121
     .notConsumable(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .inputFluids(safeFluidOf('susy:hot_hp_oxygen', 1000))
     .itemInputs('1x #forge:dusts/tin')
@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
     .EUt(480)
     .duration(120)
 
-  event.recipes.susy.roaster('gfdozrw52cdy2x') // remapped from original line 130
+  event.recipes.susy.roaster('yujft3ej2ebefh') // remapped from original line 130
     .itemInputs('2x #forge:dusts/purified_tin_ii_oxide')
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
     .itemOutputs('1x #forge:dusts/high_purity_tin')
@@ -84,7 +84,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(120)
 
-  event.recipes.gtceu.centrifuge('er87ocxalzllij') // remapped from original line 139
+  event.recipes.gtceu.centrifuge('finbqwgvkwzwjl') // remapped from original line 139
     .itemInputs('1x #forge:dusts/any_purity_sulfur')
     .inputFluids(safeFluidOf('susy:crude_tin', 5760))
     .outputFluids(safeFluidOf('susy:decopperized_tin', 5760))
@@ -92,7 +92,7 @@ ServerEvents.recipes(event => {
     .EUt(30)
     .duration(300)
 
-  event.recipes.susy.roaster('wgali7rutdnxch') // remapped from original line 148
+  event.recipes.susy.roaster('gngs6yoin5ffcu') // remapped from original line 148
     .inputFluids(safeFluidOf('gtceu:oxygen', 2000))
     .itemInputs('2x #forge:dusts/copper_monosulfide')
     .itemOutputs('1x #forge:dusts/copper')
@@ -100,11 +100,11 @@ ServerEvents.recipes(event => {
     .EUt(30)
     .duration(120)
 
-  event.recipes.susy.crystallizer('glgzeemsnm67wm') // remapped from original line 157
+  event.recipes.susy.crystallizer('bey9nrabgoukoa') // remapped from original line 157
     .inputFluids(safeFluidOf('susy:decopperized_tin', 2880))
     .notConsumable('1x #forge:wires/fine_aluminium')
-    .chancedOutput('500x #forge:dusts/antimony', 500, 0)
-    .chancedOutput('500x #forge:dusts/bismuth', 500, 0)
+    .chancedOutput('1x #forge:dusts/antimony', 500, 0)
+    .chancedOutput('1x #forge:dusts/bismuth', 500, 0)
     .outputFluids(safeFluidOf('gtceu:tin', 2880))
     .EUt(30)
     .duration(160)

@@ -1,13 +1,13 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.reaction_furnace('cmcgvqrifpnvty') // remapped from original line 41
+  event.recipes.susy.reaction_furnace('htdon62ucmbuan') // remapped from original line 41
     .itemInputs('21x #forge:dusts/vanadinite')
     .itemInputs('6x #forge:dusts/salt')
     .itemOutputs('27x #forge:dusts/salt_roasted_vanadinite')
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.reaction_furnace('2qxgpz7kjth9pm') // remapped from original line 49
+  event.recipes.susy.reaction_furnace('pc8pv5cizmpwiy') // remapped from original line 49
     .itemInputs('42x #forge:dusts/vanadinite')
     .itemInputs('18x #forge:dusts/soda_ash')
     .itemOutputs('51x #forge:dusts/soda_ash_roasted_vanadinite')
@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(120)
 
-  event.recipes.gtceu.centrifuge('aofpxtqclcegpa') // remapped from original line 58
+  event.recipes.gtceu.centrifuge('tsjtjv6mfgwy8y') // remapped from original line 58
     .itemInputs('51x #forge:dusts/soda_ash_roasted_vanadinite')
     .inputFluids(safeFluidOf('minecraft:water', 6000))
     .outputFluids(safeFluidOf('susy:sodium_vanadate_solution', 6000))
@@ -23,15 +23,16 @@ ServerEvents.recipes(event => {
     .duration(80)
     .EUt(120)
 
-  event.recipes.gtceu.centrifuge('q48jsbtsarnxun') // remapped from original line 67
-    .itemInputs('21x #forge:dusts/leached_soda_ash_roasted_vanadinite')
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
-    .outputFluids(safeFluidOf('susy:lead_chloride_solution', 1000))
-    .itemOutputs('18x #forge:dusts/lead_oxide')
-    .duration(80)
-    .EUt(120)
+  // Contains GTFO resources
+  //event.recipes.gtceu.centrifuge('5vwnqzh5b5s60j') // remapped from original line 67
+    //.itemInputs('21x #forge:dusts/leached_soda_ash_roasted_vanadinite')
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 1000))
+    //.outputFluids(safeFluidOf('susy:lead_chloride_solution', 1000))
+    //.itemOutputs('18x #forge:dusts/lead_oxide')
+    //.duration(80)
+    //.EUt(120)
 
-  event.recipes.gtceu.centrifuge('210dhfhru2gsmr') // remapped from original line 76
+  event.recipes.gtceu.centrifuge('eqvkso7pc1wzdh') // remapped from original line 76
     .itemInputs('27x #forge:dusts/salt_roasted_vanadinite')
     .inputFluids(safeFluidOf('minecraft:water', 3000))
     .outputFluids(safeFluidOf('susy:sodium_vanadate_solution', 3000))
@@ -39,22 +40,23 @@ ServerEvents.recipes(event => {
     .duration(80)
     .EUt(120)
 
-  event.recipes.gtceu.centrifuge('8vzhydcstzrc0a') // remapped from original line 85
-    .itemInputs('12x #forge:dusts/leached_salt_roasted_vanadinite')
-    .inputFluids(safeFluidOf('susy:gtfo_heated_water', 3000))
-    .outputFluids(safeFluidOf('susy:lead_chloride_solution', 3000))
-    .itemOutputs('6x #forge:dusts/lead_oxide')
-    .duration(80)
-    .EUt(120)
+  // Contains GTFO resources
+  //event.recipes.gtceu.centrifuge('wssx4b29tnlsbs') // remapped from original line 85
+    //.itemInputs('12x #forge:dusts/leached_salt_roasted_vanadinite')
+    //.inputFluids(safeFluidOf('susy:gtfo_heated_water', 3000))
+    //.outputFluids(safeFluidOf('susy:lead_chloride_solution', 3000))
+    //.itemOutputs('6x #forge:dusts/lead_oxide')
+    //.duration(80)
+    //.EUt(120)
 
-  event.recipes.gtceu.distillery('gf1wlafobwsojy') // remapped from original line 94
+  event.recipes.gtceu.distillery('v73mmawy3qrolg') // remapped from original line 94
     .inputFluids(safeFluidOf('susy:lead_chloride_solution', 1000))
     .outputFluids(safeFluidOf('minecraft:water', 1000))
     .itemOutputs('3x #forge:dusts/lead_chloride')
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.batch_reactor('gdyozztbkwwzqm') // remapped from original line 102
+  event.recipes.susy.batch_reactor('2dcezexfvpyarj') // remapped from original line 102
     .itemInputs('6x #forge:dusts/ammonium_chloride')
     .inputFluids(safeFluidOf('susy:sodium_vanadate_solution', 1000))
     .itemOutputs('9x #forge:dusts/ammonium_metavanadate')
@@ -62,7 +64,7 @@ ServerEvents.recipes(event => {
     .duration(80)
     .EUt(120)
 
-  event.recipes.susy.roaster('n4ccl9ngkhug3b') // remapped from original line 111
+  event.recipes.susy.roaster('swq8b46upozby5') // remapped from original line 111
     .itemInputs('18x #forge:dusts/ammonium_metavanadate')
     .itemOutputs('7x #forge:dusts/vanadium_pentoxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 1000))
@@ -70,21 +72,21 @@ ServerEvents.recipes(event => {
     .duration(80)
     .EUt(120)
 
-  event.recipes.gtceu.electromagnetic_separator('ln1gcimz0hc0oi') // remapped from original line 120
+  event.recipes.gtceu.electromagnetic_separator('yltdhuqhbnpmrd') // remapped from original line 120
     .itemInputs('1x #forge:dusts/impure_vanadiferous_titanomagnetite')
     .itemOutputs('1x #forge:dusts/vanadiferous_titanomagnetite')
-    .chancedOutput('2500x #forge:dusts/pegmatite_tailings', 2500, 500)
+    .chancedOutput('1x #forge:dusts/pegmatite_tailings', 2500, 500)
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.mixer('mqvy809w2ihlqn') // remapped from original line 128
+  event.recipes.gtceu.mixer('u4jw5evsbcryi4') // remapped from original line 128
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .itemInputs('8x #forge:dusts/vanadiferous_titanomagnetite')
     .outputFluids(safeFluidOf('susy:impure_vanadiferous_titanomagnetite_slurry', 2000))
     .EUt(120)
     .duration(200)
 
-  event.recipes.susy.froth_flotation('chyhvyt7kojbyq') // remapped from original line 136
+  event.recipes.susy.froth_flotation('kzcilojfz6t4wd') // remapped from original line 136
     .inputFluids(safeFluidOf('susy:impure_vanadiferous_titanomagnetite_slurry', 2000))
     .notConsumable(safeFluidOf('susy:methyl_isobutyl_carbinol', 100))
     .notConsumable(safeFluidOf('susy:n_octylamine', 100))
@@ -93,20 +95,20 @@ ServerEvents.recipes(event => {
     .EUt(480)
     .duration(800)
 
-  event.recipes.susy.CLARIFIER('r3eipfqfwfreyz') // remapped from original line 146
+  event.recipes.susy.CLARIFIER('x8kqb897brfha4') // remapped from original line 146
     .inputFluids(safeFluidOf('susy:vanadiferous_titanomagnetite_slurry', 1000))
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .itemOutputs('16x #forge:dusts/flotated_vanadiferous_titanomagnetite')
     .EUt(30)
     .duration(20)
 
-  event.recipes.gtceu.centrifuge('3ugdjktiwthocf') // remapped from original line 154
+  event.recipes.gtceu.centrifuge('jhgittcgy5x977') // remapped from original line 154
     .itemInputs('1x #forge:dusts/magnesite')
     .itemOutputs('1x #forge:dusts/magnesium_carbonate')
     .EUt(30)
     .duration(160)
 
-  event.recipes.susy.batch_reactor('y3qvwl8lyxucjr') // remapped from original line 161
+  event.recipes.susy.batch_reactor('12po8zwxesavri') // remapped from original line 161
     .itemInputs('3x #forge:dusts/magnesium_chloride')
     .inputFluids(safeFluidOf('susy:sodium_bicarbonate_solution', 2000))
     .itemOutputs('5x #forge:dusts/magnesium_carbonate')
@@ -115,7 +117,7 @@ ServerEvents.recipes(event => {
     .EUt(30)
     .duration(160)
 
-  event.recipes.susy.roaster('ecjyisdl5y74kx') // remapped from original line 171
+  event.recipes.susy.roaster('nmtqkyy1pb4rvi') // remapped from original line 171
     .itemInputs('5x #forge:dusts/magnesium_hydroxide')
     .inputFluids(safeFluidOf('gtceu:carbon_dioxide', 1000))
     .itemOutputs('5x #forge:dusts/magnesium_carbonate')
@@ -123,28 +125,28 @@ ServerEvents.recipes(event => {
     .EUt(30)
     .duration(160)
 
-  event.recipes.gtceu.mixer('hwfhtzxd8eptys') // remapped from original line 180
+  event.recipes.gtceu.mixer('yqnhrtvm5y1ns1') // remapped from original line 180
     .itemInputs('5x #forge:dusts/calcite')
     .itemInputs('5x #forge:dusts/magnesium_carbonate')
     .itemOutputs('10x #forge:dusts/dolomite')
     .EUt(120)
     .duration(300)
 
-  event.recipes.susy.advanced_arc_furnace('ntrltmu2l6dtep') // remapped from original line 229
-    .itemInputs(metaitem('vti_rich_pig_iron') * 2)
+  event.recipes.susy.advanced_arc_furnace('jk13yp1si8b56t') // remapped from original line 229
+    .itemInputs(safeItemId('2x susy:vti_rich_pig_iron'))
     .inputFluids(safeFluidOf('gtceu:oxygen', 2700))
     .itemOutputs('2x #forge:ingots/steel')
-    .itemOutputs(metaitem('vt_slag'))
+    .itemOutputs(safeItemId('1x susy:vt_slag'))
     .EUt(240)
     .duration(300)
 
-  event.recipes.gtceu.macerator('lxkgibwqhelxir') // remapped from original line 238
-    .itemInputs(metaitem('vt_slag'))
+  event.recipes.gtceu.macerator('9bq0wiqd6wvt98') // remapped from original line 238
+    .itemInputs(safeItemId('1x susy:vt_slag'))
     .itemOutputs('1x #forge:dusts/vt_slag')
     .EUt(120)
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('pbygdg7kmkk2qy') // remapped from original line 245
+  event.recipes.gtceu.centrifuge('912tseth81cuzx') // remapped from original line 245
     .itemInputs('7x #forge:dusts/alkali_vt_slag')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
     .itemOutputs('6x #forge:dusts/titania_slag')
@@ -152,7 +154,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('rte7mhlj04krig') // remapped from original line 254
+  event.recipes.gtceu.centrifuge('594wat2xvuqbpl') // remapped from original line 254
     .itemInputs('1x #forge:dusts/titania_slag')
     .inputFluids(safeFluidOf('susy:oleum', 1000))
     .itemOutputs('1x #forge:dusts/silicon_dioxide')
@@ -160,7 +162,7 @@ ServerEvents.recipes(event => {
     .EUt(120)
     .duration(200)
 
-  event.recipes.susy.reaction_furnace('wasanz5xxnotmz') // remapped from original line 263
+  event.recipes.susy.reaction_furnace('goz8zhckgmiubf') // remapped from original line 263
     .itemInputs('5x #forge:dusts/high_purity_calcium')
     .itemInputs('7x #forge:dusts/vanadium_pentoxide')
     .itemOutputs('2x #forge:dusts/vanadium')

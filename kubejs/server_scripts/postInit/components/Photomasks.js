@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.batch_reactor('zhb4ti4nthqbw8') // remapped from original line 14
+  event.recipes.susy.batch_reactor('9w2ckv1ngfslan') // remapped from original line 14
     .inputFluids(safeFluidOf('gtceu:butyraldehyde', 1000))
     .inputFluids(safeFluidOf('susy:formaldehyde', 3000))
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.roaster('nmu9fxg8o5zvzp') // remapped from original line 24
+  event.recipes.susy.roaster('sejtnvxbgy3smr') // remapped from original line 24
     .itemInputs('1x #forge:dusts/copper')
     .itemInputs('1x #forge:dusts/nickel')
     .inputFluids(safeFluidOf('gtceu:bromine', 4000))
@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.reaction_furnace('oi5cz4xkrqaryj') // remapped from original line 33
+  event.recipes.susy.reaction_furnace('yuonzm5i9vvvtc') // remapped from original line 33
     .notConsumable('1x #forge:dusts/acrylic_catalyst')
     .inputFluids(safeFluidOf('susy:acetylene', 1000))
     .inputFluids(safeFluidOf('gtceu:carbon_monoxide', 1000))
@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.reaction_furnace('w10t7m2sihkuu8') // remapped from original line 45
+  event.recipes.susy.reaction_furnace('lm79porhkbop1a') // remapped from original line 45
     .itemInputs('4x #forge:dusts/molybdenum_trioxide')
     .itemInputs('7x #forge:dusts/vanadium_pentoxide')
     .itemInputs('5x #forge:dusts/alumina')
@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.fixed_bed_reactor('jkvzmhxqsc7vbn') // remapped from original line 54
+  event.recipes.susy.fixed_bed_reactor('fkzmbkcldto159') // remapped from original line 54
     .notConsumable('1x #forge:dusts/phosphomolybdic_acid')
     .inputFluids(safeFluidOf('gtceu:propene', 50))
     .inputFluids(safeFluidOf('gtceu:oxygen', 100))
@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
     .duration(8)
     .EUt(120)
 
-  event.recipes.susy.fixed_bed_reactor('nezd6nsdtrg1xj') // remapped from original line 64
+  event.recipes.susy.fixed_bed_reactor('04ifjbh5yiw1f9') // remapped from original line 64
     .notConsumable('1x #forge:catalysts/bed_supported_molybdenum_vanadium')
     .inputFluids(safeFluidOf('susy:acrolein', 50))
     .inputFluids(safeFluidOf('gtceu:oxygen', 50))
@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
     .duration(8)
     .EUt(120)
 
-  event.recipes.susy.batch_reactor('8fviuaev4aernt') // remapped from original line 75
+  event.recipes.susy.batch_reactor('nlg6x4q4gzokqw') // remapped from original line 75
     .notConsumable('1x #forge:springs/cupronickel')
     .notConsumable(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .itemInputs('1x #forge:dusts/trimethylolpropane')
@@ -61,17 +61,18 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.batch_reactor('5zyrb24f8vtkll') // remapped from original line 88
-    .circuit(1)
-    .itemInputs('4x #forge:dusts/sodium_nitrite')
-    .inputFluids(safeFluidOf('susy:hydrogen_chloride', 2000))
-    .inputFluids(safeFluidOf('susy:gtfo_aniline', 1000))
-    .itemOutputs('1x #forge:dusts/benzenediazonium_chloride')
-    .outputFluids(safeFluidOf('susy:diluted_saltwater', 2000))
-    .duration(200)
-    .EUt(120)
+  // Contains GTFO resources
+  //event.recipes.susy.batch_reactor('r7kxlv6f1re34y') // remapped from original line 88
+    //.circuit(1)
+    //.itemInputs('4x #forge:dusts/sodium_nitrite')
+    //.inputFluids(safeFluidOf('susy:hydrogen_chloride', 2000))
+    //.inputFluids(safeFluidOf('susy:gtfo_aniline', 1000))
+    //.itemOutputs('1x #forge:dusts/benzenediazonium_chloride')
+    //.outputFluids(safeFluidOf('susy:diluted_saltwater', 2000))
+    //.duration(200)
+    //.EUt(120)
 
-  event.recipes.gtceu.mixer('8rzpb6iybsh5ik') // remapped from original line 99
+  event.recipes.gtceu.mixer('twkz35077c7ec6') // remapped from original line 99
     .itemInputs('1x #forge:dusts/benzenediazonium_chloride')
     .itemInputs('8x #forge:dusts/gelatin')
     .inputFluids(safeFluidOf('susy:trimethylolpropane_triacrylate', 8000))
@@ -79,109 +80,109 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.mixer('jpkzh9q6wusij6') // remapped from original line 108
+  event.recipes.gtceu.mixer('hcscmu6mqdygas') // remapped from original line 108
     .itemInputs('1x #forge:foils/plastic')
     .inputFluids(safeFluidOf('susy:dye_red', 100))
     .inputFluids(safeFluidOf('susy:acrylic_photoemulsion', 500))
-    .itemOutputs(metaitem('rubylith_film'))
+    .itemOutputs(safeItemId('1x susy:rubylith_film'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('mdkrgclv535sdh') // remapped from original line 117
+  event.recipes.gtceu.assembler('lyfk1n1g79ye8a') // remapped from original line 117
     .itemInputs('1x #forge:foils/mylar')
-    .itemInputs(metaitem('rubylith_film'))
+    .itemInputs(safeItemId('1x susy:rubylith_film'))
     .inputFluids(safeFluidOf('gtceu:glue', 100))
-    .itemOutputs(metaitem('rubylith'))
+    .itemOutputs(safeItemId('1x susy:rubylith'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.roaster('vxak2gpfucwbzi') // remapped from original line 128
+  event.recipes.susy.roaster('ml9mkbeyn677iz') // remapped from original line 128
     .itemInputs('1x #forge:dusts/silver')
     .inputFluids(safeFluidOf('gtceu:chlorine', 1000))
     .itemOutputs('2x #forge:dusts/silver_chloride')
     .duration(100)
     .EUt(30)
 
-  event.recipes.gtceu.assembler('ajjbtdoztcwrek') // remapped from original line 136
+  event.recipes.gtceu.assembler('xc5znw4bwmdebl') // remapped from original line 136
     .itemInputs('1x #forge:plates/glass')
     .itemInputs('1x #forge:dusts/gelatin')
     .itemInputs('1x #forge:dusts/silver_chloride')
-    .itemOutputs(metaitem('mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.blank'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('5rxyf6xw3faghm') // remapped from original line 151
-    .itemInputs(metaitem('stencil.ram'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.ram'))
+  event.recipes.susy.uv_light_box('nyb3lv0n4llhuc') // remapped from original line 151
+    .itemInputs(safeItemId('1x susy:stencil.ram'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.ram'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('12sjjbchyofixr') // remapped from original line 165
-    .itemInputs(metaitem('stencil.ic'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.ic'))
+  event.recipes.susy.uv_light_box('vrecghgrroddi5') // remapped from original line 165
+    .itemInputs(safeItemId('1x susy:stencil.ic'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.ic'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('38aeemmr0gqzhu') // remapped from original line 179
-    .itemInputs(metaitem('stencil.pcb'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.pcb'))
+  event.recipes.susy.uv_light_box('v3ohcmuo8svpti') // remapped from original line 179
+    .itemInputs(safeItemId('1x susy:stencil.pcb'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.pcb'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('szhdj2fj6jzauy') // remapped from original line 193
-    .itemInputs(metaitem('stencil.ulpic'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.ulpic'))
+  event.recipes.susy.uv_light_box('bhghqfw5yo2afi') // remapped from original line 193
+    .itemInputs(safeItemId('1x susy:stencil.ulpic'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.ulpic'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('pwnyfzrqt1by7x') // remapped from original line 207
-    .itemInputs(metaitem('stencil.lpic'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.lpic'))
+  event.recipes.susy.uv_light_box('78h6rh2wzo17ky') // remapped from original line 207
+    .itemInputs(safeItemId('1x susy:stencil.lpic'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.lpic'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.uv_light_box('trwqumw7hy5ylv') // remapped from original line 221
-    .itemInputs(metaitem('stencil.cpu'))
-    .itemInputs(metaitem('mask.blank'))
-    .itemOutputs(metaitem('mask.cpu'))
+  event.recipes.susy.uv_light_box('gb3fiimknm5h84') // remapped from original line 221
+    .itemInputs(safeItemId('1x susy:stencil.cpu'))
+    .itemInputs(safeItemId('1x susy:mask.blank'))
+    .itemOutputs(safeItemId('1x susy:mask.cpu'))
     .duration(200)
     .EUt(7)
 
-  event.recipes.susy.reaction_furnace('quyzwpz6t0moae') // remapped from original line 231
-    .notConsumable(metaitem('shape.mold.plate'))
+  event.recipes.susy.reaction_furnace('nzbijt6rlpzydb') // remapped from original line 231
+    .notConsumable(safeItemId('1x susy:shape.mold.plate'))
     .inputFluids(safeFluidOf('susy:silicon_tetrachloride', 1000))
     .inputFluids(safeFluidOf('gtceu:oxygen', 3000))
     .inputFluids(safeFluidOf('gtceu:hydrogen', 2000))
-    .itemOutputs(metaitem('fused_quartz'))
+    .itemOutputs(safeItemId('1x susy:fused_quartz'))
     .duration(400)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('nh6kcsktjzl9xo') // remapped from original line 241
-    .itemInputs(metaitem('fused_quartz'))
+  event.recipes.gtceu.assembler('yofqjpnnum2dxy') // remapped from original line 241
+    .itemInputs(safeItemId('1x susy:fused_quartz'))
     .itemInputs('1x #forge:dusts/tiny_chromium_trioxide')
     .circuit(1)
-    .itemOutputs(metaitem('mask.advanced'))
+    .itemOutputs(safeItemId('1x susy:mask.advanced'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('lvoy93ylgcnlqr') // remapped from original line 250
-    .itemInputs(metaitem('fused_quartz'))
+  event.recipes.gtceu.assembler('i8slu4rnc2hkxh') // remapped from original line 250
+    .itemInputs(safeItemId('1x susy:fused_quartz'))
     .itemInputs('1x #forge:dusts/tiny_chromium_trioxide')
     .circuit(2)
-    .itemOutputs(metaitem('mask.nand'))
+    .itemOutputs(safeItemId('1x susy:mask.nand'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('ne5odsrup8etyu') // remapped from original line 259
-    .itemInputs(metaitem('fused_quartz'))
+  event.recipes.gtceu.assembler('webfqupqyuoacx') // remapped from original line 259
+    .itemInputs(safeItemId('1x susy:fused_quartz'))
     .itemInputs('1x #forge:dusts/tiny_chromium_trioxide')
     .circuit(3)
-    .itemOutputs(metaitem('mask.nor'))
+    .itemOutputs(safeItemId('1x susy:mask.nor'))
     .duration(200)
     .EUt(120)
 

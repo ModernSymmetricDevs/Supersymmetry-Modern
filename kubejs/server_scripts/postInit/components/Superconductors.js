@@ -65,56 +65,56 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:arc_furnace', input: '#forge:wires/gt_hex_enriched_naquadah_trinium_europium_duranide' && safeFluidOf('gtceu:oxygen')})
   event.remove({ type: 'gtceu:arc_furnace', input: '#forge:wires/gt_hex_ruthenium_trinium_americium_neutronate' && safeFluidOf('gtceu:oxygen')})
 
-  event.recipes.susy.TUBE_FURNACE('2gj7swshdnobwm') // remapped from original line 240
-    .itemInputs(metaitem('cannedmagnesiumdiboride'))
+  event.recipes.susy.tube_furnace('jsemv4pp6ej237') // remapped from original line 240
+    .itemInputs(safeItemId('1x susy:cannedmagnesiumdiboride'))
     .inputFluids(safeFluidOf('gtceu:nitrogen', 500))
-    .itemOutputs(metaitem('tubemagnesiumdiboride'))
+    .itemOutputs(safeItemId('1x susy:tubemagnesiumdiboride'))
     .duration(1006)
     .EUt(120)
 
-  event.recipes.susy.TUBE_FURNACE('mhbtfh1jwmxjed') // remapped from original line 248
-    .itemInputs(metaitem('cannedmagnesiumdiboride'))
+  event.recipes.susy.tube_furnace('i2i5itwfbjhe7n') // remapped from original line 248
+    .itemInputs(safeItemId('1x susy:cannedmagnesiumdiboride'))
     .inputFluids(safeFluidOf('gtceu:argon', 50))
-    .itemOutputs(metaitem('tubemagnesiumdiboride'))
+    .itemOutputs(safeItemId('1x susy:tubemagnesiumdiboride'))
     .duration(670)
     .EUt(120)
 
-  event.recipes.susy.TUBE_FURNACE('4a1xfmretviizv') // remapped from original line 256
-    .itemInputs(metaitem('cannedmercurybariumcalciumcuprate'))
+  event.recipes.susy.tube_furnace('ko2x2zscjkztvn') // remapped from original line 256
+    .itemInputs(safeItemId('1x susy:cannedmercurybariumcalciumcuprate'))
     .inputFluids(safeFluidOf('gtceu:nitrogen', 500))
-    .itemOutputs(metaitem('tubemercurybariumcalciumcuprate'))
+    .itemOutputs(safeItemId('1x susy:tubemercurybariumcalciumcuprate'))
     .duration(1500)
     .EUt(480)
 
-  event.recipes.susy.TUBE_FURNACE('wf3dtwzxzpdgo4') // remapped from original line 264
-    .itemInputs(metaitem('cannedmercurybariumcalciumcuprate'))
+  event.recipes.susy.tube_furnace('bwetwansvtgdp2') // remapped from original line 264
+    .itemInputs(safeItemId('1x susy:cannedmercurybariumcalciumcuprate'))
     .inputFluids(safeFluidOf('gtceu:argon', 50))
-    .itemOutputs(metaitem('tubemercurybariumcalciumcuprate'))
+    .itemOutputs(safeItemId('1x susy:tubemercurybariumcalciumcuprate'))
     .duration(1005)
     .EUt(480)
 
-  event.recipes.susy.TUBE_FURNACE('yttlytylny4pba') // remapped from original line 272
-    .itemInputs(metaitem('cannedsamariumironarsenicoxide'))
+  event.recipes.susy.tube_furnace('s2te406llvpc2q') // remapped from original line 272
+    .itemInputs(safeItemId('1x susy:cannedsamariumironarsenicoxide'))
     .inputFluids(safeFluidOf('gtceu:argon', 50))
-    .itemOutputs(metaitem('tubesamariumironarsenicoxide'))
+    .itemOutputs(safeItemId('1x susy:tubesamariumironarsenicoxide'))
     .duration(1005)
     .EUt(3840)
 
-  event.recipes.susy.roaster('rdahnzgwbxrbjq') // remapped from original line 342
+  event.recipes.susy.roaster('gurk1cdncqb0e0') // remapped from original line 342
     .itemInputs('1x #forge:dusts/any_purity_barium')
-    .inputFluids(liquid('oxygen') * 1000)
+    .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .itemOutputs('2x #forge:dusts/barium_oxide')
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.roaster('wzanaz6y2abknk') // remapped from original line 350
-    .inputFluids(liquid('mercury') * 1000)
-    .inputFluids(liquid('oxygen') * 1000)
+  event.recipes.susy.roaster('yjfxyjht5dwuzm') // remapped from original line 350
+    .inputFluids(safeFluidOf('gtceu:mercury', 1000))
+    .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .itemOutputs('2x #forge:dusts/mercury_oxide')
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.mixer('pnqsnomasopd31') // remapped from original line 358
+  event.recipes.gtceu.mixer('nn4jzcfrzrakwt') // remapped from original line 358
     .itemInputs('2x #forge:dusts/mercury_oxide')
     .itemInputs('4x #forge:dusts/quicklime')
     .itemInputs('4x #forge:dusts/barium_oxide')
@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(240)
 
-  event.recipes.susy.TUBE_FURNACE('zmkagd5hvnxuvc') // remapped from original line 368
+  event.recipes.susy.tube_furnace('cq9fxhxodq7w0r') // remapped from original line 368
     .itemInputs('1x #forge:dusts/any_purity_samarium')
     .itemInputs('1x #forge:dusts/any_purity_arsenic')
     .itemInputs('1x #forge:dusts/any_purity_iron')
@@ -132,7 +132,7 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(1920)
 
-  event.recipes.susy.TUBE_FURNACE('isboqurpfbmck1') // remapped from original line 379
+  event.recipes.susy.tube_furnace('920jjd8fbn0wwj') // remapped from original line 379
     .itemInputs('1x #forge:dusts/any_purity_manganese')
     .itemInputs('1x #forge:dusts/any_purity_phosphorus')
     .inputFluids(safeFluidOf('gtceu:nitrogen', 1000))
@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.mixer('vi50lynsfsffoq') // remapped from original line 388
+  event.recipes.gtceu.mixer('yinj206prw5xjg') // remapped from original line 388
     .itemInputs('5x #forge:dusts/yttrium_oxide')
     .itemInputs('8x #forge:dusts/barium_oxide')
     .itemInputs('12x #forge:dusts/cupric_oxide')
@@ -148,29 +148,29 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(7680)
 
-  event.recipes.susy.roaster('2ixsig48qtfhna') // remapped from original line 397
+  event.recipes.susy.roaster('naellj3dc46twl') // remapped from original line 397
     .itemInputs('1x #forge:dusts/any_purity_indium')
-    .inputFluids(liquid('chlorine') * 3000)
+    .inputFluids(safeFluidOf('gtceu:chlorine', 3000))
     .itemOutputs('4x #forge:dusts/indium_chloride')
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.batch_reactor('c0yybceaadlwhp') // remapped from original line 405
+  event.recipes.susy.batch_reactor('npffgkzk701a9h') // remapped from original line 405
     .itemInputs('4x #forge:dusts/indium_chloride')
-    .inputFluids(liquid('sodium_hydroxide_solution') * 3000)
+    .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 3000))
     .itemOutputs('7x #forge:dusts/indium_hydroxide')
-    .outputFluids(liquid('salt_water') * 3000)
+    .outputFluids(safeFluidOf('gtceu:salt_water', 3000))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.roaster('hhkxxwiq3mb8bz') // remapped from original line 414
+  event.recipes.susy.roaster('s7nqqgkrf16hy6') // remapped from original line 414
     .itemInputs('14x #forge:dusts/indium_hydroxide')
     .itemOutputs('5x #forge:dusts/indium_oxide')
-    .outputFluids(liquid('dense_steam') * 3000)
+    .outputFluids(safeFluidOf('susy:dense_steam', 3000))
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.mixer('khu4e689isvyno') // remapped from original line 422
+  event.recipes.gtceu.mixer('p2nkunjkxccavp') // remapped from original line 422
     .itemInputs('10x #forge:dusts/indium_oxide')
     .itemInputs('4x #forge:dusts/purified_tin_ii_oxide')
     .itemInputs('4x #forge:dusts/barium_oxide')

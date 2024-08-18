@@ -1,20 +1,20 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.roaster('h3birrrb5jkzfh') // remapped from original line 32
+  event.recipes.susy.roaster('cz8c6fwa6bzpwj') // remapped from original line 32
     .itemInputs('1x #forge:dusts/rhodochrosite')
     .itemOutputs('2x #forge:dusts/manganese_ii_oxide')
     .outputFluids(safeFluidOf('gtceu:carbon_dioxide', 1000))
     .duration(120)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.batch_reactor('tc9bgwqybroffl') // remapped from original line 107
+  event.recipes.susy.batch_reactor('4z9wadd7i6hjkh') // remapped from original line 107
     .itemInputs('1x #forge:dusts/manganese_ii_oxide')
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .outputFluids(safeFluidOf('susy:crude_manganese_ii_sulfate_solution', 1000))
     .duration(120)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.batch_reactor('8jcxtd7ttumitp') // remapped from original line 115
+  event.recipes.susy.batch_reactor('7qvwtuldwsptrh') // remapped from original line 115
     .itemInputs('2x #forge:dusts/tiny_sodium_hydroxide')
     .inputFluids(safeFluidOf('susy:crude_manganese_ii_sulfate_solution', 4000))
     .chancedOutput('7x #forge:dusts/iron_iii_hydroxide', 500, 0)
@@ -22,37 +22,37 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.electrolytic_cell('ml7xsaxdurcznc') // remapped from original line 124
+  event.recipes.gtceu.electrolytic_cell('cgaar40nzmwufh') // remapped from original line 124
     .inputFluids(safeFluidOf('susy:manganese_ii_sulfate_solution', 1000))
     .notConsumable('1x #forge:rods/manganese')
-    .notConsumable(metaitem('graphite_electrode'))
+    .notConsumable(safeItemId('1x susy:graphite_electrode'))
     .itemOutputs('1x #forge:dusts/manganese')
     .outputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
     .duration(480)
     .EUt(voltAmps[2])
 
-  event.recipes.gtceu.BR('fy61n7gxvld6im') // remapped from original line 136
+  event.recipes.gtceu.BR('edioclebvrlupj') // remapped from original line 136
     .itemInputs('1x #forge:dusts/any_purity_manganese')
     .inputFluids(safeFluidOf('gtceu:chlorine', 2000))
     .itemOutputs('3x #forge:dusts/manganese_ii_chloride')
     .duration(100)
     .EUt(120)
 
-  event.recipes.gtceu.BR('1isxeeygrrvnru') // remapped from original line 144
+  event.recipes.gtceu.BR('2oz8ndsnpki986') // remapped from original line 144
     .itemInputs('2x #forge:dusts/manganese_ii_oxide')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 2000))
     .outputFluids(safeFluidOf('susy:manganese_ii_chloride_solution', 3000))
     .duration(100)
     .EUt(120)
 
-  event.recipes.gtceu.DISTILLERY('weqhgdagxidrhn') // remapped from original line 152
+  event.recipes.gtceu.DISTILLERY('f7ayhpcg2pio37') // remapped from original line 152
     .inputFluids(safeFluidOf('susy:manganese_ii_chloride_solution', 3000))
     .itemOutputs('3x #forge:dusts/manganese_ii_chloride')
     .outputFluids(safeFluidOf('minecraft:water', 3000))
     .duration(20)
     .EUt(30)
 
-  event.recipes.gtceu.BR('ldxwtg5cahug2y') // remapped from original line 160
+  event.recipes.gtceu.BR('madcu7u7h8upxi') // remapped from original line 160
     .itemInputs('3x #forge:dusts/manganese_dioxide')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 4000))
     .outputFluids(safeFluidOf('susy:diluted_manganese_ii_chloride_solution', 6000))
@@ -60,35 +60,35 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(120)
 
-  event.recipes.gtceu.DISTILLERY('smmlpmb0a429bw') // remapped from original line 169
+  event.recipes.gtceu.DISTILLERY('abhu70yye5dy9u') // remapped from original line 169
     .inputFluids(safeFluidOf('susy:diluted_manganese_ii_chloride_solution', 3000))
     .itemOutputs('3x #forge:dusts/manganese_ii_chloride')
     .outputFluids(safeFluidOf('minecraft:water', 6000))
     .duration(20)
     .EUt(30)
 
-  event.recipes.gtceu.BR('wwrt1smry46qsv') // remapped from original line 179
+  event.recipes.gtceu.BR('9xyanc9678dhce') // remapped from original line 179
     .itemInputs('3x #forge:dusts/pyrolusite')
     .inputFluids(safeFluidOf('gtceu:nitrogen_dioxide', 2000))
     .itemOutputs('9x #forge:dusts/manganese_ii_nitrate')
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.roaster('lv8inyxlrgtgka') // remapped from original line 187
+  event.recipes.susy.roaster('cjehysiyddmvsq') // remapped from original line 187
     .itemInputs('9x #forge:dusts/manganese_ii_nitrate')
     .outputFluids(safeFluidOf('gtceu:nitrogen_dioxide', 2000))
     .itemOutputs('3x #forge:dusts/manganese_dioxide')
     .duration(100)
     .EUt(120)
 
-  event.recipes.susy.roaster('ggcq6wxp7tadju') // remapped from original line 197
+  event.recipes.susy.roaster('tsaipqxjqhlkx0') // remapped from original line 197
     .itemInputs('5x #forge:dusts/manganese_ii_hydroxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 1000))
     .itemOutputs('2x #forge:dusts/manganese_ii_oxide')
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.roaster('gpnwzvtqufzyha') // remapped from original line 207
+  event.recipes.susy.roaster('2kxowz8lwdjcoo') // remapped from original line 207
     .itemInputs('3x #forge:dusts/manganese_dioxide')
     .inputFluids(safeFluidOf('susy:potassium_hydroxide', 864))
     .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.gtceu.electrolytic_cell('rgbjtlknva98zh') // remapped from original line 217
+  event.recipes.gtceu.electrolytic_cell('ananqf2ghgvidh') // remapped from original line 217
     .notConsumable('4x #forge:plates/nickel')
     .notConsumable('4x #forge:plates/iron')
     .itemInputs('7x #forge:dusts/potassium_manganate')
@@ -107,7 +107,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.CRYSTALLIZER('drtjvp1tbbivow') // remapped from original line 228
+  event.recipes.susy.CRYSTALLIZER('f9fl7djkou1sqm') // remapped from original line 228
     .inputFluids(safeFluidOf('susy:oxidized_manganate_solution', 1000))
     .itemOutputs('6x #forge:dusts/potassium_permanganate')
     .outputFluids(safeFluidOf('susy:potassium_hydroxide_solution', 1000))

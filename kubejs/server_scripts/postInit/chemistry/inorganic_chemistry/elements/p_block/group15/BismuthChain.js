@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.roaster('ga2kdhrm90swzi') // remapped from original line 11
+  event.recipes.susy.roaster('vn6zpgglziis3x') // remapped from original line 11
     .itemInputs('5x #forge:dusts/bismuthinite')
     .inputFluids(safeFluidOf('gtceu:oxygen', 9000))
     .itemOutputs('5x #forge:dusts/bismuth_iii_oxide')

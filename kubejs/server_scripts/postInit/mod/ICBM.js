@@ -1,49 +1,49 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.recipemap('weapons_factory')('3izmmprvv0kymc') // remapped from original line 150
+  event.recipes.susy.weapons_factory('1zuwn5qz1fxtdg') // remapped from original line 150
     .itemInputs([
-    .inputFluids(liquid('sulfur_dioxide')*1000)
-    .itemOutputs(safeItemId('3x icbmclassic:explosives:3')'))
+    .inputFluids(safeFluidOf('gtceu:sulfur_dioxide', 1000))
+    .itemOutputs(safeItemId('1x icbmclassic:explosives:3'))
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.recipemap('weapons_factory')('15gaiqqnym66sd') // remapped from original line 182
+  event.recipes.susy.weapons_factory('mqoeaj59xmew5g') // remapped from original line 182
     .itemInputs([
-    .itemOutputs(safeItemId('6x icbmclassic:explosives:6')'))
+    .itemOutputs(safeItemId('1x icbmclassic:explosives:6'))
     .duration(20)
     .EUt(16)
 
-  event.recipes.susy.recipemap('weapons_factory')('ikmsorldfroald') // remapped from original line 195
+  event.recipes.susy.weapons_factory('jl17yk4h5pcmlq') // remapped from original line 195
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('11x icbmclassic:explosives:11')1'))
+    .itemOutputs(safeItemId('1x icbmclassic:explosives:11'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy./*recipemap('weapons_factory')('lockktvltfvhup') // remapped from original line 224
+  event.recipes.susy.weapons_factory('f43oztypu0zjrl') // remapped from original line 224
     .itemInputs([
-    .itemOutputs(safeItemId('8x icbmclassic:explosives:8')'))
+    .itemOutputs(safeItemId('1x icbmclassic:explosives:8'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy./*recipemap('weapons_factory')('m75970figuutn0') // remapped from original line 234
+  event.recipes.susy.weapons_factory('qo1svlngv2ziav') // remapped from original line 234
     .itemInputs([
-    .inputFluids(liquid('biomass')*8000)
-    .itemOutputs(safeItemId('9x icbmclassic:explosives:9')'))
+    .inputFluids(safeFluidOf('gtceu:biomass', 8000))
+    .itemOutputs(safeItemId('1x icbmclassic:explosives:9'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy.mods.gregtech.assembler('hqnyumbqvwaf81') // remapped from original line 314
+  event.recipes.susy.mods.gregtech.assembler('cbq8g5nd49gwbg') // remapped from original line 314
     .circuit(1)
     .inputFluids(safeFluidOf('minecraft:water', 500))
     .itemInputs('1x #forge:dusts/obsidian')
     .itemInputs('1x #forge:dusts/cement')
     .itemInputs('4x #forge:dusts/stone')
-    .itemOutputs(safeItemId('1x icbmclassic:concrete', ')) * 4)
+    .itemOutputs(safeItemId('4x icbmclassic:concrete'))
     .duration(160)
     .EUt(24)
 
-  event.recipes.susy.mods.gregtech.assembler('xgkziy81bcznzn') // remapped from original line 325
+  event.recipes.susy.mods.gregtech.assembler('zwjaxmvb2or6yn') // remapped from original line 325
     .circuit(2)
     .inputFluids(safeFluidOf('minecraft:water', 500))
     .itemInputs('1x #forge:dusts/obsidian')
@@ -51,11 +51,11 @@ ServerEvents.recipes(event => {
     .itemInputs('1x #forge:dusts/cement')
     .itemInputs('4x #forge:dusts/stone')
     .itemInputs('1x #forge:frames/gt_steel')
-    .itemOutputs(safeItemId('1x icbmclassic:concrete', ')) * 4)
+    .itemOutputs(safeItemId('4x icbmclassic:concrete'))
     .duration(160)
     .EUt(96)
 
-  event.recipes.susy.mods.gregtech.assembler('nlxhsiyzn575c5') // remapped from original line 338
+  event.recipes.susy.mods.gregtech.assembler('ucifnnfqsljkov') // remapped from original line 338
     .circuit(3)
     .inputFluids(safeFluidOf('minecraft:water', 500))
     .itemInputs('1x #forge:dusts/obsidian')
@@ -63,11 +63,11 @@ ServerEvents.recipes(event => {
     .itemInputs('1x #forge:dusts/cement')
     .itemInputs('4x #forge:dusts/stone')
     .itemInputs('1x #forge:frames/gt_stainless_steel')
-    .itemOutputs(safeItemId('2x icbmclassic:concrete', ')) * 4)
+    .itemOutputs(safeItemId('4x icbmclassic:concrete'))
     .duration(160)
     .EUt(384)
 
-  event.recipes.susy.mods.gregtech.assembler('iidwbskp1ngrf3') // remapped from original line 351
+  event.recipes.susy.mods.gregtech.assembler('csvwxqhun5ay5o') // remapped from original line 351
     .circuit(3)
     .inputFluids(safeFluidOf('minecraft:water', 500))
     .itemInputs('1x #forge:dusts/obsidian')
@@ -75,70 +75,70 @@ ServerEvents.recipes(event => {
     .itemInputs('1x #forge:dusts/cement')
     .itemInputs('4x #forge:dusts/stone')
     .itemInputs('1x #forge:frames/gt_stainless_steel')
-    .itemOutputs(safeItemId('2x icbmclassic:concrete', ')) * 4)
+    .itemOutputs(safeItemId('4x icbmclassic:concrete'))
     .duration(160)
     .EUt(384)
 
-  event.recipes.susy.mods.gregtech.assembler('wuicynm1yqyjtp') // remapped from original line 366
+  event.recipes.susy.mods.gregtech.assembler('aeeacypqygbbsj') // remapped from original line 366
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherbase:0')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherbase:0'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('fwkzmyefhmlv8r') // remapped from original line 379
+  event.recipes.susy.mods.gregtech.assembler('hqt3hzplrmcl8a') // remapped from original line 379
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherscreen:0')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherscreen:0'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('7nd2jycgchrqqy') // remapped from original line 392
+  event.recipes.susy.mods.gregtech.assembler('scdol59ugc5jbj') // remapped from original line 392
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherbase:1')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherbase:1'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy.mods.gregtech.assembler('twubgfkfehx8qh') // remapped from original line 405
+  event.recipes.susy.mods.gregtech.assembler('ujsst0leglogg1') // remapped from original line 405
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherscreen:1')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherscreen:1'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy.mods.gregtech.assembler('di84pvussvs57c') // remapped from original line 418
+  event.recipes.susy.mods.gregtech.assembler('pqvwvwr9nzd7u0') // remapped from original line 418
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x icbmclassic:launcherbase:2')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherbase:2'))
     .duration(400)
     .EUt(260)
 
-  event.recipes.susy.mods.gregtech.assembler('updr0lkjuxp8mk') // remapped from original line 431
+  event.recipes.susy.mods.gregtech.assembler('v7jeecabh2ypor') // remapped from original line 431
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x icbmclassic:launcherscreen:2')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherscreen:2'))
     .duration(400)
     .EUt(260)
 
-  event.recipes.susy.mods.gregtech.assembler('8orapuzmnil4uy') // remapped from original line 444
+  event.recipes.susy.mods.gregtech.assembler('voyjztsspkwxgl') // remapped from original line 444
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherframe:0')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherframe:0'))
     .duration(400)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('eufpa7uyo86lu7') // remapped from original line 456
+  event.recipes.susy.mods.gregtech.assembler('xbgffwqv8lcuas') // remapped from original line 456
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x icbmclassic:launcherframe:1')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherframe:1'))
     .duration(400)
     .EUt(60)
 
-  event.recipes.susy.mods.gregtech.assembler('yl8zqfcaluevff') // remapped from original line 468
+  event.recipes.susy.mods.gregtech.assembler('oniij0vz1h7b8v') // remapped from original line 468
     .itemInputs([
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x icbmclassic:launcherframe:2')'))
+    .itemOutputs(safeItemId('1x icbmclassic:launcherframe:2'))
     .duration(400)
     .EUt(260)
 

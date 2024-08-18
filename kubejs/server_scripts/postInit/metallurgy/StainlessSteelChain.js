@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/iron' && '#forge:dusts/nickel' && '#forge:dusts/manganese' && '#forge:dusts/chrome' && 'susy:circuit.integrated'})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/iron' && '#forge:dusts/invar' && '#forge:dusts/manganese' && '#forge:dusts/chrome' && 'susy:circuit.integrated'})
 
-  event.recipes.gtceu.electric_blast_furnace('xfdfvz2svsf9uf') // remapped from original line 18
+  event.recipes.gtceu.electric_blast_furnace('l1hmchq89kmu4k') // remapped from original line 18
     .itemInputs('6x #forge:dusts/iron')
     .itemInputs('1x #forge:dusts/nickel')
     .itemInputs('2x #forge:dusts/tiny_manganese')
@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2] * 2)
 
-  event.recipes.gtceu.electric_blast_furnace('f8ssxidoolvkbc') // remapped from original line 28
+  event.recipes.gtceu.electric_blast_furnace('5yeem8nxztixfx') // remapped from original line 28
     .itemInputs('14x #forge:dusts/magnetite')
     .itemInputs('1x #forge:dusts/nickel')
     .itemInputs('2x #forge:dusts/tiny_manganese')
@@ -20,7 +20,7 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2] * 2)
 
-  event.recipes.gtceu.electric_blast_furnace('uz1o7vujt73j7n') // remapped from original line 38
+  event.recipes.gtceu.electric_blast_furnace('equ0nabwojisd3') // remapped from original line 38
     .itemInputs('15x #forge:dusts/banded_iron')
     .itemInputs('1x #forge:dusts/nickel')
     .itemInputs('2x #forge:dusts/tiny_manganese')
@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2] * 2)
 
-  event.recipes.gtceu.electric_blast_furnace('s6ay5wl22zan34') // remapped from original line 48
+  event.recipes.gtceu.electric_blast_furnace('sgrm8ccjmiyclt') // remapped from original line 48
     .itemInputs('15x #forge:dusts/iron_iii_oxide')
     .itemInputs('1x #forge:dusts/nickel')
     .itemInputs('2x #forge:dusts/tiny_manganese')
@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2] * 2)
 
-  event.recipes.gtceu.electric_blast_furnace('ngfc0rs5m35xfe') // remapped from original line 58
+  event.recipes.gtceu.electric_blast_furnace('g5fjqc9xzftnex') // remapped from original line 58
     .itemInputs('30x #forge:dusts/granitic_mineral_sand')
     .itemInputs('1x #forge:dusts/nickel')
     .itemInputs('2x #forge:dusts/tiny_manganese')
@@ -44,9 +44,9 @@ ServerEvents.recipes(event => {
     .duration(800)
     .EUt(voltAmps[2] * 2)
 
-  event.recipes.susy.//VACUUM('5l2kg0gqmfahtr') // remapped from original line 68
+  event.recipes.susy.//VACUUM('eltgfqilthqbva') // remapped from original line 68
 
-  event.recipes.gtceu.mixer('ubfftzyze7wgbc') // remapped from original line 93
+  event.recipes.gtceu.mixer('y89yx9fsmrumt3') // remapped from original line 93
     .circuit(2)
     .itemInputs('1x #forge:dusts/iron')
     .itemInputs('2x #forge:dusts/chrome')
@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[1] * 2)
 
-  event.recipes.susy.advanced_arc_furnace('ymi2hfisx9e1n7') // remapped from original line 103
+  event.recipes.susy.advanced_arc_furnace('lhd2ggjh03jgim') // remapped from original line 103
     .inputFluids(safeFluidOf('gtceu:oxygen', 2000))
     .inputFluids(safeFluidOf('gtceu:argon', 500))
     .inputFluids(safeFluidOf('susy:carburized_stainless_steel', 1440))
@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
     .duration(400)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.advanced_arc_furnace('cl2dv1sm3m4gtp') // remapped from original line 116
+  event.recipes.susy.advanced_arc_furnace('qi4zo8bgx8iknq') // remapped from original line 116
     .inputFluids(safeFluidOf('gtceu:oxygen', 2000))
     .inputFluids(safeFluidOf('gtceu:nitrogen', 1000))
     .inputFluids(safeFluidOf('susy:carburized_stainless_steel', 1440))
@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
     .duration(600)
     .EUt(voltAmps[2])
 
-  event.recipes.susy.advanced_arc_furnace('vgllbyee48cmtm') // remapped from original line 131
+  event.recipes.susy.advanced_arc_furnace('8zchzilmmljry8') // remapped from original line 131
     .inputFluids(safeFluidOf('gtceu:oxygen', 2000))
     .inputFluids(safeFluidOf('gtceu:argon', 500))
     .inputFluids(safeFluidOf('susy:carburized_stainless_steel', 1440))

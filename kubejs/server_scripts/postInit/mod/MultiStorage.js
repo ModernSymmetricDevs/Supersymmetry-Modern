@@ -1,8 +1,8 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.recipemap('assembler')('ycli4tjhanvytq') // remapped from original line 75
-    .itemInputs(safeItemId('4x gregtech:stone_smooth', ')) * 4)
-    .itemInputs(metaitem('electric.motor.lv') * 2)
+  event.recipes.gtceu.assembler('l4m8eqvcdr33pe') // remapped from original line 75
+    .itemInputs(safeItemId('4x gregtech:stone_smooth'))
+    .itemInputs(safeItemId('2x susy:electric.motor.lv'))
     .itemInputs('8x #forge:rods/steel')
     .itemInputs('8x #forge:plates/steel')
     .itemInputs('8x #forge:screws/steel')
@@ -10,61 +10,61 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('pfjkhp8fhhb6jv') // remapped from original line 86
+  event.recipes.gtceu.assembler('ns8v70s5cndvgb') // remapped from original line 86
     .circuit(12)
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('6x #forge:plates/steel')
-    .itemOutputs(safeItemId('1x multistorage:vault', ')).withNbt(["color": "silver", "cvalue": 10329495]) * 2)
+    .itemOutputs(safeItemId('2x multistorage:vault'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('vwjpzcsf1gxvup') // remapped from original line 96
+  event.recipes.gtceu.assembler('z78fcvwc8mvhmk') // remapped from original line 96
     .circuit(12)
     .itemInputs(safeItemId('1x gregtech:transparent_casing'))
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('6x #forge:rods/steel')
-    .itemOutputs(safeItemId('13x multistorage:vault', 1')).withNbt(["color": "silver", "cvalue": 10329495]) * 2)
+    .itemOutputs(safeItemId('2x multistorage:vault'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('pi0hcopxwaogqa') // remapped from original line 106
+  event.recipes.gtceu.assembler('kjhn98zlcebfwy') // remapped from original line 106
     .circuit(13)
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs(safeItemId('1x minecraft:chest'))
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('2x multistorage:vault', ')).withNbt(["color": "silver", "cvalue": 10329495]))
+    .itemOutputs(safeItemId('1x multistorage:vault').withNbt(["color": "silver", "cvalue": 10329495]))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('jhj6rzquwwgkwr') // remapped from original line 117
+  event.recipes.gtceu.assembler('o5fblsqdifxeji') // remapped from original line 117
     .circuit(14)
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('2x #forge:wires/gt_single_red_alloy')
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('3x multistorage:vault', ')).withNbt(["color": "silver", "cvalue": 10329495]))
+    .itemOutputs(safeItemId('1x multistorage:vault').withNbt(["color": "silver", "cvalue": 10329495]))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('phf8vsytryuq26') // remapped from original line 128
+  event.recipes.gtceu.assembler('dnulsrcc6icbtn') // remapped from original line 128
     .circuit(15)
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('1x #forge:pipes/small_fluid_steel')
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('4x multistorage:vault', ')).withNbt(["color": "silver", "cvalue": 10329495]))
+    .itemOutputs(safeItemId('1x multistorage:vault').withNbt(["color": "silver", "cvalue": 10329495]))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.recipemap('assembler')('salafezpcjp9jo') // remapped from original line 139
+  event.recipes.gtceu.assembler('livkexktqpciqg') // remapped from original line 139
     .circuit(16)
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('2x #forge:cables/gt_single_tin')
     .itemInputs('1x #forge:frames/steel')
     .itemInputs('4x #forge:plates/steel')
-    .itemOutputs(safeItemId('5x multistorage:vault', ')).withNbt(["color": "silver", "cvalue": 10329495]))
+    .itemOutputs(safeItemId('1x multistorage:vault').withNbt(["color": "silver", "cvalue": 10329495]))
     .duration(200)
     .EUt(30)
 

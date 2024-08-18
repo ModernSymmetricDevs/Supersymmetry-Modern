@@ -17,126 +17,126 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:compressor', input: '#forge:dusts/alumina'})
   event.remove({ type: 'gtceu:assembler', input: '#forge:foils/vanadium_gallium' && '#forge:wires/fine_hssg' && safeFluidOf('gtceu:polybenzimidazole')})
 
-  event.recipes.susy.crystallizer('gdhfzlcsdmyblk') // remapped from original line 98
-    .itemInputs(metaitem('seed_crystal.alumina'))
+  event.recipes.susy.crystallizer('ansvdyjyw10b7l') // remapped from original line 98
+    .itemInputs(safeItemId('1x susy:seed_crystal.alumina'))
     .circuit(1)
     .inputFluids(safeFluidOf('susy:alumina', 4608))
-    .itemOutputs(metaitem('boule.alumina'))
+    .itemOutputs(safeItemId('1x susy:boule.alumina'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('xsqbdepzz7bogr') // remapped from original line 107
-    .itemInputs(metaitem('boule.alumina'))
-    .itemOutputs(metaitem('seed_crystal.alumina'))
-    .itemOutputs(metaitem('wafer.alumina') * 32)
+  event.recipes.gtceu.cutter('sklh8gf8qiigam') // remapped from original line 107
+    .itemInputs(safeItemId('1x susy:boule.alumina'))
+    .itemOutputs(safeItemId('1x susy:seed_crystal.alumina'))
+    .itemOutputs(safeItemId('32x susy:wafer.alumina'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('4uwm72hypvlcu7') // remapped from original line 189
+  event.recipes.gtceu.mixer('tzfqq5snxglzmk') // remapped from original line 189
     .itemInputs('5x #forge:dusts/alumina')
     .inputFluids(safeFluidOf('gtceu:glue', 500))
     .outputFluids(safeFluidOf('susy:ferroelectric_ceramic_binding', 1000))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('wyh3e1uuhjy4a5') // remapped from original line 197
+  event.recipes.gtceu.mixer('m2oxefx1svyirz') // remapped from original line 197
     .itemInputs('2x #forge:dusts/rutile')
     .inputFluids(safeFluidOf('gtceu:glue', 500))
     .outputFluids(safeFluidOf('susy:ferroelectric_ceramic_binding', 2000))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('vhgnfbhgclqlvc') // remapped from original line 205
+  event.recipes.gtceu.mixer('1yaneilrppfv9q') // remapped from original line 205
     .itemInputs('1x #forge:dusts/barium_titanate')
     .inputFluids(safeFluidOf('gtceu:glue', 500))
     .outputFluids(safeFluidOf('susy:ferroelectric_ceramic_binding', 4000))
     .duration(20)
     .EUt(240)
 
-  event.recipes.gtceu.compressor('chby9skcj8dh6e') // remapped from original line 213
-    .notConsumable(metaitem('shape.extruder.foil'))
+  event.recipes.gtceu.compressor('qr4l7ipryppijv') // remapped from original line 213
+    .notConsumable(safeItemId('1x susy:shape.extruder.foil'))
     .inputFluids(safeFluidOf('susy:ferroelectric_ceramic_binding', 1000))
-    .itemOutputs(metaitem('ferroelectric_ceramic_foil') * 5)
+    .itemOutputs(safeItemId('5x susy:ferroelectric_ceramic_foil'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.forming_press('ae3nowiezzpw3n') // remapped from original line 221
-    .itemInputs(metaitem('ferroelectric_ceramic_foil') * 2)
+  event.recipes.gtceu.forming_press('hhledh0ezkxnz3') // remapped from original line 221
+    .itemInputs(safeItemId('2x susy:ferroelectric_ceramic_foil'))
     .itemInputs('2x #forge:foils/aluminium')
-    .itemOutputs(metaitem('stacked_ceramic_capacitor'))
+    .itemOutputs(safeItemId('1x susy:stacked_ceramic_capacitor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('uttyxlnwpw38wy') // remapped from original line 229
-    .itemInputs(metaitem('stacked_ceramic_capacitor'))
-    .itemOutputs(metaitem('raw_ceramic_capacitor') * 16)
+  event.recipes.gtceu.cutter('9tz3mi4wpl0s6b') // remapped from original line 229
+    .itemInputs(safeItemId('1x susy:stacked_ceramic_capacitor'))
+    .itemOutputs(safeItemId('16x susy:raw_ceramic_capacitor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.roaster('pt6myfq9kuchb8') // remapped from original line 236
+  event.recipes.susy.roaster('wjvfkyshklv8yr') // remapped from original line 236
     .itemInputs('1x #forge:dusts/lead')
     .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .itemOutputs('2x #forge:dusts/lead_oxide')
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.roaster('u5ihg6av6fg3ov') // remapped from original line 244
+  event.recipes.susy.roaster('a5letqrg39lc1n') // remapped from original line 244
     .itemInputs('1x #forge:dusts/nickel')
     .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .itemOutputs('2x #forge:dusts/nickel_ii_oxide')
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.roaster('yttpo3hg2e7fp8') // remapped from original line 252
+  event.recipes.susy.roaster('cnx9rugwqaecnd') // remapped from original line 252
     .itemInputs('1x #forge:dusts/cobalt')
     .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
     .itemOutputs('2x #forge:dusts/cobalt_oxide')
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.reaction_furnace('z2lqhbsqvzov7u') // remapped from original line 260
+  event.recipes.susy.reaction_furnace('ocasm8jrtyndvj') // remapped from original line 260
     .itemInputs('1x #forge:dusts/tantalum')
     .inputFluids(safeFluidOf('gtceu:nitrogen', 1000))
     .itemOutputs('2x #forge:dusts/tantalum_nitride')
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('xdaxb4swtdlzfb') // remapped from original line 268
+  event.recipes.gtceu.mixer('mnu0zaelxqlfq6') // remapped from original line 268
     .itemInputs('2x #forge:dusts/lead_oxide')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .outputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 1000))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('isvif4pb9jhn0w') // remapped from original line 276
+  event.recipes.gtceu.mixer('oewu8mwlsmtv1m') // remapped from original line 276
     .itemInputs('2x #forge:dusts/nichrome')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .outputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 2000))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('hv43fwxjzmg42v') // remapped from original line 284
+  event.recipes.gtceu.mixer('ud3pstkvkx7mfj') // remapped from original line 284
     .itemInputs('2x #forge:dusts/tantalum_nitride')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .outputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 2000))
     .duration(150)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('t2jl42lmnvwxkv') // remapped from original line 292
+  event.recipes.gtceu.mixer('9ihuf0dv5mo3ka') // remapped from original line 292
     .itemInputs('1x #forge:dusts/ruthenium_iv_oxide')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .outputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 3000))
     .duration(120)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('zawrhun3ciwv9l') // remapped from original line 300
+  event.recipes.gtceu.mixer('v6ogaer6qujwom') // remapped from original line 300
     .itemInputs('1x #forge:dusts/bismuth_iridate')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 1000))
     .outputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 4000))
     .duration(20)
     .EUt(240)
 
-  event.recipes.susy.batch_reactor('i6yxuef4ofso3y') // remapped from original line 308
+  event.recipes.susy.batch_reactor('sh9tth2leekwrp') // remapped from original line 308
     .itemInputs('5x #forge:dusts/bismuth_iii_oxide')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 6000))
     .inputFluids(safeFluidOf('gtceu:chlorine', 4000))
@@ -145,14 +145,14 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(240)
 
-  event.recipes.susy.roaster('y6kb5pnigluigm') // remapped from original line 318
+  event.recipes.susy.roaster('dbxeavooqo5peh') // remapped from original line 318
     .itemInputs('1x #forge:dusts/iridium')
     .inputFluids(safeFluidOf('gtceu:chlorine', 3000))
     .itemOutputs('4x #forge:dusts/iridium_chloride')
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.autoclave('scp8iiobazkhkc') // remapped from original line 326
+  event.recipes.gtceu.autoclave('2s2qil8zk55wk9') // remapped from original line 326
     .itemInputs('10x #forge:dusts/sodium_bismuthate')
     .itemInputs('8x #forge:dusts/iridium_chloride')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 2000))
@@ -161,309 +161,309 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.forming_press('njoeuc67pmjmrl') // remapped from original line 336
-    .itemInputs(metaitem('raw_ceramic_capacitor') * 4)
+  event.recipes.gtceu.forming_press('iltjsdrujsch8e') // remapped from original line 336
+    .itemInputs(safeItemId('4x susy:raw_ceramic_capacitor'))
     .itemInputs('2x #forge:wires/fine_tin')
-    .itemOutputs(metaitem('component.smd.capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:component.smd.capacitor'))
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.forming_press('v5ig2ooh9xr4ds') // remapped from original line 344
-    .itemInputs(metaitem('raw_ceramic_capacitor') * 4)
+  event.recipes.gtceu.forming_press('kffaqdoc655kcl') // remapped from original line 344
+    .itemInputs(safeItemId('4x susy:raw_ceramic_capacitor'))
     .itemInputs('2x #forge:wires/fine_zinc')
-    .itemOutputs(metaitem('component.smd.capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:component.smd.capacitor'))
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.forming_press('xygalgaab1dsex') // remapped from original line 352
-    .itemInputs(metaitem('raw_ceramic_capacitor') * 4)
+  event.recipes.gtceu.forming_press('sp2swgrjhcev0t') // remapped from original line 352
+    .itemInputs(safeItemId('4x susy:raw_ceramic_capacitor'))
     .itemInputs('1x #forge:wires/fine_aluminium')
-    .itemOutputs(metaitem('component.smd.capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:component.smd.capacitor'))
     .duration(20)
     .EUt(240)
 
-  event.recipes.susy.vacuum_chamber('amk9erbft6abay') // remapped from original line 360
+  event.recipes.susy.vacuum_chamber('5bjeb1c3owsq6i') // remapped from original line 360
     .inputFluids(safeFluidOf('gtceu:aluminium', 18))
     .itemInputs('1x #forge:foils/polypropylene')
-    .itemOutputs(metaitem('metallized_plastic_film'))
+    .itemOutputs(safeItemId('1x susy:metallized_plastic_film'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.vacuum_chamber('nschshtgvjrohq') // remapped from original line 368
+  event.recipes.susy.vacuum_chamber('uisnafns2noaol') // remapped from original line 368
     .inputFluids(safeFluidOf('gtceu:zinc', 36))
     .itemInputs('1x #forge:foils/polypropylene')
-    .itemOutputs(metaitem('metallized_plastic_film'))
+    .itemOutputs(safeItemId('1x susy:metallized_plastic_film'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.susy.vacuum_chamber('3mnehmnr6f1szx') // remapped from original line 376
+  event.recipes.susy.vacuum_chamber('uivx8t05h5dxlt') // remapped from original line 376
     .inputFluids(safeFluidOf('gtceu:aluminium', 18))
     .itemInputs('1x #forge:foils/mylar')
-    .itemOutputs(metaitem('metallized_plastic_film') * 2)
+    .itemOutputs(safeItemId('2x susy:metallized_plastic_film'))
     .duration(30)
     .EUt(240)
 
-  event.recipes.susy.vacuum_chamber('vnwelnb6emwfzc') // remapped from original line 384
+  event.recipes.susy.vacuum_chamber('abx5naiizckkce') // remapped from original line 384
     .inputFluids(safeFluidOf('gtceu:zinc', 36))
     .itemInputs('1x #forge:foils/mylar')
-    .itemOutputs(metaitem('metallized_plastic_film') * 2)
+    .itemOutputs(safeItemId('2x susy:metallized_plastic_film'))
     .duration(60)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('pdpcxouwf6tdho') // remapped from original line 392
-    .itemInputs(metaitem('metallized_plastic_film'))
-    .itemOutputs(metaitem('metallized_plastic_square') * 16)
+  event.recipes.gtceu.cutter('nbuinag1spfdi2') // remapped from original line 392
+    .itemInputs(safeItemId('1x susy:metallized_plastic_film'))
+    .itemOutputs(safeItemId('16x susy:metallized_plastic_square'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('lrhdl2gl0bx2qm') // remapped from original line 399
-    .itemInputs(metaitem('metallized_plastic_square') * 4)
+  event.recipes.gtceu.chemical_bath('ohjfmtbfvnsvnc') // remapped from original line 399
+    .itemInputs(safeItemId('4x susy:metallized_plastic_square'))
     .inputFluids(safeFluidOf('gtceu:tin', 80))
-    .itemOutputs(metaitem('raw_smd_capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:raw_smd_capacitor'))
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('mtszw6lhnq3tdg') // remapped from original line 407
-    .itemInputs(metaitem('metallized_plastic_square') * 4)
+  event.recipes.gtceu.chemical_bath('5zgaixfsdl4kma') // remapped from original line 407
+    .itemInputs(safeItemId('4x susy:metallized_plastic_square'))
     .inputFluids(safeFluidOf('gtceu:zinc', 80))
-    .itemOutputs(metaitem('raw_smd_capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:raw_smd_capacitor'))
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('c2z3ajdclq2xa9') // remapped from original line 415
-    .itemInputs(metaitem('metallized_plastic_square') * 4)
+  event.recipes.gtceu.chemical_bath('jlrxifwol1glmp') // remapped from original line 415
+    .itemInputs(safeItemId('4x susy:metallized_plastic_square'))
     .inputFluids(safeFluidOf('gtceu:aluminium', 40))
-    .itemOutputs(metaitem('raw_smd_capacitor') * 4)
+    .itemOutputs(safeItemId('4x susy:raw_smd_capacitor'))
     .duration(20)
     .EUt(240)
 
-  event.recipes.susy.batch_reactor('zfq9xir0pk4b28') // remapped from original line 423
-    .itemInputs(metaitem('raw_smd_capacitor') * 16)
+  event.recipes.susy.batch_reactor('qhs0rjleyd30sg') // remapped from original line 423
+    .itemInputs(safeItemId('16x susy:raw_smd_capacitor'))
     .inputFluids(safeFluidOf('gtceu:polydimethylsiloxane', 72))
-    .itemOutputs(metaitem('component.smd.capacitor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.capacitor'))
     .duration(40)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('tmq25ywng1awfj') // remapped from original line 431
-    .itemInputs(metaitem('wafer.alumina'))
+  event.recipes.gtceu.assembler('58nrl7cfqoabhj') // remapped from original line 431
+    .itemInputs(safeItemId('1x susy:wafer.alumina'))
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer'))
+    .itemOutputs(safeItemId('1x susy:thick_film_substrate_wafer'))
     .duration(600)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('eazobyvwzl0jqu') // remapped from original line 439
-    .itemInputs(metaitem('wafer.alumina'))
+  event.recipes.gtceu.assembler('gtn5yieyoc3frs') // remapped from original line 439
+    .itemInputs(safeItemId('1x susy:wafer.alumina'))
     .inputFluids(safeFluidOf('gtceu:polyvinyl_chloride', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer'))
+    .itemOutputs(safeItemId('1x susy:thick_film_substrate_wafer'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('koxm8u3dual3yb') // remapped from original line 447
-    .itemInputs(metaitem('wafer.alumina'))
+  event.recipes.gtceu.assembler('hmhi2kdnawbvb8') // remapped from original line 447
+    .itemInputs(safeItemId('1x susy:wafer.alumina'))
     .inputFluids(safeFluidOf('gtceu:polytetrafluoroethylene', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 2)
+    .itemOutputs(safeItemId('2x susy:thick_film_substrate_wafer'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('ipmmcidg6o6h7a') // remapped from original line 455
+  event.recipes.gtceu.cutter('l0vy4y2bj5wu89') // remapped from original line 455
     .itemInputs('1x #forge:plates/alumina')
-    .itemOutputs(metaitem('wafer.alumina'))
+    .itemOutputs(safeItemId('1x susy:wafer.alumina'))
     .duration(30)
     .EUt(240)
 
-  event.recipes.gtceu.fluid_solidifier('lajwgwkqtzcjc2') // remapped from original line 462
+  event.recipes.gtceu.fluid_solidifier('wlyc6wuu1ubljl') // remapped from original line 462
     .inputFluids(safeFluidOf('susy:beryllium_oxide', 36))
-    .notConsumable(metaitem('shape.mold.ball'))
-    .chancedOutput(metaitem('seed_crystal.beryllium_oxide'), 1000, 1000)
+    .notConsumable(safeItemId('1x susy:shape.mold.ball'))
+    .chancedOutput(safeItemId('1x susy:seed_crystal.beryllium_oxide'), 1000, 1000)
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.crystallizer('mivajq02l5tmfk') // remapped from original line 470
-    .itemInputs(metaitem('seed_crystal.beryllium_oxide'))
+  event.recipes.susy.crystallizer('ovl2jm70eupnxf') // remapped from original line 470
+    .itemInputs(safeItemId('1x susy:seed_crystal.beryllium_oxide'))
     .circuit(1)
     .inputFluids(safeFluidOf('susy:beryllium_oxide', 3168))
-    .itemOutputs(metaitem('boule.beryllium_oxide'))
+    .itemOutputs(safeItemId('1x susy:boule.beryllium_oxide'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('lfw0rwl1ebftpp') // remapped from original line 480
-    .itemInputs(metaitem('boule.beryllium_oxide'))
-    .itemOutputs(metaitem('seed_crystal.beryllium_oxide'))
-    .itemOutputs(metaitem('wafer.beryllium_oxide') * 32)
+  event.recipes.gtceu.cutter('o2ljxq2fekv6n3') // remapped from original line 480
+    .itemInputs(safeItemId('1x susy:boule.beryllium_oxide'))
+    .itemOutputs(safeItemId('1x susy:seed_crystal.beryllium_oxide'))
+    .itemOutputs(safeItemId('32x susy:wafer.beryllium_oxide'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('cmcghmzrib6jmd') // remapped from original line 488
+  event.recipes.gtceu.cutter('cxcdaxtjopnxzf') // remapped from original line 488
     .itemInputs('1x #forge:plates/beryllium_oxide')
-    .itemOutputs(metaitem('wafer.beryllium_oxide'))
+    .itemOutputs(safeItemId('1x susy:wafer.beryllium_oxide'))
     .duration(30)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('xvotknbmzi40og') // remapped from original line 495
-    .itemInputs(metaitem('wafer.beryllium_oxide'))
+  event.recipes.gtceu.assembler('r4heboklhpwxwa') // remapped from original line 495
+    .itemInputs(safeItemId('1x susy:wafer.beryllium_oxide'))
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 4)
+    .itemOutputs(safeItemId('4x susy:thick_film_substrate_wafer'))
     .duration(600)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('eblrhsv2a154e8') // remapped from original line 503
-    .itemInputs(metaitem('wafer.beryllium_oxide'))
+  event.recipes.gtceu.assembler('zasghbyzkuyt8u') // remapped from original line 503
+    .itemInputs(safeItemId('1x susy:wafer.beryllium_oxide'))
     .inputFluids(safeFluidOf('gtceu:polyvinyl_chloride', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 4)
+    .itemOutputs(safeItemId('4x susy:thick_film_substrate_wafer'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('bksqfkyialex2p') // remapped from original line 511
-    .itemInputs(metaitem('wafer.beryllium_oxide'))
+  event.recipes.gtceu.assembler('72nhqa0nrmnv6u') // remapped from original line 511
+    .itemInputs(safeItemId('1x susy:wafer.beryllium_oxide'))
     .inputFluids(safeFluidOf('gtceu:polytetrafluoroethylene', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 8)
+    .itemOutputs(safeItemId('8x susy:thick_film_substrate_wafer'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('jffhpogbky9kla') // remapped from original line 519
+  event.recipes.gtceu.assembler('fawraeydfuzjwf') // remapped from original line 519
     .circuit(1)
     .itemInputs('1x #forge:plates/stainless_steel')
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 2)
+    .itemOutputs(safeItemId('2x susy:thick_film_substrate_wafer'))
     .duration(600)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('c1alzacftfnrq8') // remapped from original line 528
+  event.recipes.gtceu.assembler('ne5nyvlh80dhvw') // remapped from original line 528
     .circuit(1)
     .itemInputs('1x #forge:plates/stainless_steel')
     .inputFluids(safeFluidOf('gtceu:polyvinyl_chloride', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 2)
+    .itemOutputs(safeItemId('2x susy:thick_film_substrate_wafer'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('rntej2ji2rdmuc') // remapped from original line 537
+  event.recipes.gtceu.assembler('ke50oqnywdjfm2') // remapped from original line 537
     .circuit(1)
     .itemInputs('1x #forge:plates/stainless_steel')
     .inputFluids(safeFluidOf('gtceu:polytetrafluoroethylene', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 4)
+    .itemOutputs(safeItemId('4x susy:thick_film_substrate_wafer'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('dtdydmdcrtvzps') // remapped from original line 546
-    .itemInputs(metaitem('wafer.silicon_dioxide'))
+  event.recipes.gtceu.assembler('twl3bgotgljg3d') // remapped from original line 546
+    .itemInputs(safeItemId('1x susy:wafer.silicon_dioxide'))
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 2)
+    .itemOutputs(safeItemId('2x susy:thick_film_substrate_wafer'))
     .duration(600)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('eev0733nmjb3ka') // remapped from original line 554
-    .itemInputs(metaitem('wafer.silicon_dioxide'))
+  event.recipes.gtceu.assembler('bkl1ussqus6bye') // remapped from original line 554
+    .itemInputs(safeItemId('1x susy:wafer.silicon_dioxide'))
     .inputFluids(safeFluidOf('gtceu:polyvinyl_chloride', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 2)
+    .itemOutputs(safeItemId('2x susy:thick_film_substrate_wafer'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('y6zm93ur5ciofr') // remapped from original line 562
-    .itemInputs(metaitem('wafer.silicon_dioxide'))
+  event.recipes.gtceu.assembler('sbrhjkagipbw5n') // remapped from original line 562
+    .itemInputs(safeItemId('1x susy:wafer.silicon_dioxide'))
     .inputFluids(safeFluidOf('gtceu:polytetrafluoroethylene', 144))
-    .itemOutputs(metaitem('thick_film_substrate_wafer') * 4)
+    .itemOutputs(safeItemId('4x susy:thick_film_substrate_wafer'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('w9oewej7lk60jx') // remapped from original line 570
-    .itemInputs(metaitem('thick_film_substrate_wafer'))
-    .itemOutputs(metaitem('patterned_thick_film_substrate_wafer'))
+  event.recipes.gtceu.cutter('o21vj7jdqxdrzo') // remapped from original line 570
+    .itemInputs(safeItemId('1x susy:thick_film_substrate_wafer'))
+    .itemOutputs(safeItemId('1x susy:patterned_thick_film_substrate_wafer'))
     .duration(600)
     .EUt(240)
 
-  event.recipes.gtceu.laser_engraver('s6awvnl7ppafxk') // remapped from original line 577
-    .itemInputs(metaitem('thick_film_substrate_wafer'))
-    .itemOutputs(metaitem('patterned_thick_film_substrate_wafer'))
+  event.recipes.gtceu.laser_engraver('vmttytdhtvr1mp') // remapped from original line 577
+    .itemInputs(safeItemId('1x susy:thick_film_substrate_wafer'))
+    .itemOutputs(safeItemId('1x susy:patterned_thick_film_substrate_wafer'))
     .duration(50)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('wm7rylfxrfgn4j') // remapped from original line 584
-    .itemInputs(metaitem('patterned_thick_film_substrate_wafer'))
+  event.recipes.gtceu.chemical_bath('g2vnufvw7xxnvz') // remapped from original line 584
+    .itemInputs(safeItemId('1x susy:patterned_thick_film_substrate_wafer'))
     .inputFluids(safeFluidOf('susy:ceramic_thick_film_paste', 1000))
-    .itemOutputs(metaitem('thick_film_resistor_wafer'))
+    .itemOutputs(safeItemId('1x susy:thick_film_resistor_wafer'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('qyqecktsfficc1') // remapped from original line 592
-    .itemInputs(metaitem('thick_film_resistor_wafer'))
-    .itemOutputs(metaitem('component.smd.resistor') * 16)
+  event.recipes.gtceu.cutter('ifpoysk1tpydzz') // remapped from original line 592
+    .itemInputs(safeItemId('1x susy:thick_film_resistor_wafer'))
+    .itemOutputs(safeItemId('16x susy:component.smd.resistor'))
     .duration(300)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('2r0cihfy0rxah3') // remapped from original line 599
+  event.recipes.gtceu.assembler('n3ke0llwkcvpet') // remapped from original line 599
     .itemInputs('2x #forge:foils/aluminium')
     .itemInputs(safeItemId('1x minecraft:paper'))
-    .itemOutputs(metaitem('raw_capacitor_roll') * 8)
+    .itemOutputs(safeItemId('8x susy:raw_capacitor_roll'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.canner('4ipag4mwkg8cbz') // remapped from original line 607
-    .itemInputs(metaitem('raw_capacitor_roll') * 8)
+  event.recipes.gtceu.canner('5oaiz56ezmrxjs') // remapped from original line 607
+    .itemInputs(safeItemId('8x susy:raw_capacitor_roll'))
     .itemInputs('1x #forge:dusts/manganese_dioxide')
-    .itemOutputs(metaitem('aluminium_electrolytic_capacitor') * 8)
+    .itemOutputs(safeItemId('8x susy:aluminium_electrolytic_capacitor'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.mixer('611q31i6iuvsuc') // remapped from original line 615
+  event.recipes.gtceu.mixer('jg74btszwdgubl') // remapped from original line 615
     .inputFluids(safeFluidOf('susy:ethylene_glycol', 1000))
     .itemInputs('3x #forge:dusts/boric_acid')
     .outputFluids(safeFluidOf('susy:borax_electrolyte', 1000))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('bongsc56g60lri') // remapped from original line 623
-    .itemInputs(metaitem('raw_capacitor_roll') * 16)
+  event.recipes.gtceu.chemical_bath('j4mj5htvtijler') // remapped from original line 623
+    .itemInputs(safeItemId('16x susy:raw_capacitor_roll'))
     .inputFluids(safeFluidOf('susy:borax_electrolyte', 100))
-    .itemOutputs(metaitem('aluminium_electrolytic_capacitor') * 16)
+    .itemOutputs(safeItemId('16x susy:aluminium_electrolytic_capacitor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('g1xorrua1emxkv') // remapped from original line 631
-    .itemInputs(metaitem('aluminium_electrolytic_capacitor') * 16)
+  event.recipes.gtceu.assembler('iiwod4czrwthbi') // remapped from original line 631
+    .itemInputs(safeItemId('16x susy:aluminium_electrolytic_capacitor'))
     .itemInputs('4x #forge:rings/rubber')
     .itemInputs('2x #forge:foils/aluminium')
-    .itemOutputs(metaitem('component.smd.capacitor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.capacitor'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('wsbie8chywahtq') // remapped from original line 640
-    .itemInputs(metaitem('aluminium_electrolytic_capacitor') * 16)
+  event.recipes.gtceu.assembler('frkpmkviildppr') // remapped from original line 640
+    .itemInputs(safeItemId('16x susy:aluminium_electrolytic_capacitor'))
     .itemInputs('2x #forge:rings/silicone_rubber')
     .itemInputs('2x #forge:foils/aluminium')
-    .itemOutputs(metaitem('component.smd.capacitor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.capacitor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('4hqiuob6jcx5gx') // remapped from original line 649
-    .itemInputs(metaitem('aluminium_electrolytic_capacitor') * 16)
+  event.recipes.gtceu.assembler('rtuc1gpn6tryc9') // remapped from original line 649
+    .itemInputs(safeItemId('16x susy:aluminium_electrolytic_capacitor'))
     .itemInputs('1x #forge:rings/styrene_butadiene_rubber')
     .itemInputs('2x #forge:foils/aluminium')
-    .itemOutputs(metaitem('component.smd.capacitor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.capacitor'))
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.electrolyzer('jon4jgt4felutv') // remapped from original line 658
-    .itemInputs(metaitem('tantalum_chip') * 8)
+  event.recipes.gtceu.electrolyzer('n4nq2g6mfszm10') // remapped from original line 658
+    .itemInputs(safeItemId('8x susy:tantalum_chip'))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 1000))
-    .itemOutputs(metaitem('anodized_tantalum_chip') * 8)
+    .itemOutputs(safeItemId('8x susy:anodized_tantalum_chip'))
     .duration(40)
     .EUt(240)
 
-  event.recipes.gtceu.pyrolyse_oven('x5asdg2ohukyae') // remapped from original line 666
-    .itemInputs(metaitem('anodized_tantalum_chip') * 8)
+  event.recipes.gtceu.pyrolyse_oven('30vjq5md4dcq57') // remapped from original line 666
+    .itemInputs(safeItemId('8x susy:anodized_tantalum_chip'))
     .itemInputs('1x #forge:dusts/manganese_ii_nitrate')
-    .itemOutputs(metaitem('manganized_tantalum_chip') * 8)
+    .itemOutputs(safeItemId('8x susy:manganized_tantalum_chip'))
     .duration(40)
     .EUt(240)
 
-  event.recipes.gtceu.chemical_bath('weqghpt4de7jjg') // remapped from original line 674
-    .itemInputs(metaitem('manganized_tantalum_chip') * 8)
+  event.recipes.gtceu.chemical_bath('qhg3pzbnkrot2v') // remapped from original line 674
+    .itemInputs(safeItemId('8x susy:manganized_tantalum_chip'))
     .inputFluids(safeFluidOf('gtceu:silver', 36))
-    .itemOutputs(metaitem('component.smd.capacitor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.capacitor'))
     .duration(40)
     .EUt(240)
 
-  event.recipes.gtceu.electric_blast_furnace('twfaxgxevql4hw') // remapped from original line 682
+  event.recipes.gtceu.electric_blast_furnace('eog7pqmwy127sb') // remapped from original line 682
     .itemInputs('10x #forge:dusts/purified_iron_iii_oxide')
     .itemInputs('2x #forge:dusts/zinc_oxide')
     .itemInputs('2x #forge:dusts/nickel_ii_oxide')
@@ -472,7 +472,7 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(60)
 
-  event.recipes.gtceu.electric_blast_furnace('kgrurhhxjqj77u') // remapped from original line 692
+  event.recipes.gtceu.electric_blast_furnace('xgsy3sbcsp4rc7') // remapped from original line 692
     .itemInputs('10x #forge:dusts/purified_iron_iii_oxide')
     .itemInputs('2x #forge:dusts/zinc_oxide')
     .itemInputs('2x #forge:dusts/manganese_ii_oxide')
@@ -481,7 +481,7 @@ ServerEvents.recipes(event => {
     .duration(300)
     .EUt(60)
 
-  event.recipes.gtceu.electric_blast_furnace('v2viua40jy1vat') // remapped from original line 702
+  event.recipes.gtceu.electric_blast_furnace('antp2jpmj5fmxd') // remapped from original line 702
     .itemInputs('30x #forge:dusts/purified_iron_iii_oxide')
     .itemInputs('5x #forge:dusts/barium_carbonate')
     .itemOutputs('32x #forge:ingots/barium_ferrite')
@@ -490,7 +490,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(60)
 
-  event.recipes.gtceu.electric_blast_furnace('2af8so4m8yz61i') // remapped from original line 712
+  event.recipes.gtceu.electric_blast_furnace('ub45glkzjglvxe') // remapped from original line 712
     .itemInputs('30x #forge:dusts/purified_iron_iii_oxide')
     .itemInputs('5x #forge:dusts/strontium_carbonate')
     .itemOutputs('32x #forge:ingots/strontium_ferrite')
@@ -499,368 +499,368 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(60)
 
-  event.recipes.gtceu.assembler('xgp2n15997hm4f') // remapped from original line 722
+  event.recipes.gtceu.assembler('gy84nvf985mus2') // remapped from original line 722
     .inputFluids(safeFluidOf('gtceu:plastic', 36))
     .itemInputs('1x #forge:rings/manganese_zinc_ferrite')
     .itemInputs('2x #forge:wires/fine_copper')
-    .itemOutputs(metaitem('component.inductor') * 4)
+    .itemOutputs(safeItemId('4x susy:component.inductor'))
     .duration(320)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('kjzydtc6skq6fx') // remapped from original line 731
+  event.recipes.gtceu.assembler('u89paubqlvkoox') // remapped from original line 731
     .inputFluids(safeFluidOf('gtceu:plastic', 36))
     .itemInputs('1x #forge:rings/manganese_zinc_ferrite')
     .itemInputs('2x #forge:wires/fine_annealed_copper')
-    .itemOutputs(metaitem('component.inductor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.inductor'))
     .duration(320)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('7cs8uh93zfi3k1') // remapped from original line 740
+  event.recipes.gtceu.assembler('y0zi7tf4i1axob') // remapped from original line 740
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('1x #forge:rings/manganese_zinc_ferrite')
     .itemInputs('4x #forge:wires/fine_cupronickel')
-    .itemOutputs(metaitem('component.smd.inductor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.inductor'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('13apzrr2yft9ax') // remapped from original line 749
+  event.recipes.gtceu.assembler('7ga3n5lvabfy6q') // remapped from original line 749
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('1x #forge:rings/nickel_zinc_ferrite')
     .itemInputs('4x #forge:wires/fine_cupronickel')
-    .itemOutputs(metaitem('component.smd.inductor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.inductor'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('ud4j7usa1rheyy') // remapped from original line 758
+  event.recipes.gtceu.assembler('eqwzxccxu0emtt') // remapped from original line 758
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('1x #forge:rings/cobalt_ferrite')
     .itemInputs('4x #forge:wires/fine_cupronickel')
-    .itemOutputs(metaitem('component.smd.inductor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.inductor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('wkrbuhslddr7jh') // remapped from original line 767
+  event.recipes.gtceu.assembler('rfqygrus1clgwf') // remapped from original line 767
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('1x #forge:rings/barium_ferrite')
     .itemInputs('4x #forge:wires/fine_cupronickel')
-    .itemOutputs(metaitem('component.smd.inductor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.inductor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('hzrfltgzyhqrzs') // remapped from original line 776
+  event.recipes.gtceu.assembler('qyahvkympw5tzf') // remapped from original line 776
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
     .itemInputs('1x #forge:rings/strontium_ferrite')
     .itemInputs('4x #forge:wires/fine_cupronickel')
-    .itemOutputs(metaitem('component.smd.inductor') * 20)
+    .itemOutputs(safeItemId('20x susy:component.smd.inductor'))
     .duration(40)
     .EUt(240)
 
-  event.recipes.susy.roaster('iimeam4nkfyd7a') // remapped from original line 785
-    .itemInputs(metaitem('wafer.silicon'))
+  event.recipes.susy.roaster('xchugbc2vvp3uu') // remapped from original line 785
+    .itemInputs(safeItemId('1x susy:wafer.silicon'))
     .inputFluids(safeFluidOf('gtceu:oxygen', 1000))
-    .itemOutputs(metaitem('wafer.silicon_dioxide'))
+    .itemOutputs(safeItemId('1x susy:wafer.silicon_dioxide'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(400)
     .EUt(240)
 
-  event.recipes.susy.cvd('62r70hnurtp8vl') // remapped from original line 794
-    .itemInputs(metaitem('wafer.silicon'))
+  event.recipes.susy.cvd('yq6upduu3voeb1') // remapped from original line 794
+    .itemInputs(safeItemId('1x susy:wafer.silicon'))
     .inputFluids(safeFluidOf('susy:zirconium_tetrachloride', 180))
     .inputFluids(safeFluidOf('minecraft:water', 500))
-    .itemOutputs(metaitem('wafer.insulated_silicon'))
+    .itemOutputs(safeItemId('1x susy:wafer.insulated_silicon'))
     .outputFluids(safeFluidOf('susy:hydrogen_chloride', 1000))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(240)
 
-  event.recipes.susy.cvd('8btnp54cmrcjlu') // remapped from original line 805
-    .itemInputs(metaitem('wafer.silicon_germanium'))
+  event.recipes.susy.cvd('xhkenaoxkb7qdj') // remapped from original line 805
+    .itemInputs(safeItemId('1x susy:wafer.silicon_germanium'))
     .inputFluids(safeFluidOf('susy:zirconium_tetrachloride', 180))
     .inputFluids(safeFluidOf('minecraft:water', 500))
-    .itemOutputs(metaitem('wafer.insulated_silicon_germanium'))
+    .itemOutputs(safeItemId('1x susy:wafer.insulated_silicon_germanium'))
     .outputFluids(safeFluidOf('susy:hydrogen_chloride', 1000))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(240)
 
-  event.recipes.gtceu.cutter('9nppmqxlyjwtpe') // remapped from original line 816
-    .itemInputs(metaitem('wafer.n_doped.silicon'))
+  event.recipes.gtceu.cutter('orj4dzcurrzqmq') // remapped from original line 816
+    .itemInputs(safeItemId('1x susy:wafer.n_doped.silicon'))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 100))
-    .itemOutputs(metaitem('chip.n_doped_silicon') * 16)
+    .itemOutputs(safeItemId('16x susy:chip.n_doped_silicon'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.cutter('lnwnn7ozgl5pej') // remapped from original line 825
-    .itemInputs(metaitem('wafer.silicon_dioxide'))
+  event.recipes.gtceu.cutter('g34sll6yyxtblx') // remapped from original line 825
+    .itemInputs(safeItemId('1x susy:wafer.silicon_dioxide'))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 100))
-    .itemOutputs(metaitem('chip.silicon_dioxide') * 16)
+    .itemOutputs(safeItemId('16x susy:chip.silicon_dioxide'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(500)
     .EUt(120)
 
-  event.recipes.gtceu.cutter('cis42orwvmurcj') // remapped from original line 834
-    .itemInputs(metaitem('wafer.insulated_silicon'))
+  event.recipes.gtceu.cutter('bsn6jel9qfgypm') // remapped from original line 834
+    .itemInputs(safeItemId('1x susy:wafer.insulated_silicon'))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 100))
-    .itemOutputs(metaitem('chip.insulated_silicon') * 24)
+    .itemOutputs(safeItemId('24x susy:chip.insulated_silicon'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(120)
 
-  event.recipes.gtceu.cutter('ves9kdjfpqmtlm') // remapped from original line 843
-    .itemInputs(metaitem('wafer.insulated_silicon_germanium'))
+  event.recipes.gtceu.cutter('kwvnwxx0xenbio') // remapped from original line 843
+    .itemInputs(safeItemId('1x susy:wafer.insulated_silicon_germanium'))
     .inputFluids(safeFluidOf('susy:ultrapure_water', 100))
-    .itemOutputs(metaitem('chip.insulated_silicon_germanium') * 32)
+    .itemOutputs(safeItemId('32x susy:chip.insulated_silicon_germanium'))
     .duration(80)
     .EUt(120)
 
-  event.recipes.gtceu.assembler('d3b7logmb6pzrr') // remapped from original line 851
+  event.recipes.gtceu.assembler('lsipln0gkswhnr') // remapped from original line 851
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_copper')
-    .itemOutputs(metaitem('component.smd.transistor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.transistor'))
     .duration(300)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('psmbdgldl4wyep') // remapped from original line 860
+  event.recipes.gtceu.assembler('xkp8hc6m3r2nyu') // remapped from original line 860
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_aluminium')
-    .itemOutputs(metaitem('component.smd.transistor') * 10)
+    .itemOutputs(safeItemId('10x susy:component.smd.transistor'))
     .duration(250)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('htcaueq8efwqmh') // remapped from original line 869
+  event.recipes.gtceu.assembler('94p1l6068din47') // remapped from original line 869
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_tantalum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('ayqijb4zjxcxrz') // remapped from original line 878
+  event.recipes.gtceu.assembler('cm5ehg4iodf1eh') // remapped from original line 878
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_platinum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('fsye4v4hpmpe04') // remapped from original line 887
+  event.recipes.gtceu.assembler('8a8injyavafg1k') // remapped from original line 887
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_titanium')
-    .itemOutputs(metaitem('component.smd.transistor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.transistor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('frusm5sp7tmrez') // remapped from original line 896
+  event.recipes.gtceu.assembler('nbimtprun5zxcq') // remapped from original line 896
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon_germanium') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon_germanium'))
     .itemInputs('2x #forge:wires/fine_tungsten')
-    .itemOutputs(metaitem('component.smd.transistor') * 20)
+    .itemOutputs(safeItemId('20x susy:component.smd.transistor'))
     .duration(50)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('cwjvcwiei4hlaa') // remapped from original line 905
+  event.recipes.gtceu.assembler('ox3jqjefu58afw') // remapped from original line 905
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_copper')
-    .itemOutputs(metaitem('component.smd.transistor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.transistor'))
     .duration(300)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('gpsvcqga0zmi27') // remapped from original line 914
+  event.recipes.gtceu.assembler('bif0khpn978hby') // remapped from original line 914
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_aluminium')
-    .itemOutputs(metaitem('component.smd.transistor') * 10)
+    .itemOutputs(safeItemId('10x susy:component.smd.transistor'))
     .duration(250)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('qkbpvcpcl39obe') // remapped from original line 923
+  event.recipes.gtceu.assembler('gsmsalew19xiui') // remapped from original line 923
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_tantalum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('xmcizyqcmnt0t4') // remapped from original line 932
+  event.recipes.gtceu.assembler('re4ibflaz5by0h') // remapped from original line 932
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_platinum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('k318vmhuo7cbfj') // remapped from original line 941
+  event.recipes.gtceu.assembler('oehps9swxm8bwb') // remapped from original line 941
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_titanium')
-    .itemOutputs(metaitem('component.smd.transistor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.transistor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('ochtwf4nlfohvs') // remapped from original line 950
+  event.recipes.gtceu.assembler('ith3chdb1lff0w') // remapped from original line 950
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.insulated_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.insulated_silicon'))
     .itemInputs('2x #forge:wires/fine_tungsten')
-    .itemOutputs(metaitem('component.smd.transistor') * 20)
+    .itemOutputs(safeItemId('20x susy:component.smd.transistor'))
     .duration(50)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('usep05arb1vx1s') // remapped from original line 959
+  event.recipes.gtceu.assembler('uptvtpgka4i4gr') // remapped from original line 959
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_copper')
-    .itemOutputs(metaitem('component.smd.transistor') * 8)
+    .itemOutputs(safeItemId('8x susy:component.smd.transistor'))
     .duration(300)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('oeqery7alidsd5') // remapped from original line 968
+  event.recipes.gtceu.assembler('vz8ub7u5y6anku') // remapped from original line 968
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_aluminium')
-    .itemOutputs(metaitem('component.smd.transistor') * 10)
+    .itemOutputs(safeItemId('10x susy:component.smd.transistor'))
     .duration(250)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('a6ikjgcrijltfo') // remapped from original line 977
+  event.recipes.gtceu.assembler('xzvgj9huw7gdcb') // remapped from original line 977
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_tantalum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('mkfeoavchc9gsh') // remapped from original line 986
+  event.recipes.gtceu.assembler('dghrp5jmagncgj') // remapped from original line 986
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_platinum')
-    .itemOutputs(metaitem('component.smd.transistor') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.transistor'))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('suy0tw6nysdjvo') // remapped from original line 995
+  event.recipes.gtceu.assembler('uqkqnb19ujzx0y') // remapped from original line 995
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_titanium')
-    .itemOutputs(metaitem('component.smd.transistor') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.transistor'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('zrajdpjjxxyvi6') // remapped from original line 1004
+  event.recipes.gtceu.assembler('w0iyjtydj4wdjn') // remapped from original line 1004
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.silicon_dioxide') * 8)
+    .itemInputs(safeItemId('8x susy:chip.silicon_dioxide'))
     .itemInputs('2x #forge:wires/fine_tungsten')
-    .itemOutputs(metaitem('component.smd.transistor') * 20)
+    .itemOutputs(safeItemId('20x susy:component.smd.transistor'))
     .duration(50)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('gefuvykiblo0fs') // remapped from original line 1013
+  event.recipes.gtceu.assembler('wjwc58iuaowwar') // remapped from original line 1013
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/platinum')
     .itemInputs('1x #forge:wires/gt_single_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('7oe9qhlwshtzc2') // remapped from original line 1023
+  event.recipes.gtceu.assembler('mdrghdxpaq9ukj') // remapped from original line 1023
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/molybdenum')
     .itemInputs('1x #forge:wires/gt_single_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('9b5k3ucnnb4uhh') // remapped from original line 1033
+  event.recipes.gtceu.assembler('nougvoejvtupug') // remapped from original line 1033
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/palladium')
     .itemInputs('1x #forge:wires/gt_single_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 32)
+    .itemOutputs(safeItemId('32x susy:component.smd.diode'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('dmqmg8zoxaiccr') // remapped from original line 1043
+  event.recipes.gtceu.assembler('gtcej1fs8larxn') // remapped from original line 1043
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/tungsten')
     .itemInputs('1x #forge:wires/gt_single_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 32)
+    .itemOutputs(safeItemId('32x susy:component.smd.diode'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('4cs0wvdzrxxarb') // remapped from original line 1053
+  event.recipes.gtceu.assembler('0rdrymzcyziyao') // remapped from original line 1053
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/platinum')
     .itemInputs('1x #forge:wires/gt_single_annealed_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('bmqi5pj0qyovhu') // remapped from original line 1063
+  event.recipes.gtceu.assembler('kk399jjzwk8ixw') // remapped from original line 1063
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/molybdenum')
     .itemInputs('1x #forge:wires/gt_single_annealed_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 16)
+    .itemOutputs(safeItemId('16x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('p8ghit25b1rxxj') // remapped from original line 1073
+  event.recipes.gtceu.assembler('trni34kqhvnh1l') // remapped from original line 1073
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/palladium')
     .itemInputs('1x #forge:wires/gt_single_annealed_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 32)
+    .itemOutputs(safeItemId('32x susy:component.smd.diode'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('mysrg2ed0rcrwc') // remapped from original line 1083
+  event.recipes.gtceu.assembler('kule4vmfjkkkv1') // remapped from original line 1083
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/tungsten')
     .itemInputs('1x #forge:wires/gt_single_annealed_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 32)
+    .itemOutputs(safeItemId('32x susy:component.smd.diode'))
     .duration(100)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('iuvnviienyihve') // remapped from original line 1093
+  event.recipes.gtceu.assembler('eqwdx858vkeuv3') // remapped from original line 1093
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/gold')
     .itemInputs('1x #forge:wires/gt_single_annealed_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.gtceu.assembler('6uipq2xyhoe8nk') // remapped from original line 1103
+  event.recipes.gtceu.assembler('2awq17yzklh7pv') // remapped from original line 1103
     .inputFluids(safeFluidOf('gtceu:plastic', 144))
-    .itemInputs(metaitem('chip.n_doped_silicon') * 8)
+    .itemInputs(safeItemId('8x susy:chip.n_doped_silicon'))
     .itemInputs('1x #forge:foils/gold')
     .itemInputs('1x #forge:wires/gt_single_copper')
-    .itemOutputs(metaitem('component.smd.diode') * 12)
+    .itemOutputs(safeItemId('12x susy:component.smd.diode'))
     .duration(400)
     .EUt(240)
 
-  event.recipes.susy.crystallizer('uedxx36kowdszj') // remapped from original line 1113
+  event.recipes.susy.crystallizer('mnemzkfgvco0eg') // remapped from original line 1113
     .inputFluids(safeFluidOf('susy:high_purity_silicon', 2304))
     .inputFluids(safeFluidOf('susy:high_purity_germanium', 2304))
-    .itemInputs(metaitem('seed_crystal.silicon'))
-    .itemOutputs(metaitem('boule.silicon_germanium'))
+    .itemInputs(safeItemId('1x susy:seed_crystal.silicon'))
+    .itemOutputs(safeItemId('1x susy:boule.silicon_germanium'))
     .duration(9000)
     .EUt(120)
 
-  event.recipes.gtceu.cutter('jkmejpudvlhwaz') // remapped from original line 1122
+  event.recipes.gtceu.cutter('ddtksp1rd8mvl4') // remapped from original line 1122
     .inputFluids(safeFluidOf('susy:ultrapure_water', 100))
-    .itemInputs(metaitem('boule.silicon_germanium'))
-    .itemOutputs(metaitem('wafer.silicon_germanium') * 16)
-    .itemOutputs(metaitem('seed_crystal.silicon'))
+    .itemInputs(safeItemId('1x susy:boule.silicon_germanium'))
+    .itemOutputs(safeItemId('16x susy:wafer.silicon_germanium'))
+    .itemOutputs(safeItemId('1x susy:seed_crystal.silicon'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(400)
     .EUt(64)

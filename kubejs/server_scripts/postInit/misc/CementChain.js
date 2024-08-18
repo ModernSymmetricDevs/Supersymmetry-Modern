@@ -3,9 +3,9 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/stone' && '#forge:dusts/calcite' && '#forge:dusts/gypsum' && safeFluidOf('minecraft:water')})
   event.remove({ type: 'gtceu:mixer', input: '#forge:dusts/stone' && '#forge:dusts/marble' && '#forge:dusts/gypsum' && safeFluidOf('minecraft:water')})
 
-  event.recipes.susy.mods.gregtech.macerator('kcxbleetmww5af') // remapped from original line 94
-    .itemInputs(metaitem('cement.clinker'))
-    .itemOutputs(metaitem('cement.dust') * 16)
+  event.recipes.susy.mods.gregtech.macerator('iwmvszjmx3slaj') // remapped from original line 94
+    .itemInputs(safeItemId('1x susy:cement.clinker'))
+    .itemOutputs(safeItemId('16x susy:cement.dust'))
     .duration(20)
     .EUt(voltAmps[0])
 

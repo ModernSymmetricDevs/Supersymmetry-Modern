@@ -1,49 +1,49 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.assembler('8b4br3plwazcsy') // remapped from original line 324
+  event.recipes.susy.mods.gregtech.assembler('hmjpuuxxhu4ird') // remapped from original line 324
     .itemInputs('4x #forge:plates/stainless_steel')
     .itemInputs('4x #forge:wires/fine_gold')
     .itemInputs('4x #forge:wires/fine_silver')
     .itemInputs('1x #forge:plates/certus_quartz')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16))
+    .itemInputs(safeItemId('1x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:material', 3'):material', 39))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material'))
     .duration(80)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('yuw4jpxyhbvlez') // remapped from original line 336
+  event.recipes.susy.mods.gregtech.assembler('jnxxmx8n7qazxy') // remapped from original line 336
     .itemInputs('1x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:wires/fine_platinum')
-    .itemInputs(metaitem('pattern.memory'))
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16))
+    .itemInputs(safeItemId('1x susy:pattern.memory'))
+    .itemInputs(safeItemId('1x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:material', 5'):material', 52))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material'))
     .duration(80)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('mtcifnp2m0r4e4') // remapped from original line 347
+  event.recipes.susy.mods.gregtech.assembler('5cnmzd61hzriop') // remapped from original line 347
     .itemInputs('4x #forge:plates/naquadah_alloy')
     .itemInputs('4x #forge:wires/fine_gold')
     .itemInputs('4x #forge:wires/fine_silver')
     .itemInputs('1x #forge:plates/certus_quartz')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16))
+    .itemInputs(safeItemId('1x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
     .itemOutputs(safeItemId('1x extracells:storage.casing'))
     .duration(80)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.assembler('tv3w8ogcjqsfq3') // remapped from original line 359
+  event.recipes.susy.mods.gregtech.assembler('j4gl9gamaoqhiz') // remapped from original line 359
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('1x #forge:gems/exquisite_fluix')
     .itemInputs('1x #forge:wires/fine_silver')
     .itemInputs('1x #forge:plates/titanium')
     .itemInputs('1x #forge:plates/certus_quartz')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:part', 46'):part', 460))
+    .itemOutputs(safeItemId('1x appliedenergistics2:part'))
     .duration(80)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('geomnjebaovsna') // remapped from original line 371
+  event.recipes.susy.mods.gregtech.assembler('iixuni2qwc8bh2') // remapped from original line 371
     .itemInputs('1x #forge:frames/gt_titanium')
     .itemInputs('1x #forge:plates/titanium')
     .itemInputs('1x #forge:plates/certus_quartz')
@@ -52,483 +52,483 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('orialo38zzj92h') // remapped from original line 381
-    .itemInputs(safeItemId('2x gregtech:multiblock_casing', ')))
+  event.recipes.susy.mods.gregtech.assembler('w9vfiz6b5gomxd') // remapped from original line 381
+    .itemInputs(safeItemId('1x gregtech:multiblock_casing'))
     .itemInputs('1x #forge:plates/titanium')
     .itemInputs('1x #forge:plates/certus_quartz')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('1x threng:big_assembler', ')))
+    .itemOutputs(safeItemId('1x threng:big_assembler'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('ew0akgefsfov6o') // remapped from original line 391
+  event.recipes.susy.mods.gregtech.assembler('fv9mnqynaobsj9') // remapped from original line 391
     .itemInputs(safeItemId('1x threng:big_assembler'))
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(safeItemId('2x appliedenergistics2:molecular_assembler'):molecular_assembler'))
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16) * 2)
-    .itemInputs(safeItemId('2x appliedenergistics2:interface'):interface'))
+    .itemInputs(safeItemId('1x appliedenergistics2:molecular_assembler'))
+    .itemInputs(safeItemId('2x appliedenergistics2:part'))
+    .itemInputs(safeItemId('1x appliedenergistics2:interface'))
     .itemInputs('1x #forge:circuits/ev')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x threng:big_assembler', ')))
+    .itemOutputs(safeItemId('1x threng:big_assembler'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('hduuyyzohetwgx') // remapped from original line 404
+  event.recipes.susy.mods.gregtech.assembler('5dpdp7cddxewpl') // remapped from original line 404
     .itemInputs(safeItemId('1x threng:big_assembler'))
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16) * 2)
-    .itemInputs(safeItemId('2x appliedenergistics2:interface'):interface'))
-    .itemInputs(metaitem('pattern.memory'))
+    .itemInputs(safeItemId('2x appliedenergistics2:part'))
+    .itemInputs(safeItemId('1x appliedenergistics2:interface'))
+    .itemInputs(safeItemId('1x susy:pattern.memory'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('3x threng:big_assembler', ')))
+    .itemOutputs(safeItemId('1x threng:big_assembler'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('hdexpo9kepqbfg') // remapped from original line 416
+  event.recipes.susy.mods.gregtech.assembler('uh6vexdwaakxx4') // remapped from original line 416
     .itemInputs(safeItemId('1x threng:big_assembler'))
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16) * 2)
-    .itemInputs(safeItemId('2x appliedenergistics2:interface'):interface'))
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_accelerator'):crafting_accelerator'))
-    .itemInputs(metaitem('pattern.processor'))
+    .itemInputs(safeItemId('2x appliedenergistics2:part'))
+    .itemInputs(safeItemId('1x appliedenergistics2:interface'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_accelerator'))
+    .itemInputs(safeItemId('1x susy:pattern.processor'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('4x threng:big_assembler', ')))
+    .itemOutputs(safeItemId('1x threng:big_assembler'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('etbpszih16ybng') // remapped from original line 429
+  event.recipes.susy.mods.gregtech.assembler('uxgazwqfq6vljv') // remapped from original line 429
     .itemInputs(safeItemId('1x threng:big_assembler'))
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16) * 2)
-    .itemInputs(safeItemId('2x appliedenergistics2:interface'):interface'))
-    .itemInputs(safeItemId('2x appliedenergistics2:io_port'):io_port'))
+    .itemInputs(safeItemId('2x appliedenergistics2:part'))
+    .itemInputs(safeItemId('1x appliedenergistics2:interface'))
+    .itemInputs(safeItemId('1x appliedenergistics2:io_port'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('5x threng:big_assembler', ')))
+    .itemOutputs(safeItemId('1x threng:big_assembler'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('bun5dk8mqjw4cg') // remapped from original line 441
+  event.recipes.susy.mods.gregtech.assembler('dxfrmmtggn2wt5') // remapped from original line 441
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(metaitem('plate.power_integrated_circuit'))
-    .itemInputs(metaitem('storage.segment'))
+    .itemInputs(safeItemId('1x susy:plate.power_integrated_circuit'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:energy_cell'):energy_cell'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:energy_cell'))
     .duration(100)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('rpyzo4md9c9ssu') // remapped from original line 451
+  event.recipes.susy.mods.gregtech.assembler('wpdqcn6pflr8av') // remapped from original line 451
     .itemInputs('1x #forge:plates/titanium')
-    .itemInputs(metaitem('plate.high_power_integrated_circuit'))
-    .itemInputs(metaitem('storage.segment') * 8)
+    .itemInputs(safeItemId('1x susy:plate.high_power_integrated_circuit'))
+    .itemInputs(safeItemId('8x susy:storage.segment'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:dense_energy_cell'):dense_energy_cell'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:dense_energy_cell'))
     .duration(100)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.assembler('crp3xo6ocjs3zg') // remapped from original line 461
+  event.recipes.susy.mods.gregtech.assembler('pbepwuckiiimu4') // remapped from original line 461
     .itemInputs(safeItemId('1x rs_ctr:edge_trigger'))
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 28'):part', 280) * 2)
+    .itemInputs(safeItemId('2x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:part', 8'):part', 80))
+    .itemOutputs(safeItemId('1x appliedenergistics2:part'))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('ipyif1i97ubsbo') // remapped from original line 470
-    .itemInputs(metaitem('hull.iv'))
+  event.recipes.susy.mods.gregtech.assembler('6fzuaf2jlwspmi') // remapped from original line 470
+    .itemInputs(safeItemId('1x susy:hull.iv'))
     .itemInputs('1x #forge:circuits/iv')
-    .itemInputs(safeItemId('2x appliedenergistics2:interface'):interface'))
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_accelerator'):crafting_accelerator') * 2)
+    .itemInputs(safeItemId('1x appliedenergistics2:interface'))
+    .itemInputs(safeItemId('2x appliedenergistics2:crafting_accelerator'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('3x threng:machine', ')))
+    .itemOutputs(safeItemId('1x threng:machine'))
     .duration(100)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.assembler('sfppc7zx7k3ylg') // remapped from original line 481
-    .itemInputs(metaitem('hull.iv'))
+  event.recipes.susy.mods.gregtech.assembler('myqgm1z0iebdnf') // remapped from original line 481
+    .itemInputs(safeItemId('1x susy:hull.iv'))
     .itemInputs('1x #forge:circuits/iv')
-    .itemInputs(safeItemId('2x appliedenergistics2:material', 5'):material', 53))
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 28'):part', 280) * 3)
+    .itemInputs(safeItemId('1x appliedenergistics2:material'))
+    .itemInputs(safeItemId('3x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('4x threng:machine', ')))
+    .itemOutputs(safeItemId('1x threng:machine'))
     .duration(100)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.assembler('a6f6aaabp58xlm') // remapped from original line 492
-    .itemInputs(metaitem('hull.ev'))
+  event.recipes.susy.mods.gregtech.assembler('vzuxjvhbmopumg') // remapped from original line 492
+    .itemInputs(safeItemId('1x susy:hull.ev'))
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('2x #forge:plates/titanium')
     .itemInputs('2x #forge:wires/fine_gold')
     .itemInputs('4x #forge:gems/exquisite_fluix')
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:controller'):controller'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:controller'))
     .duration(200)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('nophv5r2ijnue5') // remapped from original line 504
+  event.recipes.susy.mods.gregtech.assembler('q9bfl0tdqri4ti') // remapped from original line 504
     .itemInputs('4x #forge:plates/titanium')
     .itemInputs('4x #forge:rods/titanium')
     .itemInputs('1x #forge:gems/exquisite_fluix')
-    .itemInputs(safeItemId('2x appliedenergistics2:material', 4'):material', 43))
-    .itemInputs(safeItemId('2x appliedenergistics2:material', 4'):material', 44))
+    .itemInputs(safeItemId('1x appliedenergistics2:material'))
+    .itemInputs(safeItemId('1x appliedenergistics2:material'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:spatial_pylon'):spatial_pylon'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:spatial_pylon'))
     .duration(140)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.assembler('litnfue0hwunrp') // remapped from original line 516
+  event.recipes.susy.mods.gregtech.assembler('crhtesbdq0hakf') // remapped from original line 516
     .itemInputs('1x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:wires/fine_gold')
     .itemInputs('1x #forge:wires/fine_red_alloy')
     .itemInputs('1x #forge:circuits/hv')
     .circuit(1)
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:memory_card'):memory_card'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:memory_card'))
     .duration(80)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.mods.gregtech.assembler('q1zchnmg4p2g2m') // remapped from original line 528
+  event.recipes.susy.mods.gregtech.assembler('cegrwbdlhysiak') // remapped from original line 528
     .itemInputs('1x #forge:plates/stainless_steel')
     .itemInputs('1x #forge:wires/fine_gold')
     .itemInputs('1x #forge:wires/fine_red_alloy')
     .itemInputs('1x #forge:circuits/hv')
     .circuit(2)
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:biometric_card'):biometric_card'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:biometric_card'))
     .duration(80)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.mods.gregtech.assembler('u2htc2vhkhxaao') // remapped from original line 540
+  event.recipes.susy.mods.gregtech.assembler('vgfw4k3qgeivf5') // remapped from original line 540
     .itemInputs('1x #forge:plates/rhodium_plated_palladium')
-    .itemInputs(metaitem('emitter.luv'))
-    .itemInputs(metaitem('sensor.luv'))
+    .itemInputs(safeItemId('1x susy:emitter.luv'))
+    .itemInputs(safeItemId('1x susy:sensor.luv'))
     .itemInputs('1x #forge:circuits/luv')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16) * 4)
+    .itemInputs(safeItemId('4x appliedenergistics2:part'))
     .inputFluids(safeFluidOf('gtceu:soldering_alloy', 72))
-    .itemOutputs(safeItemId('2x appliedenergistics2:material', 4'):material', 42))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material'))
     .duration(80)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.assembler('zc77wohbxlliee') // remapped from original line 573
+  event.recipes.susy.mods.gregtech.assembler('ld1ul8dfvfzqmy') // remapped from original line 573
     .itemInputs('1x #forge:wires/fine_red_alloy')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16))
+    .itemInputs(safeItemId('1x appliedenergistics2:part'))
     .circuit(1)
     .inputFluids(safeFluidOf('gtceu:red_alloy', 144))
-    .itemOutputs(safeItemId('2x appliedenergistics2:part', 28'):part', 280) * 8)
+    .itemOutputs(safeItemId('8x appliedenergistics2:part'))
     .duration(80)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.assembler('xlrrghoqxkpvmq') // remapped from original line 583
+  event.recipes.susy.mods.gregtech.assembler('1clzs5owbi61dr') // remapped from original line 583
     .itemInputs('1x #forge:wires/fine_red_alloy')
-    .itemInputs(safeItemId('2x appliedenergistics2:part', 1'):part', 16))
+    .itemInputs(safeItemId('1x appliedenergistics2:part'))
     .circuit(2)
     .inputFluids(safeFluidOf('gtceu:red_alloy', 144))
-    .itemOutputs(safeItemId('2x appliedenergistics2:part', 28'):part', 281) * 8)
+    .itemOutputs(safeItemId('8x appliedenergistics2:part'))
     .duration(80)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('5n6vqqp2liofx0') // remapped from original line 622
+  event.recipes.susy.mods.gregtech.circuit_assembler('2cndoji0lwzpp5') // remapped from original line 622
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:35'):material:35'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:35'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('ffluxfz1xiucsc') // remapped from original line 634
+  event.recipes.susy.mods.gregtech.circuit_assembler('zkpxjunwwoepnc') // remapped from original line 634
     .itemInputs('1x #forge:circuits/iv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 4)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('4x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:36'):material:36'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:36'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('0ghkvnvp9mm8xa') // remapped from original line 646
+  event.recipes.susy.mods.gregtech.circuit_assembler('qtaqoywwegnk1f') // remapped from original line 646
     .itemInputs('1x #forge:circuits/luv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 16)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('16x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:37'):material:37'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:37'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[6])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('bn8vxunskt5yff') // remapped from original line 658
+  event.recipes.susy.mods.gregtech.circuit_assembler('68f8edgc6en9ia') // remapped from original line 658
     .itemInputs('1x #forge:circuits/zpm')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 64)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('64x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:38'):material:38'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:38'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[7])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('asltxsnuoh1ysi') // remapped from original line 673
+  event.recipes.susy.mods.gregtech.circuit_assembler('7xletdle3f1uon') // remapped from original line 673
     .itemInputs('1x #forge:circuits/uv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('1x extracells:storage.component:0')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:0'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[8])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('knoqjr8rhiylvs') // remapped from original line 685
+  event.recipes.susy.mods.gregtech.circuit_assembler('hzapwnpqdb2elu') // remapped from original line 685
     .itemInputs('1x #forge:circuits/uhv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 4)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('4x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('1x extracells:storage.component:1')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:1'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[9])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('yroiajrf7ack9v') // remapped from original line 697
+  event.recipes.susy.mods.gregtech.circuit_assembler('xyzpcwcqn8n6vi') // remapped from original line 697
     .itemInputs('1x #forge:circuits/uev')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 16)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('16x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('2x extracells:storage.component:2')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:2'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[10])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('pqleqf7s9pcvsq') // remapped from original line 709
+  event.recipes.susy.mods.gregtech.circuit_assembler('tzmuqxrd9otnl4') // remapped from original line 709
     .itemInputs('1x #forge:circuits/uiv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 64)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('64x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(1)
-    .itemOutputs(safeItemId('3x extracells:storage.component:3')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:3'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[11])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('dsgva5g02bztbp') // remapped from original line 723
+  event.recipes.susy.mods.gregtech.circuit_assembler('swybb2hb8bnepy') // remapped from original line 723
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:54'):material:54'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:54'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[4])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('gciijeffwboj6t') // remapped from original line 735
+  event.recipes.susy.mods.gregtech.circuit_assembler('mw45axjv83jbbb') // remapped from original line 735
     .itemInputs('1x #forge:circuits/iv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 4)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('4x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:55'):material:55'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:55'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[5])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('o7vy12omjbdwtj') // remapped from original line 747
+  event.recipes.susy.mods.gregtech.circuit_assembler('spameyv9jdqqsb') // remapped from original line 747
     .itemInputs('1x #forge:circuits/luv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 16)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('16x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:56'):material:56'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:56'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[6])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('uii9t5owtebsb9') // remapped from original line 759
+  event.recipes.susy.mods.gregtech.circuit_assembler('0dwrenrdmyo6t5') // remapped from original line 759
     .itemInputs('1x #forge:circuits/zpm')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 64)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('64x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:57'):material:57'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:57'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[7])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('flsgdbn2pxprhs') // remapped from original line 772
+  event.recipes.susy.mods.gregtech.circuit_assembler('jfvhxds7olm4xp') // remapped from original line 772
     .itemInputs('1x #forge:circuits/uv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('8x extracells:storage.component:8')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:8'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[8])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('4tatwbpleat1cr') // remapped from original line 784
+  event.recipes.susy.mods.gregtech.circuit_assembler('jp7gey8hsvhgzw') // remapped from original line 784
     .itemInputs('1x #forge:circuits/uhv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 4)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('4x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('9x extracells:storage.component:9')'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:9'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[9])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('dfzkdm3m9wfeks') // remapped from original line 796
+  event.recipes.susy.mods.gregtech.circuit_assembler('sf2fkltzv2u2r3') // remapped from original line 796
     .itemInputs('1x #forge:circuits/uev')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.advanced_random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.advanced_random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(2)
-    .itemOutputs(safeItemId('10x extracells:storage.component:10')0'))
+    .itemOutputs(safeItemId('1x extracells:storage.component:10'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(voltAmps[10])
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('kvzabbjmqvmpcf') // remapped from original line 810
+  event.recipes.susy.mods.gregtech.circuit_assembler('bdsiud6ar9ers9') // remapped from original line 810
     .itemInputs('1x #forge:circuits/iv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 1)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('1x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(3)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:32'):material:32'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:32'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(7680)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('3kijm9ycp6sn5u') // remapped from original line 822
+  event.recipes.susy.mods.gregtech.circuit_assembler('42xc84kizpchnd') // remapped from original line 822
     .itemInputs('1x #forge:circuits/luv')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 4)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('4x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(3)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:33'):material:33'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:33'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(30720)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('tsgycsywqnkiyz') // remapped from original line 834
+  event.recipes.susy.mods.gregtech.circuit_assembler('malorbcis15kre') // remapped from original line 834
     .itemInputs('1x #forge:circuits/zpm')
     .itemInputs('4x #forge:wires/fine_silver')
-    .itemInputs(metaitem('plate.random_access_memory') * 16)
-    .itemInputs(metaitem('storage.segment') * 1)
+    .itemInputs(safeItemId('16x susy:plate.random_access_memory'))
+    .itemInputs(safeItemId('1x susy:storage.segment'))
     .circuit(3)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:34'):material:34'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:34'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(200)
     .EUt(122880)
 
-  event.recipes.susy.mods.gregtech.assembler('cfb4m0y2ocbf4d') // remapped from original line 872
+  event.recipes.susy.mods.gregtech.assembler('p8qt0wclp0qpsv') // remapped from original line 872
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:crafting_accelerator'):crafting_accelerator'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:crafting_accelerator'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('q6jjaankhxlmxi') // remapped from original line 883
-    .itemInputs(safeItemId('2x appliedenergistics2:material:35'):material:35'))
+  event.recipes.susy.mods.gregtech.assembler('3r5vycuu1rlyj6') // remapped from original line 883
+    .itemInputs(safeItemId('1x appliedenergistics2:material:35'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:crafting_storage_1k'):crafting_storage_1k'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:crafting_storage_1k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('9irhtxf0y4a0gu') // remapped from original line 894
-    .itemInputs(safeItemId('2x appliedenergistics2:material:36'):material:36'))
+  event.recipes.susy.mods.gregtech.assembler('otodx0zjwe829d') // remapped from original line 894
+    .itemInputs(safeItemId('1x appliedenergistics2:material:36'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:crafting_storage_4k'):crafting_storage_4k'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:crafting_storage_4k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('oxxnv9rghlhtgk') // remapped from original line 905
-    .itemInputs(safeItemId('2x appliedenergistics2:material:37'):material:37'))
+  event.recipes.susy.mods.gregtech.assembler('aclvmtrffvbveu') // remapped from original line 905
+    .itemInputs(safeItemId('1x appliedenergistics2:material:37'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:crafting_storage_16k'):crafting_storage_16k'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:crafting_storage_16k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('yguvoxrizxka0a') // remapped from original line 916
-    .itemInputs(safeItemId('2x appliedenergistics2:material:38'):material:38'))
+  event.recipes.susy.mods.gregtech.assembler('hjlzhsx0sbxgzw') // remapped from original line 916
+    .itemInputs(safeItemId('1x appliedenergistics2:material:38'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:crafting_storage_64k'):crafting_storage_64k'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:crafting_storage_64k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('2vjenqdzmlmkws') // remapped from original line 927
-    .itemInputs(safeItemId('1x extracells:storage.component', ')))
+  event.recipes.susy.mods.gregtech.assembler('ehnimstbccq9tq') // remapped from original line 927
+    .itemInputs(safeItemId('1x extracells:storage.component'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('256x extracpus:crafting_storage_256k')56k'))
+    .itemOutputs(safeItemId('1x extracpus:crafting_storage_256k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('n6o4dn4cicbsk9') // remapped from original line 938
-    .itemInputs(safeItemId('1x extracells:storage.component', ')))
+  event.recipes.susy.mods.gregtech.assembler('51sctjjbuldcon') // remapped from original line 938
+    .itemInputs(safeItemId('1x extracells:storage.component'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('1024x extracpus:crafting_storage_1024k')024k'))
+    .itemOutputs(safeItemId('1x extracpus:crafting_storage_1024k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('pv1xd12bfz0iw4') // remapped from original line 949
-    .itemInputs(safeItemId('2x extracells:storage.component', ')))
+  event.recipes.susy.mods.gregtech.assembler('xwu0emir9ack9a') // remapped from original line 949
+    .itemInputs(safeItemId('1x extracells:storage.component'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('4096x extracpus:crafting_storage_4096k')096k'))
+    .itemOutputs(safeItemId('1x extracpus:crafting_storage_4096k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.assembler('erwcbqbcsoh0bu') // remapped from original line 960
-    .itemInputs(safeItemId('3x extracells:storage.component', ')))
+  event.recipes.susy.mods.gregtech.assembler('4ljdifn734gzl3') // remapped from original line 960
+    .itemInputs(safeItemId('1x extracells:storage.component'))
     .itemInputs('2x #forge:wires/fine_silver')
-    .itemInputs(safeItemId('2x appliedenergistics2:crafting_unit'):crafting_unit'))
+    .itemInputs(safeItemId('1x appliedenergistics2:crafting_unit'))
     .inputFluids(solder)
-    .itemOutputs(safeItemId('16384x extracpus:crafting_storage_16384k')6384k'))
+    .itemOutputs(safeItemId('1x extracpus:crafting_storage_16384k'))
     .cleanroom(CleanroomType.CLEANROOM)
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('3qdkbhzny3uixv') // remapped from original line 971
-    .itemInputs(metaitem('circuit_board.plastic'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('0yth4bridsdyrp') // remapped from original line 971
+    .itemInputs(safeItemId('1x susy:circuit_board.plastic'))
     .itemInputs('1x #forge:circuits/hv')
     .itemInputs('4x #forge:wires/fine_electrum')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:25'):material:25'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:25'))
     .duration(80)
     .EUt(1920)
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('3ymt8ovw1crju9') // remapped from original line 981
-    .itemInputs(metaitem('circuit_board.advanced'))
+  event.recipes.susy.mods.gregtech.circuit_assembler('rv3xeudtxkn4ew') // remapped from original line 981
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
     .itemInputs('1x #forge:circuits/ev')
     .itemInputs('4x #forge:wires/fine_platinum')
     .inputFluids(solder)
-    .itemOutputs(safeItemId('2x appliedenergistics2:material:28'):material:28'))
+    .itemOutputs(safeItemId('1x appliedenergistics2:material:28'))
     .duration(80)
     .EUt(1920)
 

@@ -3,11 +3,11 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:assembler', input: 'susy:component.glass.tube' && '#forge:bolts/steel' && '#forge:wires/gt_single_copper' && safeFluidOf('gtceu:red_alloy')})
   event.remove({ type: 'gtceu:assembler', input: 'susy:component.glass.tube' && '#forge:bolts/steel' && '#forge:wires/gt_single_copper' && 'susy:circuit.integrated'})
 
-  event.recipes.susy.VACUUM_RECIPES('9kzqqr2eb5lqxu') // remapped from original line 37
-    .itemInputs(metaitem('component.glass.tube'))
-    .itemInputs(metaitem('vacuum_tube_components'))
+  event.recipes.susy.vacuum_chamber('hfjydxbh3l06p3') // remapped from original line 37
+    .itemInputs(safeItemId('1x susy:component.glass.tube'))
+    .itemInputs(safeItemId('1x susy:vacuum_tube_components'))
     .itemInputs('1x #forge:rings/steel')
-    .itemOutputs(metaitem('circuit.vacuum_tube'))
+    .itemOutputs(safeItemId('1x susy:circuit.vacuum_tube'))
     .EUt(7)
     .duration(200)
 

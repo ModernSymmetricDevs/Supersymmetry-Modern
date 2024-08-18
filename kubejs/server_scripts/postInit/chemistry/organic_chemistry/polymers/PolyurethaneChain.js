@@ -1,22 +1,23 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.LCR('iqlpqv4bvdljfc') // remapped from original line 17
-    .inputFluids(safeFluidOf('susy:formaldehyde', 2000))
-    .inputFluids(safeFluidOf('susy:gtfo_aniline', 1000))
-    .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 1000))
-    .itemOutputs('8x #forge:dusts/methylenedianiline')
-    .outputFluids(safeFluidOf('gtceu:diluted_hydrochloric_acid', 2000))
-    .duration(200)
-    .EUt(240)
+  // Contains GTFO resources
+  //event.recipes.gtceu.large_chemical_reactor('1f3w0lwuzhrvt0') // remapped from original line 17
+    //.inputFluids(safeFluidOf('susy:formaldehyde', 2000))
+    //.inputFluids(safeFluidOf('susy:gtfo_aniline', 1000))
+    //.inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 1000))
+    //.itemOutputs('8x #forge:dusts/methylenedianiline')
+    //.outputFluids(safeFluidOf('gtceu:diluted_hydrochloric_acid', 2000))
+    //.duration(200)
+    //.EUt(240)
 
-  event.recipes.gtceu.DISTILLATION_TOWER('aqtfpxcvwih0ga') // remapped from original line 27
+  event.recipes.gtceu.distillation_tower('lpmvbb08akmrln') // remapped from original line 27
     .inputFluids(safeFluidOf('gtceu:diluted_hydrochloric_acid', 500))
     .outputFluids(safeFluidOf('gtceu:hydrochloric_acid', 250))
     .outputFluids(safeFluidOf('minecraft:water', 250))
     .duration(50)
     .EUt(30)
 
-  event.recipes.susy.FBR('qq8gn9cv2mghn7') // remapped from original line 35
+  event.recipes.susy.fluidized_bed_reactor('p5j31mq9jq5efu') // remapped from original line 35
     .itemInputs('8x #forge:dusts/methylenedianiline')
     .inputFluids(safeFluidOf('susy:phosgene', 2000))
     .itemOutputs('10x #forge:dusts/methylene_diphenyl_diisocyanate')
@@ -24,14 +25,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.CSTR('jipt6e5slnidz7') // remapped from original line 44
+  event.recipes.susy.continuous_stirred_tank_reactor('3fzk2pgd5g8qbl') // remapped from original line 44
     .inputFluids(safeFluidOf('susy:ethylene_oxide', 150))
     .inputFluids(safeFluidOf('gtceu:ammonia', 300))
     .outputFluids(safeFluidOf('susy:ethanolamine_mix', 150))
     .duration(1)
     .EUt(30)
 
-  event.recipes.gtceu.DISTILLATION_TOWER('l9gt4kdejlwn5b') // remapped from original line 52
+  event.recipes.gtceu.distillation_tower('vtvrm6antqly0z') // remapped from original line 52
     .inputFluids(safeFluidOf('susy:ethanolamine_mix', 3000))
     .outputFluids(safeFluidOf('susy:triethanolamine', 1000))
     .outputFluids(safeFluidOf('susy:diethanolamine', 1000))
@@ -39,7 +40,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.FBR('c3unqxw1qiiluk') // remapped from original line 61
+  event.recipes.susy.fluidized_bed_reactor('cxcnsrmnrmwdhx') // remapped from original line 61
     .notConsumable('1x #forge:dusts/molecular_sieve')
     .inputFluids(safeFluidOf('susy:ethanolamine', 3000))
     .itemOutputs('8x #forge:dusts/triethylenediamine')
@@ -48,7 +49,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.POLYMERIZATION('zplux7qh0a4ffi') // remapped from original line 71
+  event.recipes.susy.polymerization_tank('i7m5bd5yluhqmz') // remapped from original line 71
     .itemInputs('10x #forge:dusts/methylene_diphenyl_diisocyanate')
     .itemInputs('1x #forge:dusts/tiny_triethylenediamine')
     .inputFluids(safeFluidOf('susy:ethylene_oxide', 750))
@@ -58,14 +59,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.FLUID_COMPRESSOR('bvnto9c0odhzjm') // remapped from original line 82
+  event.recipes.susy.fluid_compressor('jn8wcurcbu4qdo') // remapped from original line 82
     .inputFluids(safeFluidOf('susy:hot_compressed_carbon_dioxide', 1280))
     .outputFluids(safeFluidOf('susy:supercritical_carbon_dioxide', 20))
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.MIXER('0sejekdj6yojha') // remapped from original line 89
-    .notConsumable(metaitem('shape.mold.block'))
+  event.recipes.gtceu.mixer('sdcek5gzurcw8b') // remapped from original line 89
+    .notConsumable(safeItemId('1x susy:shape.mold.block'))
     .inputFluids(safeFluidOf('susy:polyurethane_polymerization_mix', 9000))
     .inputFluids(safeFluidOf('minecraft:water', 180))
     .inputFluids(safeFluidOf('susy:supercritical_carbon_dioxide', 180))
@@ -73,8 +74,8 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.MIXER('ma0jybwvtc3zyx') // remapped from original line 99
-    .notConsumable(metaitem('shape.mold.plate'))
+  event.recipes.gtceu.mixer('m8fvczgufbnves') // remapped from original line 99
+    .notConsumable(safeItemId('1x susy:shape.mold.plate'))
     .inputFluids(safeFluidOf('susy:polyurethane_polymerization_mix', 1000))
     .inputFluids(safeFluidOf('minecraft:water', 20))
     .inputFluids(safeFluidOf('susy:supercritical_carbon_dioxide', 20))
@@ -82,14 +83,14 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.CHEMICAL_BATH('o0pt2bdsahlmdz') // remapped from original line 109
+  event.recipes.gtceu.chemical_bath('kdmx0mfpyoc2ta') // remapped from original line 109
     .itemInputs('1x #forge:blocks/polyurethane')
     .inputFluids(safeFluidOf('susy:dye_yellow', 288))
     .itemOutputs(safeItemId('1x minecraft:sponge'))
     .duration(100)
     .EUt(30)
 
-  event.recipes.susy.LCR('vw4udkzbc511qw') // remapped from original line 119
+  event.recipes.gtceu.large_chemical_reactor('x2ap2kraass7tg') // remapped from original line 119
     .notConsumable('1x #forge:catalysts/bed_palladium')
     .notConsumable(safeFluidOf('susy:hydrogen_iodide', 1000))
     .inputFluids(safeFluidOf('gtceu:butadiene', 1000))
@@ -99,7 +100,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(240)
 
-  event.recipes.susy.POLYMERIZATION('2uq3y5yepchus0') // remapped from original line 130
+  event.recipes.susy.polymerization_tank('knnytgwicebned') // remapped from original line 130
     .itemInputs('10x #forge:dusts/methylene_diphenyl_diisocyanate')
     .itemInputs('15x #forge:dusts/adipic_acid')
     .itemInputs('1x #forge:dusts/tiny_triethylenediamine')
@@ -108,7 +109,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.gtceu.MIXER('jmwbmqwpmdag5m') // remapped from original line 140
+  event.recipes.gtceu.mixer('wvc33qhycevf9p') // remapped from original line 140
     .inputFluids(safeFluidOf('susy:spandex_prepolymer', 4000))
     .inputFluids(safeFluidOf('susy:ethylenediamine', 250))
     .inputFluids(safeFluidOf('susy:diethylamine', 10))
@@ -116,10 +117,10 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(240)
 
-  event.recipes.susy.DRYER('prreenytyirngg') // remapped from original line 149
+  event.recipes.susy.DRYER('pgwiwpshda7ao2') // remapped from original line 149
     .inputFluids(safeFluidOf('susy:spandex_polymerization_mix', 4000))
     .inputFluids(safeFluidOf('susy:hot_air', 1000))
-    .notConsumable(metaitem('spinneret'))
+    .notConsumable(safeItemId('1x susy:spinneret'))
     .itemOutputs('8x #forge:fibers/spandex')
     .outputFluids(safeFluidOf('gtceu:air', 1000))
     .outputFluids(safeFluidOf('susy:dimethylacetamide', 3500))

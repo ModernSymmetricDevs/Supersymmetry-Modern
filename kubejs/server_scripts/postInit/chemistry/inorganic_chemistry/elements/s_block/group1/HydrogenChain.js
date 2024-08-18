@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.gtceu.electric_blast_furnace('ezq98s1b4q0yrz') // remapped from original line 4
+  event.recipes.gtceu.electric_blast_furnace('atwdfeekou5rmp') // remapped from original line 4
     .itemInputs('12x #forge:dusts/cerium_iv_oxide')
     .itemOutputs('10x #forge:dusts/cerium_iii_oxide')
     .outputFluids(safeFluidOf('gtceu:oxygen', 2000))
@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
     .blastFurnaceTemp(2273)
     .duration(20)
 
-  event.recipes.susy.fluidized_bed_reactor('c7fis2jwml4f75') // remapped from original line 13
+  event.recipes.susy.fluidized_bed_reactor('ebehsy10jqbbtk') // remapped from original line 13
     .itemInputs('10x #forge:dusts/cerium_iii_oxide')
     .inputFluids(safeFluidOf('minecraft:water', 2000))
     .itemOutputs('12x #forge:dusts/cerium_iv_oxide')

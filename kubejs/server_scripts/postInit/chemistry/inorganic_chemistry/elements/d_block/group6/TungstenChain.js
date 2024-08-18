@@ -2,21 +2,21 @@ ServerEvents.recipes(event => {
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:dusts/scheelite' && safeFluidOf('gtceu:hydrochloric_acid')})
   event.remove({ type: 'gtceu:chemical_bath', input: '#forge:dusts/tungstate' && safeFluidOf('gtceu:hydrochloric_acid')})
 
-  event.recipes.susy.gravity_separator('pdjowfqp69xxge') // remapped from original line 25
+  event.recipes.susy.gravity_separator('l7uuiyrkdzysjj') // remapped from original line 25
     .itemInputs('1x #forge:dusts/scheelite')
     .itemOutputs('1x #forge:dusts/sifted_scheelite')
-    .chancedOutput('5000x #forge:dusts/granite_tailings', 5000, 0)
+    .chancedOutput('1x #forge:dusts/granite_tailings', 5000, 0)
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.mixer('hev40fy0lvgmf3') // remapped from original line 33
+  event.recipes.gtceu.mixer('l9sipujpknctep') // remapped from original line 33
     .itemInputs('8x #forge:dusts/sifted_scheelite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_scheelite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('28hsc9jsdifh7n') // remapped from original line 41
+  event.recipes.susy.froth_flotation('a7yxcvpl9imqbm') // remapped from original line 41
     .inputFluids(safeFluidOf('susy:impure_scheelite_slurry', 2000))
     .notConsumable(safeFluidOf('susy:oleic_acid', 144))
     .notConsumable('6x #forge:dusts/sodium_silicate')
@@ -25,14 +25,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('pmzraoxqnvnwdg') // remapped from original line 51
+  event.recipes.susy.clarifier('eknzgdzxflgxij') // remapped from original line 51
     .inputFluids(safeFluidOf('susy:scheelite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/flotated_scheelite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.susy.roaster('t77jerwpeus4fc') // remapped from original line 59
+  event.recipes.susy.roaster('3emxjlfpipwsxd') // remapped from original line 59
     .itemInputs('1x #forge:dusts/flotated_scheelite')
     .inputFluids(safeFluidOf('gtceu:hydrochloric_acid', 50))
     .itemOutputs('1x #forge:dusts/calcined_scheelite')
@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.autoclave('pryxbqb2lzfjkm') // remapped from original line 69
+  event.recipes.gtceu.autoclave('dpw6xa3f0fumyc') // remapped from original line 69
     .itemInputs('1x #forge:dusts/calcined_scheelite')
     .inputFluids(safeFluidOf('susy:soda_ash_solution', 1000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
@@ -50,22 +50,22 @@ ServerEvents.recipes(event => {
     .duration(20)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.gravity_separator('pxav1xrkat8rto') // remapped from original line 81
+  event.recipes.susy.gravity_separator('qhawzgyrtdxrci') // remapped from original line 81
     .itemInputs('1x #forge:dusts/wolframite')
     .itemOutputs('1x #forge:dusts/sifted_wolframite')
-    .chancedOutput('5000x #forge:dusts/granite_tailings', 5000, 0)
-    .chancedOutput('500x #forge:dusts/gold_concentrate', 500, 100)
+    .chancedOutput('1x #forge:dusts/granite_tailings', 5000, 0)
+    .chancedOutput('1x #forge:dusts/gold_concentrate', 500, 100)
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.mixer('wii9pkypkbuz5f') // remapped from original line 90
+  event.recipes.gtceu.mixer('iflsruoc05uiha') // remapped from original line 90
     .itemInputs('8x #forge:dusts/sifted_wolframite')
     .inputFluids(safeFluidOf('gtceu:distilled_water', 2000))
     .outputFluids(safeFluidOf('susy:impure_wolframite_slurry', 2000))
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.froth_flotation('jcje5sisgahhxp') // remapped from original line 98
+  event.recipes.susy.froth_flotation('uju3rr0dmrifkx') // remapped from original line 98
     .inputFluids(safeFluidOf('susy:impure_wolframite_slurry', 2000))
     .notConsumable(safeFluidOf('susy:oleic_acid', 144))
     .notConsumable('6x #forge:dusts/sodium_silicate')
@@ -74,32 +74,32 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(80)
 
-  event.recipes.susy.clarifier('x3mvu6cjtqhflh') // remapped from original line 108
+  event.recipes.susy.clarifier('lmggjmpqfydsbn') // remapped from original line 108
     .inputFluids(safeFluidOf('susy:wolframite_slurry', 1000))
     .itemOutputs('16x #forge:dusts/flotated_wolframite')
     .outputFluids(safeFluidOf('susy:wastewater', 1000))
     .duration(20)
     .EUt(voltAmps[1])
 
-  event.recipes.gtceu.autoclave('zcbkhkbbkujmtk') // remapped from original line 116
+  event.recipes.gtceu.autoclave('uo7ndj3i4hzohv') // remapped from original line 116
     .itemInputs('1x #forge:dusts/flotated_wolframite')
     .inputFluids(safeFluidOf('susy:sodium_hydroxide_solution', 2000))
     .inputFluids(safeFluidOf('gtceu:distilled_water', 1000))
     .chancedOutput('5x #forge:dusts/manganese_ii_hydroxide', 5000, 0)
     .chancedOutput('5x #forge:dusts/iron_ii_hydroxide', 5000, 0)
-    .outputFluids(safeFluidOf('susy:sodium_tungstate_solution', 1000)
+    .outputFluids(safeFluidOf('susy:sodium_tungstate_solution', 1000)) 
     .duration(20)
     .EUt(voltAmps[3])
 
-  event.recipes.susy.batch_reactor('atmh6s7cna9p57') // remapped from original line 129
+  event.recipes.susy.batch_reactor('z2jhvxt1h0uviy') // remapped from original line 129
     .itemInputs('17x #forge:dusts/aluminium_sulfate')
     .inputFluids(safeFluidOf('susy:sodium_tungstate_solution', 18000))
     .itemOutputs('8x #forge:dusts/aluminium_silicate')
-    .outputFluids(safeFluidOf('susy:silicate_free_tungstate_solution', 18000)
+    .outputFluids(safeFluidOf('susy:silicate_free_tungstate_solution', 18000)) 
     .EUt(voltAmps[3])
     .duration(90)
 
-  event.recipes.gtceu.large_chemical_reactor('mow79ywahlkavi') // remapped from original line 143
+  event.recipes.gtceu.large_chemical_reactor('qo52tvantant28') // remapped from original line 143
     .itemInputs('6x #forge:dusts/sodium_sulfide')
     .inputFluids(safeFluidOf('susy:silicate_free_tungstate_solution', 9000))
     .inputFluids(safeFluidOf('gtceu:sulfuric_acid', 3000))
@@ -110,7 +110,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(180)
 
-  event.recipes.gtceu.mixer('beuxhedy0mnkiq') // remapped from original line 155
+  event.recipes.gtceu.mixer('komg1vw3sex8ad') // remapped from original line 155
     .inputFluids(safeFluidOf('susy:kerosene', 325))
     .inputFluids(safeFluidOf('susy:trioctylamine', 625))
     .inputFluids(safeFluidOf('susy:isodecanol', 50))
@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[4])
     .duration(200)
 
-  event.recipes.gtceu.centrifuge('ybayo5pxgq0uzs') // remapped from original line 164
+  event.recipes.gtceu.centrifuge('pvxeiflo6uqhwk') // remapped from original line 164
     .inputFluids(safeFluidOf('susy:ammonium_tungstate_solution', 4000))
     .inputFluids(safeFluidOf('susy:tungsten_extraction_mixture', 8000)) 
     .outputFluids(safeFluidOf('susy:ammonia_solution', 4000))
@@ -126,22 +126,22 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.gtceu.centrifuge('mrzjdyxzyqtfp4') // remapped from original line 173
-    .inputFluids(safeFluidOf('susy:molybdenum_free_tungstate_solution', 11250)
+  event.recipes.gtceu.centrifuge('ee3xndoxyshx6j') // remapped from original line 173
+    .inputFluids(safeFluidOf('susy:molybdenum_free_tungstate_solution', 11250)) 
     .inputFluids(safeFluidOf('susy:tungsten_extraction_mixture', 8000)) 
-    .outputFluids(safeFluidOf('susy:very_diluted_sodium_sulfate_solution', 11250))
-    .outputFluids(safeFluidOf('susy:tungsten_extract', 8000))
+    .outputFluids(safeFluidOf('susy:very_diluted_sodium_sulfate_solution', 11250)) 
+    .outputFluids(safeFluidOf('susy:tungsten_extract', 8000)) 
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.gtceu.distillery('vxnezi4ca1lsgh') // remapped from original line 182
+  event.recipes.gtceu.distillery('kpe3fvqdxhtoah') // remapped from original line 182
     .inputFluids(safeFluidOf('susy:very_diluted_sodium_sulfate_solution', 9000))
     .itemOutputs('7x #forge:dusts/sodium_sulfate')
     .outputFluids(safeFluidOf('minecraft:water', 9000))
     .EUt(voltAmps[1])
     .duration(20)
 
-  event.recipes.gtceu.centrifuge('q9tqogd0t31rvl') // remapped from original line 190
+  event.recipes.gtceu.centrifuge('ctixiquhy7zwoh') // remapped from original line 190
     .inputFluids(safeFluidOf('susy:tungsten_extract', 8000))
     .inputFluids(safeFluidOf('susy:demineralized_water', 2000)) 
     .outputFluids(safeFluidOf('susy:scrubbed_tungsten_extract', 8000))
@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.gtceu.centrifuge('fqwb0clzr5xpwy') // remapped from original line 199
+  event.recipes.gtceu.centrifuge('mzjbzhweqwamj5') // remapped from original line 199
     .inputFluids(safeFluidOf('susy:scrubbed_tungsten_extract', 8000)) 
     .inputFluids(safeFluidOf('susy:ammonia_solution', 5000)) 
     .outputFluids(safeFluidOf('susy:tungsten_extraction_mixture', 8000))
@@ -157,14 +157,14 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(20)
 
-  event.recipes.susy.crystallizer('eafnrmouc6cvtw') // remapped from original line 208
+  event.recipes.susy.crystallizer('yx8vpdgtgkryfd') // remapped from original line 208
     .inputFluids(safeFluidOf('susy:ammonium_isopolytungstate_solution', 5000))
-    .chancedOutput('5000x #forge:dusts/ammonium_paratungstate', 5000, 0)
+    .chancedOutput('1x #forge:dusts/ammonium_paratungstate', 5000, 0)
     .outputFluids(safeFluidOf('minecraft:water', 3000))
     .EUt(voltAmps[3])
     .duration(600)
 
-  event.recipes.susy.roaster('babd72bburxqri') // remapped from original line 216
+  event.recipes.susy.roaster('lpnqycm2kuveko') // remapped from original line 216
     .itemInputs('1x #forge:dusts/ammonium_paratungstate')
     .inputFluids(safeFluidOf('gtceu:air', 1000))
     .itemOutputs('48x #forge:dusts/tungsten_trioxide')
@@ -173,7 +173,7 @@ ServerEvents.recipes(event => {
     .EUt(voltAmps[3])
     .duration(1200)
 
-  event.recipes.susy.reaction_furnace('97mxf5cwv0iyvn') // remapped from original line 228
+  event.recipes.susy.reaction_furnace('qb23xojidvfhod') // remapped from original line 228
     .inputFluids(safeFluidOf('gtceu:hydrogen', 6000))
     .itemInputs('4x #forge:dusts/tungsten_trioxide')
     .outputFluids(safeFluidOf('susy:dense_steam', 3000))

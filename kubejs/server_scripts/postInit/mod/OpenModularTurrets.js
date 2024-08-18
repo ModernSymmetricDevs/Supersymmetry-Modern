@@ -1,9 +1,9 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.recipemap('mixer')('di8ub7voiefzie') // remapped from original line 296
+  event.recipes.gtceu.mixer('oe0d6ykmu2letk') // remapped from original line 296
     .itemInputs('1x #forge:dusts/clay')
-    .inputFluids(liquid('gasoline')*1000)
-    .itemOutputs(safeItemId('1x openmodularturrets:ammo_meta:0')')*32)
+    .inputFluids(safeFluidOf('gtceu:gasoline', 1000))
+    .itemOutputs(safeItemId('32x openmodularturrets:ammo_meta:0'))
     .duration(20)
     .EUt(30)
 

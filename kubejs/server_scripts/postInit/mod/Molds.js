@@ -1,16 +1,16 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.FORMINGPRESS('fgt22f2i0asby2') // remapped from original line 10
-    .itemInputs(metaitem('shape.empty'))
-    .notConsumable(metaitem('shape.mold.rod'))
-    .itemOutputs(metaitem('shape.mold.rod'))
+  event.recipes.gtceu.forming_press('2kmja8tdbagxwd') // remapped from original line 10
+    .itemInputs(safeItemId('1x susy:shape.empty'))
+    .notConsumable(safeItemId('1x susy:shape.mold.rod'))
+    .itemOutputs(safeItemId('1x susy:shape.mold.rod'))
     .duration(120)
     .EUt(22)
 
-  event.recipes.susy.FORMINGPRESS('ovpc0ikvsogwbp') // remapped from original line 25
-    .itemInputs(metaitem('shape.empty'))
-    .notConsumable(metaitem('shape.mold.crucible'))
-    .itemOutputs(metaitem('shape.mold.crucible'))
+  event.recipes.gtceu.forming_press('aclblysvurppoe') // remapped from original line 25
+    .itemInputs(safeItemId('1x susy:shape.empty'))
+    .notConsumable(safeItemId('1x susy:shape.mold.crucible'))
+    .itemOutputs(safeItemId('1x susy:shape.mold.crucible'))
     .duration(120)
     .EUt(22)
 

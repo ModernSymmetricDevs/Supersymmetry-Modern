@@ -1,35 +1,35 @@
 ServerEvents.recipes(event => {
 
-  event.recipes.susy.mods.gregtech.circuit_assembler('oma78hachs0tth') // remapped from original line 13
-    .itemInputs(safeItemId('10x opencomputers:component', 1')0))
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
+  event.recipes.susy.mods.gregtech.circuit_assembler('i0ufwnbceykvvy') // remapped from original line 13
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
     .itemInputs('4x #forge:wires/fine_aluminium')
-    .itemInputs(metaitem('circuit_board.advanced'))
-    .itemInputs(metaitem('sensor.ev'))
-    .itemInputs(metaitem('emitter.ev'))
+    .itemInputs(safeItemId('1x susy:circuit_board.advanced'))
+    .itemInputs(safeItemId('1x susy:sensor.ev'))
+    .itemInputs(safeItemId('1x susy:emitter.ev'))
     .inputFluids(solder)
     .itemOutputs(safeItemId('1x openglasses:openglasses_card'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('o66c1pmimsnrzy') // remapped from original line 26
-    .itemInputs(safeItemId('10x opencomputers:component', 1')0))
-    .itemInputs(metaitem('hull.ev'))
+  event.recipes.susy.mods.gregtech.assembler('dybvhalqh8nlas') // remapped from original line 26
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x susy:hull.ev'))
     .inputFluids(solder)
     .circuitMeta([2])
     .itemOutputs(safeItemId('1x openglasses:openglassesterminal'))
     .duration(400)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('ibecisuvcgmgol') // remapped from original line 36
-    .itemInputs(safeItemId('10x opencomputers:component', 1')0))
-    .itemInputs(safeItemId('3x opencomputers:component', ')))
-    .itemInputs(safeItemId('3x opencomputers:screen3')') * 2)
+  event.recipes.susy.mods.gregtech.assembler('xvrajqoldhrli8') // remapped from original line 36
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('1x opencomputers:component'))
+    .itemInputs(safeItemId('2x opencomputers:screen3'))
     .itemInputs('4x #forge:wires/fine_aluminium')
     .itemInputs(safeItemId('1x oc:wlanCard'))
-    .itemInputs(safeItemId('3x opencomputers:card', ')))
-    .itemInputs(metaitem('sensor.ev'))
-    .itemInputs(metaitem('emitter.ev'))
+    .itemInputs(safeItemId('1x opencomputers:card'))
+    .itemInputs(safeItemId('1x susy:sensor.ev'))
+    .itemInputs(safeItemId('1x susy:emitter.ev'))
     .inputFluids(solder)
     .circuitMeta([2])
     .itemOutputs(safeItemId('1x openglasses:openglasses'))

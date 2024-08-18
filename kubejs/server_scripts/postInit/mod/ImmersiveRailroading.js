@@ -1,60 +1,60 @@
 ServerEvents.recipes(event => {
   event.remove({ type: 'susy:railroad_engineering_station', input: '#forge:plates/steel' && '#forge:plates/iron'})
-  event.remove({ type: 'susy:railroad_engineering_station', input: 'immersiverailroading:item_rolling_stock'})
+  event.remove({ type: 'susy:railroad_engineering_station', input: safeItemId('immersiverailroading:item_rolling_stock')})
 
-  event.recipes.susy.mods.gregtech.bender('ogx4ntld69zdqh') // remapped from original line 132
+  event.recipes.susy.mods.gregtech.bender('33hn5tdnwjvwod') // remapped from original line 132
     .circuit(3)
     .itemInputs('1x #forge:plates/steel')
     .itemOutputs(safeItemId('10x immersiverailroading:item_rail_part'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('nblihfgdeu2rj3') // remapped from original line 140
+  event.recipes.susy.mods.gregtech.assembler('barzbi3d26zmlt') // remapped from original line 140
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('8x #forge:rods/steel')
     .itemInputs('2x #forge:plates/steel')
-    .itemOutputs(safeItemId('5x susy:meta_item', ')) * 2)
+    .itemOutputs(safeItemId('2x susy:meta_item'))
     .duration(200)
     .EUt(30)
 
-  event.recipes.susy.mods.gregtech.assembler('esxovmaiunuews') // remapped from original line 149
+  event.recipes.susy.mods.gregtech.assembler('lnjkdqhznlvfba') // remapped from original line 149
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('8x #forge:rods/aluminium')
     .itemInputs('2x #forge:plates/aluminium')
-    .itemOutputs(safeItemId('5x susy:meta_item', ')) * 4)
+    .itemOutputs(safeItemId('4x susy:meta_item'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('krfmhu1nokht2m') // remapped from original line 158
+  event.recipes.susy.mods.gregtech.assembler('olcd684bxumksf') // remapped from original line 158
     .inputFluids(safeFluidOf('gtceu:concrete', 144))
     .itemInputs('8x #forge:rods/stainless_steel')
     .itemInputs('2x #forge:plates/stainless_steel')
-    .itemOutputs(safeItemId('5x susy:meta_item', ')) * 8)
+    .itemOutputs(safeItemId('8x susy:meta_item'))
     .duration(200)
     .EUt(480)
 
-  event.recipes.susy.mods.gregtech.assembler('ryjaxygyyctodj') // remapped from original line 167
-    .itemInputs(metaitem('component.grinder.diamond') * 4)
+  event.recipes.susy.mods.gregtech.assembler('zatmztoo6j3g3g') // remapped from original line 167
+    .itemInputs(safeItemId('4x susy:component.grinder.diamond'))
     .itemInputs('4x #forge:gears/steel')
     .itemInputs('16x #forge:plates/double_steel')
-    .itemOutputs(metaitem('tunnelbore.drillhead'))
+    .itemOutputs(safeItemId('1x susy:tunnelbore.drillhead'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.forge_hammer('vh2gx0lyj4o0zj') // remapped from original line 176
+  event.recipes.susy.mods.gregtech.forge_hammer('ssbguc6gibygaq') // remapped from original line 176
     .itemInputs('16x #forge:rods/long_steel')
-    .itemOutputs(metaitem('tunnelbore.axle'))
+    .itemOutputs(safeItemId('1x susy:tunnelbore.axle'))
     .duration(200)
     .EUt(120)
 
-  event.recipes.susy.mods.gregtech.assembler('qw0b3yqc66hp8t') // remapped from original line 183
-    .itemInputs(metaitem('electric.motor.mv') * 8)
+  event.recipes.susy.mods.gregtech.assembler('nggls2hwrdxtxu') // remapped from original line 183
+    .itemInputs(safeItemId('8x susy:electric.motor.mv'))
     .itemInputs('64x #forge:wires/fine_copper')
     .itemInputs('4x #forge:gears/aluminium')
     .itemInputs('4x #forge:gears/small_aluminium')
     .itemInputs('8x #forge:plates/steel')
     .inputFluids(safeFluidOf('gtceu:lubricant', 8000))
-    .itemOutputs(metaitem('tunnelbore.engine'))
+    .itemOutputs(safeItemId('1x susy:tunnelbore.engine'))
     .duration(200)
     .EUt(120)
 

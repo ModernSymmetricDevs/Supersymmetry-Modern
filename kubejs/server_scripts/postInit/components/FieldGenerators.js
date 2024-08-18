@@ -1,8 +1,8 @@
 ServerEvents.recipes(event => {
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:ender_pearl' && '#forge:plates/steel' && 'susy:circuit.microprocessor' && '#forge:wires/gt_quadruple_manganese_phosphide'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:ender_eye' && '#forge:plates/aluminium' && 'susy:circuit.processor' && '#forge:wires/gt_quadruple_magnesium_diboride'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:ender_pearl') && '#forge:plates/steel' && 'susy:circuit.microprocessor' && '#forge:wires/gt_quadruple_manganese_phosphide'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:ender_eye') && '#forge:plates/aluminium' && 'susy:circuit.processor' && '#forge:wires/gt_quadruple_magnesium_diboride'})
   event.remove({ type: 'gtceu:assembler', input: 'susy:quantumeye' && '#forge:plates/stainless_steel' && 'susy:circuit.assembly' && '#forge:wires/gt_quadruple_mercury_barium_calcium_cuprate'})
-  event.remove({ type: 'gtceu:assembler', input: 'minecraft:nether_star' && '#forge:plates/double_titanium' && 'susy:circuit.nano_assembly' && '#forge:wires/gt_quadruple_uranium_triplatinum'})
+  event.remove({ type: 'gtceu:assembler', input: safeItemId('minecraft:nether_star') && '#forge:plates/double_titanium' && 'susy:circuit.nano_assembly' && '#forge:wires/gt_quadruple_uranium_triplatinum'})
   event.remove({ type: 'gtceu:assembler', input: 'susy:quantumstar' && '#forge:plates/double_tungsten_steel' && 'susy:circuit.quantum_assembly' && '#forge:wires/gt_quadruple_samarium_iron_arsenic_oxide'})
   event.remove({ type: 'gtceu:assembly_line', input: '#forge:frames/hsss' && '#forge:plates/hsss' && 'susy:quantumstar' && 'susy:emitter.luv' && 'susy:circuit.crystal_assembly' && '#forge:wires/fine_indium_tin_barium_titanium_cuprate' && '#forge:wires/fine_indium_tin_barium_titanium_cuprate' && '#forge:cables/gt_single_niobium_titanium' && safeFluidOf('gtceu:soldering_alloy')})
   event.remove({ type: 'gtceu:assembly_line', input: '#forge:frames/naquadah_alloy' && '#forge:plates/naquadah_alloy' && 'susy:quantumstar' && 'susy:emitter.zpm' && 'susy:circuit.wetware_assembly' && '#forge:wires/fine_uranium_rhodium_dinaquadide' && '#forge:wires/fine_uranium_rhodium_dinaquadide' && '#forge:cables/gt_single_vanadium_gallium' && safeFluidOf('gtceu:soldering_alloy')})
